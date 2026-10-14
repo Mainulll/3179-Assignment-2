@@ -31,3 +31,16 @@ context.mapPan['04']={longitude:0,mercator:0};await context.testMapView(spec,'04
 if(JSON.stringify(spec.projection.center)!==JSON.stringify(originalCenter))throw new Error('Reset does not restore geographic centre');
 console.log('PASS geographic panning changes the shared projection and reset restores the exact centre');
 console.log('PASS production zoom projection at 3×, 200 m scale cue, selected route endpoint SVG');
+// National controls retain the equal-area Albers projection while moving in screen space.
+context.vega=vega;context.mapZoom['08']=3;context.mapPan['08']={longitude:0,mercator:0};
+const national=JSON.parse(fs.readFileSync('specs/08-holiday-map.json'));national.height=440;
+await context.testMapView(national,'08-holiday-map',390);
+const nationalTranslate=[...national.projection.translate];
+if(national.projection.type!=='albers'||national.projection.parallels.join(',')!=='-18,-36')throw new Error('National equal-area projection changed');
+context.mapPan['08']={longitude:-1,mercator:.01};await context.testMapView(national,'08-holiday-map',390);
+if(JSON.stringify(national.projection.translate)===JSON.stringify(nationalTranslate))throw new Error('National pan unchanged');
+context.mapPan['08']={longitude:0,mercator:0};await context.testMapView(national,'08-holiday-map',390);
+if(JSON.stringify(national.projection.translate)!==JSON.stringify(nationalTranslate))throw new Error('National reset differs');
+const nationalView=new vega.View(vega.parse(vl.compile(national).spec),{renderer:'none',loader:vega.loader({baseURL:process.cwd()+'/'})});
+await nationalView.runAsync();if((await nationalView.toSVG()).includes('NaN'))throw new Error('National zoom invalid');nationalView.finalize();
+console.log('PASS national Albers zoom, screen-space pan and exact reset');

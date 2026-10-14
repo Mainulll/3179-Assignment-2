@@ -3,7 +3,7 @@
   "checks": 68,
   "snapshot": "2026-10-12",
   "data_bytes": 2124312,
-  "website_bytes_upper_bound": 3229572,
+  "website_bytes_upper_bound": 3231637,
   "assertions": [
     "94 unique selected sight records",
     "Sight theme counts reconcile 57 + 36 + 1",
