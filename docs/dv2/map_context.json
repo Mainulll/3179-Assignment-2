@@ -1,0 +1,69 @@
+{
+  "retrieved": "2026-10-14",
+  "license": "CC BY 4.0",
+  "role": "Display context only; not used for counts, distances or route geometry.",
+  "transform": "Clip to rectangular view bounds; simplify at 0.000005 degrees (~0.5 m), preserve topology; round to six decimal places; orient polygon rings for D3.",
+  "bounds": {
+    "city": [
+      144.903,
+      -37.845,
+      144.994,
+      -37.778
+    ],
+    "routes": [
+      144.93,
+      -37.835,
+      144.988,
+      -37.792
+    ]
+  },
+  "sources": {
+    "streets": {
+      "url": "https://data.melbourne.vic.gov.au/api/explore/v2.1/catalog/datasets/street-names/exports/geojson",
+      "sha256": "092a51a04bd630649d03d196e0ff0ff7aa2f76dbed2c7440195d2ffa904be46a",
+      "source_features": 2876
+    },
+    "water": {
+      "url": "https://services-ap1.arcgis.com/P744lA0wf4LlBZ84/ArcGIS/rest/services/Vicmap_Hydro/FeatureServer/1/query",
+      "sha256": "1f3948721ad4dd4fd62fb2ca447adc3cef5e12eee5bbca9726e4580382261636",
+      "source_features": 32
+    },
+    "parks": {
+      "url": "https://services5.arcgis.com/DmRfik4clMVydXO3/arcgis/rest/services/VPA_Draft_Open_Space_Data/FeatureServer/0/query",
+      "sha256": "e933c8b0e0b367f98e00a186348a1d02e77ddb2a1041556ecffb8319dd7155ab",
+      "source_features": 1705
+    }
+  },
+  "outputs": {
+    "city-streets.geojson": {
+      "features": 2711,
+      "bytes": 526390,
+      "sha256": "eb95653e53dc11e2da62b43aa0006abd5ff231f404ff0c662fdb9dfa03f52790"
+    },
+    "routes-streets.geojson": {
+      "features": 2035,
+      "bytes": 380337,
+      "sha256": "96335f033e69249d4c9dd402ae5fcfdbb348e5c3ecb4b3186f279468703e30d0"
+    },
+    "city-water.geojson": {
+      "features": 27,
+      "bytes": 56723,
+      "sha256": "2aa28bf68301d180389445c6094124d13cd5720afb1372177911f5250a8e2e53"
+    },
+    "routes-water.geojson": {
+      "features": 9,
+      "bytes": 21852,
+      "sha256": "fba438ad1df45f89ce43c8a818341cd313cd07ee51c58165f5fb49677143b38a"
+    },
+    "city-parks.geojson": {
+      "features": 1,
+      "bytes": 201678,
+      "sha256": "1b1d77ebd3570ece277dff64b5f05b63dee4c16cfbdd12a68d49356e9870c6ff"
+    },
+    "routes-parks.geojson": {
+      "features": 1,
+      "bytes": 86877,
+      "sha256": "b56e8aaf45346ddef29f56671eeab317ab4cc9475274128b7de1cf0a4ffa98fe"
+    }
+  }
+}

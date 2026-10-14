@@ -1,40 +1,65 @@
-# Local places, bigger stories
+# Melbourne and beyond
 
-FIT3179 Assignment 2 · Topic 23: Local Tourism Attractions · Minul Lokuliyana
+FIT3179 Data Visualisation 2 · Topic 23: Local Tourism Attractions · Minul Lokuliyana
 
-An Australian data story connecting mapped lookouts, gardens and visitor centres with regional tourism context, then examining Port Arthur and Royal Botanic Gardens Victoria. Attraction attendance, regional trips, economic estimates and community participation remain separate measures.
+A tourism data story moving from Melbourne's recorded sights and self-guided routes to Victorian forest activities and Australian overnight travel. Eleven Vega/Vega-Lite visualisations include three maps. Inventories describe recorded places; tourism estimates count trips and nights, not unique people or attraction attendance.
 
-The repository currently contains the **data foundation and project plan**. The Vega/Vega-Lite website has not been built or deployed.
+- Website: https://3179-assignment-2.vercel.app/
+- Repository: https://github.com/Mainulll/3179-Assignment-2
+- Vercel project: https://vercel.com/mainullls-projects/3179-assignment-2
+- Production branch: `main`. A push to this branch automatically deploys to Vercel.
 
-- [HD project and chart plan](docs/PROJECT_PLAN.md)
-- [Data sources, definitions and limitations](docs/DATA_GUIDE.md)
-- [Automated checks and unresolved issues](docs/data_audit.json)
-- [Original-source URLs and SHA-256 hashes](docs/source_manifest.json)
-- [Mapped-record review queue](docs/attraction_review.json)
+## Run and check locally
 
-## Rebuild the prepared data
-
-Use Python 3.12 and the original download archive. Original spreadsheets, PDFs and full-resolution polygons stay outside this repository; compact prepared datasets are in `data/`.
+Use Node.js and Python 3.12 or later:
 
 ```sh
-python3 -m venv .venv
-.venv/bin/python -m pip install -r requirements-data.txt
-.venv/bin/python scripts/prepare_data.py --source-dir '../Local Tourism Attractions Data'
+git clone https://github.com/Mainulll/3179-Assignment-2.git
+cd 3179-Assignment-2
+npm ci
+npm start
 ```
 
-The script reads original files, validates joins and arithmetic, builds display geometry, and writes an audit. It does not download sources or alter the original archive. Exact rebuilding requires the archived snapshots identified in the source manifest; live OSM queries will change over time. The case-study transcription is versioned in `scripts/case_study_extract.json` with PDF page references.
+Open http://127.0.0.1:8000/. The published page runs entirely from bundled local assets, including charts, datasets, libraries and fonts; it needs no API key or live map service.
 
-## Attribution
+```sh
+npm run build:specs
+npm run check
+```
 
-Mapped records: © OpenStreetMap contributors, [ODbL](https://www.openstreetmap.org/copyright). Heritage: DCCEEW National Heritage List. Tourism: Tourism Research Australia. Population: Australian Bureau of Statistics. Case-study measures: PAHSMA and Royal Botanic Gardens Victoria annual reports. See the data guide for direct links, coverage and reuse notes.
+The check validates 68 data/provenance assertions and renders all eleven chart specifications. Detailed source definitions and limitations are in `docs/dv2/IMPLEMENTATION.md`, `docs/dv2/provenance.json` and `docs/dv2/MAP_CONTEXT.md`.
 
-AI assistance has been used for source discovery, preparation code and planning. The final submission must acknowledge the actual assistance used. The student must understand and be able to explain the final design, data and implementation.
+## Update the live website
 
+In a fresh clone, update `main`, make edits and verify them before publishing:
 
-## Melbourne and beyond — V2 local website
+```sh
+git switch main
+git pull --ff-only origin main
+npm run check
+git add <changed-files>
+git commit -m "Describe the change"
+git push origin main
+```
 
-A new one-page editorial website is now implemented in `index.html`, `styles.css` and `app.js`, using only `data/dv2/` and eleven readable Vega/Vega-Lite specifications in `specs/`. The earlier research foundation above is preserved for reference.
+In the existing Downloads checkout, the new repository is the separate `mainulll` remote; `origin` still points to the preserved Ma1nul repository. To publish a reviewed commit from the current `codex/data-foundation` branch, use `git push mainulll HEAD:main` after confirming the remote is a fast-forward. Do not force-push. Local fixes do not become live until a push is approved and completed.
 
-Run `npm start` and open http://127.0.0.1:8000/. Run `npm ci` first if restoring development dependencies, then `npm run check` to validate data, provenance and all eleven chart specifications. The static page itself has no remote runtime dependencies.
+Vercel uses the Other preset, root directory `./`, no build command, and serves the root static files. No paid service is required.
 
-See [V2 implementation and submission limitations](docs/dv2/IMPLEMENTATION.md), [data checks](docs/dv2/validation.json) and [browser QA](docs/dv2/BROWSER_QA.md). No push or deployment is authorised yet; pushing may trigger the connected Vercel project.
+## Data and map context
+
+The site preserves the 94 selected municipal sights, 34 line components across 11 routes, 532 state-forest records and the historical 2019–2024 NVS tourism series. No 2025 DoTS data is spliced into NVS. Geography and source vintages remain distinct. Missing forest flags mean not recorded, and artwork-to-toilet distances are straight-line distances.
+
+Both Melbourne maps use locally stored, clipped vector context under CC BY 4.0:
+
+- City of Melbourne Street names lines: source September 2021, processed November 2022.
+- State of Victoria Vicmap Hydro water-area polygons: extract 14 October 2026.
+- Victorian Planning Authority historical open-space polygons: unmaintained inventory, used for background orientation, not current access claims.
+
+Map transformation code, extraction hashes, source URLs and licence links are documented in `docs/dv2/MAP_CONTEXT.md` and `docs/dv2/map_context.json`. Street/place labels retain source coordinates or derive positions along the source lines. Routes retain their original gaps; these maps do not provide navigation directions.
+
+City and Victorian data are attributed at each map. National estimates are Tourism Research Australia NVS; state boundaries are ABS 2021. Local font and Vega licences are in `vendor/`. Earlier exploratory research remains in `data/` and `docs/` for reference; the page uses `data/dv2/`.
+
+## Assessment checklist
+
+The brief requires a public GitHub Pages assessment link in addition to readable chart JSON in the repository. GitHub Pages is not currently enabled for this new repository; Vercel alone should not be represented as meeting that requirement without a tutor exception. The student's actual hand-drawn sketch PDF, tutor feedback and submission template also remain part of the assessment process; generated reference sketches are not hand-drawn student work. Review and understand the final code, data and design, and follow the tutor's confirmed AI-use requirements.

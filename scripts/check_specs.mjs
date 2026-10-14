@@ -12,6 +12,11 @@ for(const feature of states.features){
   if(!(area>0 && area<1))throw new Error('State geometry winding includes a spherical complement: '+feature.properties.state_name_2021);
 }
 console.log('PASS all eight state polygon windings render bounded geographic areas');
+for(const name of ['city-water','routes-water','city-parks','routes-parks']){
+ const context=JSON.parse(fs.readFileSync(path.join(root,'data/dv2',name+'.geojson')));
+ for(const feature of context.features){if(!(geoArea(feature)>0 && geoArea(feature)<.01))throw new Error(name+': invalid or inverted display polygon');}
+}
+console.log('PASS local water and park polygon orientations');
 let warnings=[];const logger=vega.logger(vega.Warn);logger.warn=(...args)=>{warnings.push(args.join(' '));return logger;};
 for(const filename of fs.readdirSync(path.join(root,'specs')).filter(f=>f.endsWith('.json')).sort()){
   warnings=[];

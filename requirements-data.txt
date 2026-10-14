@@ -1,3 +1,6 @@
 openpyxl==3.1.5
 shapely==2.1.2
 pyshp==3.1.6
+
+# Optional local basemap preparation
+shapely>=2,<3

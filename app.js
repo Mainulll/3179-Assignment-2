@@ -32,6 +32,10 @@
   function buildTable(figure, dataset, records) {
     if (dataset === 'sight-tree') records=records.filter(r=>r.official);
     if (dataset === 'art-toilets') records=boxSummary(records);
+    if(dataset==='sight-tree') {
+      const key=document.createElement('div');key.className='type-key';key.setAttribute('aria-label','All sight types and record counts');
+      for(const r of records){const b=document.createElement('button');b.type='button';b.textContent=`${r.label} · ${r.value}`;b.dataset.theme=r.theme;b.addEventListener('click',()=>selectType(r.id,r.theme));key.append(b);}figure.querySelector('.chart').after(key);
+    }
     const tools=document.createElement('div');tools.className='figure-tools';
     const details=document.createElement('details');
     const summary=document.createElement('summary');summary.textContent=`Data table (${records.length} rows)`;details.append(summary);
@@ -74,8 +78,8 @@
     const original=specs.get(name),spec=structuredClone(original);
     const available=Math.max(190,Math.floor(element.parentElement.classList.contains('chart-scroll') ? 760 : element.clientWidth));
     const isVega=spec.$schema.includes('/vega/v');
-    if(isVega){spec.width=name.startsWith('07')?Math.max(760,available-10):available-4;}
-    else {spec.width=available;if(name.startsWith('11')){const inner=Math.max(145,available-70);spec.width=inner;spec.height=inner;spec.autosize={type:'none',contains:'content'};spec.padding={left:52,right:10,top:10,bottom:55};}if(name.startsWith('08'))spec.height=Math.min(500,available*1.12);}
+    if(isVega){spec.width=name.startsWith('07')?Math.max(760,available-10):Math.max(120,available-8);if(name.startsWith('02'))spec.height=Math.max(300,Math.min(400,available*1.04));}
+    else {spec.width=available;if(name.startsWith('01')||name.startsWith('04')){spec.height=Math.min(520,Math.max(285,available*.9));spec.params.find(p=>p.name==='mapDetail').value=available<430?1:name.startsWith('01')?2:3;}if(name.startsWith('11')){const inner=Math.max(145,available-70);spec.width=inner;spec.height=inner;spec.autosize={type:'none',contains:'content'};spec.padding={left:52,right:10,top:10,bottom:55};}if(name.startsWith('08'))spec.height=Math.min(500,available*1.12);}
     try{
       const result=await vegaEmbed(element,spec,{actions:false,renderer:'svg',tooltip:{theme:'light'},defaultStyle:false});
       const view=result.view;views.set(name,view);

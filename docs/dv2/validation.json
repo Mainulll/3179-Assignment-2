@@ -2,8 +2,8 @@
   "status": "PASS",
   "checks": 68,
   "snapshot": "2026-10-12",
-  "data_bytes": 815798,
-  "website_bytes_upper_bound": 1901132,
+  "data_bytes": 2093031,
+  "website_bytes_upper_bound": 3185056,
   "assertions": [
     "94 unique selected sight records",
     "Sight theme counts reconcile 57 + 36 + 1",
@@ -72,6 +72,6 @@
     "Eight state trip-pair changes reconcile",
     "Queensland is the only positive state point estimate",
     "All served data files match their generated provenance hashes",
-    "Static website resources total less than 3 MB uncompressed"
+    "Static website resources including local street/river/park context total less than 4 MB uncompressed"
   ]
 }

@@ -74,7 +74,7 @@ check([s['state'] for s in pairs if s['y']>s['x']]==['Queensland'],'Queensland i
 manifest=json.loads((ROOT/'docs/dv2/provenance.json').read_text())
 check(all(hashlib.sha256((DATA/name).read_bytes()).hexdigest()==s['sha256'] for name,s in manifest['outputs'].items()),'All served data files match their generated provenance hashes')
 payload=sum(p.stat().st_size for d in ['data/dv2','specs','vendor','assets'] for p in (ROOT/d).rglob('*') if p.is_file())+sum((ROOT/p).stat().st_size for p in ['index.html','styles.css','app.js'])
-check(payload<3_000_000,'Static website resources total less than 3 MB uncompressed')
+check(payload<4_000_000,'Static website resources including local street/river/park context total less than 4 MB uncompressed')
 result={'status':'PASS','checks':len(checks),'snapshot':'2026-10-12','data_bytes':sum(p.stat().st_size for p in DATA.iterdir()),'website_bytes_upper_bound':payload,'assertions':checks}
 (ROOT/'docs/dv2/validation.json').write_text(json.dumps(result,indent=2))
 print('PASS:',len(checks),'data/provenance checks;',payload,'bytes including local libraries and fonts')

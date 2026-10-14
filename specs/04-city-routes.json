@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 420,
-  "height": 375,
+  "height": 510,
   "autosize": {
     "type": "fit",
     "contains": "padding"
@@ -47,12 +47,16 @@
     {
       "name": "routeFilter",
       "value": "All"
+    },
+    {
+      "name": "mapDetail",
+      "value": 3
     }
   ],
   "layer": [
     {
       "data": {
-        "url": "data/dv2/areas.geojson",
+        "url": "data/dv2/routes-parks.geojson",
         "format": {
           "type": "json",
           "property": "features"
@@ -60,23 +64,13 @@
       },
       "mark": {
         "type": "geoshape",
-        "fill": "#ECECE0",
-        "stroke": "#D6D8C9",
-        "strokeWidth": 0.7
-      },
-      "encoding": {
-        "tooltip": [
-          {
-            "field": "properties.featurenam",
-            "title": "CLUE analysis area",
-            "type": "nominal"
-          }
-        ]
+        "fill": "#DCE6CD",
+        "stroke": null
       }
     },
     {
       "data": {
-        "url": "data/dv2/boundary.geojson",
+        "url": "data/dv2/routes-water.geojson",
         "format": {
           "type": "json",
           "property": "features"
@@ -84,9 +78,24 @@
       },
       "mark": {
         "type": "geoshape",
-        "fill": null,
-        "stroke": "#9BA89C",
-        "strokeWidth": 1.1
+        "fill": "#B7D8DF",
+        "stroke": "#95BBC7",
+        "strokeWidth": 0.5
+      }
+    },
+    {
+      "data": {
+        "url": "data/dv2/routes-streets.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "filled": false,
+        "stroke": "#CCD0C8",
+        "strokeWidth": 0.75
       }
     },
     {
@@ -100,15 +109,27 @@
       "mark": {
         "type": "geoshape",
         "filled": false,
-        "strokeWidth": 3
+        "strokeWidth": 3.2
       },
       "encoding": {
         "color": {
           "condition": {
             "test": "routeFilter === 'All' || datum.properties.route_name === routeFilter",
-            "value": "#176C65"
+            "field": "properties.mode",
+            "type": "nominal",
+            "scale": {
+              "domain": [
+                "Walking",
+                "Cycling"
+              ],
+              "range": [
+                "#A6472D",
+                "#176C65"
+              ]
+            },
+            "legend": null
           },
-          "value": "#B4C2B9"
+          "value": "#BCC8BE"
         },
         "opacity": {
           "condition": {
@@ -161,6 +182,66 @@
             "type": "quantitative"
           }
         ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/dv2/routes-labels.json"
+      },
+      "transform": [
+        {
+          "filter": "datum.kind === 'street' && datum.priority <= mapDetail"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "font": "Manrope",
+        "fontSize": 10,
+        "color": "#68756E"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "data/dv2/routes-labels.json"
+      },
+      "transform": [
+        {
+          "filter": "datum.kind !== 'street' && datum.priority <= mapDetail"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "font": "Manrope",
+        "fontSize": 11,
+        "fontWeight": 700,
+        "color": "#304E48",
+        "dy": -11
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label"
+        }
       }
     }
   ]
