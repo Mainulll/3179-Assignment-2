@@ -43,7 +43,7 @@ separate populations, with no attraction-level attendance linkage.
 | 2 | What types of sights are recorded? | Hierarchical treemap | A genuine root → theme → subtheme layout; leaf area counts records, and parents are derived without double-counting. |
 | 3 | What years appear in the artwork catalogue? | Histogram | Adjacent quantitative ten-year intervals count 177 exact recorded years; 25 uncertain values are disclosed. |
 | 4 | How do the self-guided routes run? | Route-line map | Actual geometry preserves 34 separate components for 11 routes; cycling is dashed. |
-| 5 | How close are recorded toilets to art? | Boxplot | Five areas/169 works; horizontal straight-line distance, median, middle half and explicit min–max whiskers, with n. |
+| 5 | How close are recorded toilets to art? | Strip plot | All 169 distances in the same five areas; exact horizontal metres, deterministic non-quantitative vertical offsets, labelled medians and n. |
 | 6 | How long is each mapped route? | Bar | Zero-based length in derived kilometres, sorted ascending. |
 | 7 | Which documented activities occur together? | UpSet | Thirteen exact combinations, top frequency bars, joined recorded flags and correctly weighted activity marginals. All 532 sites remain represented. |
 | 8 | What share of state nights is for holidays? | Choropleth | Colour = holiday nights / published all-night denominator, 2024. Australia-centred equal-area projection, eight states/territories. |
@@ -52,8 +52,13 @@ separate populations, with no attraction-level attendance linkage.
 | 11 | How do 2019 and 2024 state trips compare? | Scatter | Eight state points, square plot, identical zero-based domains, equality line and Victoria highlight. Label leaders are purely display annotations. |
 
 The brief v1.2 classifies all map idioms and idioms beyond its listed basic
-families as advanced. This implementation supplies 11 families, with 8 advanced
-candidates (1, 2, 3, 4, 5, 7, 8, 9) and 3 map families. The forest chart's internal
+families as advanced. This revision supplies 11 chart families, with 7 advanced
+candidates (1, 2, 3, 4, 7, 8, 9) and 3 map families. The brief explicitly lists
+dot plots as basic, so the new strip plot is counted conservatively as basic.
+This preserves the minimum ten charts and required three map idioms, but falls
+one advanced idiom short of the HD-band target of eight. It fits the D-band
+numerical range of five to eight advanced idioms; effective application and
+other rubric rows still require assessment. Do not claim full HD coverage. The forest chart's internal
 bars and matrix count once; layers, category filters and repeated views do not
 add to the count. Effective application remains for tutor assessment; no grade
 is guaranteed.
@@ -67,9 +72,11 @@ and map/bar clicks link the route views. Reset buttons restore all records.
 Forest selection highlights an exact combination without omitting the others.
 
 Native labelled selects and buttons provide keyboard/tap equivalents. Every
-chart has an accessible image label, explanatory caption, expandable HTML data
-table, source-data link and human-readable JSON specification. Tables and the
-wide UpSet chart scroll within their own containers on phones. Category symbols
+chart has an accessible image label, explanatory caption and source attribution.
+Per-chart data-table and JSON controls were removed at the user’s request.
+The complete source data and human-readable chart specifications remain in the
+repository; `specs/README.md` indexes all eleven. The wide UpSet chart scrolls
+within its own container on phones. Category symbols
 combine shape and colour. The page honours reduced motion and never replaces
 its main chapters.
 
@@ -85,7 +92,7 @@ its main chapters.
   survey or operational-status dates.
 - Artwork coordinate validation uses raw GeoJSON point geometry; the reversed
   standalone latitude/longitude fields are never used for distance grouping.
-- Exact dates apply only to the histogram. The boxplot starts with all 202
+- Exact dates apply only to the histogram. The strip plot starts with all 202
   artwork records, then the n≥10 area rule selects 169; 33 are omitted by this
   transparent group-size rule. CLUE areas are municipal analysis units, not
   official suburbs. Toilet proximity uses 74 source inventory points, not

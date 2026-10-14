@@ -37,3 +37,54 @@
 @media(max-width:640px){.figure-heading,.map-figure .figure-heading,.forest-grid .figure-heading,.national-map .figure-heading{min-height:0!important;margin-bottom:18px}.filter-bar{display:grid;grid-template-columns:80px minmax(0,1fr)}.filter-bar select{width:100%;max-width:none}.filter-bar button{grid-column:1}.filter-bar output{grid-column:2;margin-left:0}.map-controls{display:grid;grid-template-columns:auto minmax(90px,1fr) auto}.map-controls button{grid-column:1/-1;justify-self:start}.scroll-hint{display:block}.type-key{grid-template-columns:1fr}.figure figcaption{font-size:12px}.hero{padding-top:28px}}
 
 .forest-row-key{font-size:12px;line-height:1.7;margin:0 0 12px;color:var(--muted)}
+
+/* Shared editorial panel system: one inset and rhythm at every breakpoint. */
+:root{--panel-gap:24px;--panel-inset:22px;--panel-space:20px}
+.hero{display:block;padding-block:36px 28px;max-width:1240px}
+.hero h1{font-size:clamp(30px,4vw,48px);line-height:1.15;max-width:920px}
+.hero .hero-intro{max-width:800px;margin:16px 0 12px;font-size:16px;line-height:1.75}
+.intro-meta{font-size:12px;color:var(--muted);margin:0}
+.triptych,.day-grid,.pair-grid,.forest-grid,.national-grid{gap:var(--panel-gap)}
+.triptych,.day-grid,.pair-grid{align-items:start}
+.figure,.pair-grid .figure,.forest-grid .figure{padding:24px var(--panel-inset) 20px;display:flex;flex-direction:column;min-width:0}
+.figure-heading,.pair-grid .figure-heading,.forest-grid .figure-heading,.national-map .figure-heading,.national-right>.figure .figure-heading{display:flex;flex-direction:column;gap:8px;min-height:0;margin:0 0 var(--panel-space)}
+.figure-no,.figure h3,.figure-heading p{margin:0}
+.figure h3,.pair-grid h3{font-size:24px;line-height:1.2}
+.figure-no{line-height:1.5}
+.figure-heading p{font-size:13px;line-height:1.7}
+.chart{margin:0 0 20px;flex:none}
+.figure figcaption{padding-top:14px;margin:0;font-size:13px;line-height:1.8}
+.figure figcaption a,.map-credit,.map-credit a{font-size:12px;line-height:1.8}
+.map-credit{margin:10px 0 0}
+.type-key{margin:0 0 20px;gap:8px}
+.type-key button{min-height:36px}
+.map-key{margin:0 0 12px;gap:8px 16px}
+.map-controls{margin:0 0 12px;gap:10px}
+.map-controls button,.filter-bar button,.filter-bar select,.forest-controls select{min-height:36px}
+.map-controls input{margin:0;max-width:none}
+.map-controls output{text-align:center;min-width:32px}
+.map-pan-hint{margin:0 0 12px;line-height:1.75}
+.map-scale{margin:0 0 20px;min-height:22px;line-height:1.7}
+.endpoint-note{margin:0 0 20px}
+.filter-bar,.forest-controls{margin:0 0 24px;gap:10px 12px}
+.national-right>.figure{margin-bottom:var(--panel-gap)}
+.reading-note{padding-top:24px}
+@media(max-width:980px){.national-grid{grid-template-columns:1fr}.national-map{max-width:none;width:100%}}
+@media(max-width:760px){
+  .triptych,.day-grid{display:flex;flex-direction:column}
+  .figure-heading{min-height:0!important}
+}
+@media(max-width:640px){
+  :root{--panel-gap:22px;--panel-inset:16px;--panel-space:18px}
+  .hero{padding-block:28px 24px}
+  .hero h1{font-size:32px}
+  .hero .hero-intro{font-size:14px;margin-top:14px}
+  .figure,.pair-grid .figure,.forest-grid .figure{padding:20px var(--panel-inset) 18px}
+  .figure h3,.pair-grid h3{font-size:24px}
+  .figure-heading p,.figure figcaption{font-size:12px}
+  .map-controls{gap:8px}
+  .reading-note{padding:0;margin-top:22px}
+}
+
+@media(max-width:900px){.triptych:not(.day-grid){display:flex;flex-direction:column}}
+.map-controls{max-width:560px}.map-controls input{max-width:360px}

@@ -15,45 +15,20 @@
     if (!cache.has(url)) cache.set(url, fetch(url).then(r => {if (!r.ok) throw new Error(`${r.status}: ${url}`); return r.json();}));
     return cache.get(url);
   };
-  const tableColumns = {
-    'sights': [['feature_name','Place'],['theme','Source theme'],['sub_theme','Source type'],['clue_area','CLUE area']],
-    'sight-tree': [['label','Type'],['theme','Source theme'],['official','Full source label'],['value','Records']],
-    'art-decades': [['label','Recorded decade'],['count','Artworks']],
-    'routes': [['route_name','Source route name'],['mode','Derived mode'],['geometry_length_km','Mapped km'],['parts','Components']],
-    'art-toilets': [['area','CLUE area'],['n','Artworks'],['min','Min m'],['q1','Lower quartile m'],['median','Median m'],['q3','Upper quartile m'],['max','Max m']],
-    'forest-combinations': [['combination','Recorded activities'],['sites','Sites']],
-    'state-nights': [['state','State / territory'],['holiday_nights_share_pct','Holiday share %'],['holiday_nights_000','Holiday nights (000)'],['nights_000','All nights (000)']],
-    'city-purposes': [['city','Tourism region'],['purpose','Official purpose'],['share_pct','Night share %'],['nights_000','Purpose nights (000)'],['total_nights_000','All nights (000)']],
-    'melbourne-trend': [['year','Calendar year'],['trips_m','Domestic overnight trips (m)']],
-    'state-pairs': [['state','State / territory'],['x','2019 trips (m)'],['y','2024 trips (m)'],['change_pct','Change %']]
-  };
-  const fmt = x => x == null ? 'Not recorded' : typeof x === 'number' ? Number.isInteger(x) ? x.toLocaleString('en-AU') : x.toLocaleString('en-AU',{maximumFractionDigits:3}) : x;
-  const quantile = (a,p) => {const h=(a.length-1)*p,i=Math.floor(h); return a[i]+(a[Math.min(i+1,a.length-1)]-a[i])*(h-i);};
-  function boxSummary(rows) {
-    const groups = new Map();
-    for (const row of rows) {if (!groups.has(row.area)) groups.set(row.area,[]); groups.get(row.area).push(row.metres);}
-    return [...groups].map(([area,values]) => {const a=values.sort((a,b)=>a-b);return {area,n:a.length,min:a[0],q1:quantile(a,.25),median:quantile(a,.5),q3:quantile(a,.75),max:a.at(-1)};});
+  function buildTypeKey(figure,records){
+    const key=document.createElement('div');key.className='type-key';key.setAttribute('aria-label','All sight types and record counts');
+    for(const r of records.filter(r=>r.official)){const b=document.createElement('button');b.type='button';b.textContent=`${r.label} · ${r.value}`;b.dataset.theme=r.theme;b.addEventListener('click',()=>selectType(r.id,r.theme));key.append(b);}figure.querySelector('.chart').after(key);
   }
-  function buildTable(figure, dataset, records) {
-    if (dataset === 'sight-tree') records=records.filter(r=>r.official);
-    if (dataset === 'art-toilets') records=boxSummary(records);
-    if(dataset==='sight-tree') {
-      const key=document.createElement('div');key.className='type-key';key.setAttribute('aria-label','All sight types and record counts');
-      for(const r of records){const b=document.createElement('button');b.type='button';b.textContent=`${r.label} · ${r.value}`;b.dataset.theme=r.theme;b.addEventListener('click',()=>selectType(r.id,r.theme));key.append(b);}figure.querySelector('.chart').after(key);
+  function alignPanelHeadings(){
+    const rows=new Map();
+    for(const figure of document.querySelectorAll('[data-chart]')){
+      const heading=figure.querySelector('.figure-heading');heading.style.minHeight='0px';
     }
-    const tools=document.createElement('div');tools.className='figure-tools';
-    const details=document.createElement('details');
-    const summary=document.createElement('summary');summary.textContent=`Data table (${records.length} rows)`;details.append(summary);
-    const scroll=document.createElement('div');scroll.className='table-scroll';scroll.tabIndex=0;scroll.setAttribute('role','region');scroll.setAttribute('aria-label',`${figure.querySelector('h3').textContent} data table`);
-    const table=document.createElement('table');
-    const caption=document.createElement('caption');caption.textContent=figure.querySelector('h3').textContent;table.append(caption);
-    const head=document.createElement('thead'),hrow=document.createElement('tr');
-    for(const [,label] of tableColumns[dataset]){const cell=document.createElement('th');cell.scope='col';cell.textContent=label;hrow.append(cell);}head.append(hrow);table.append(head);
-    const body=document.createElement('tbody');
-    for(const record of records){const row=document.createElement('tr');for(const [key] of tableColumns[dataset]){const cell=document.createElement('td');cell.textContent=fmt(record[key]);row.append(cell);}body.append(row);}table.append(body);scroll.append(table);details.append(scroll);
-    const raw=document.createElement('a');raw.href=`data/dv2/${dataset}.json`;raw.textContent='Source data JSON';raw.className='data-download';details.append(raw);
-    const spec=document.createElement('a');spec.href=`specs/${figure.dataset.chart}.json`;spec.textContent='Chart JSON';spec.setAttribute('aria-label',`${figure.querySelector('h3').textContent}: chart JSON specification`);
-    tools.append(details,spec);figure.append(tools);
+    for(const figure of document.querySelectorAll('[data-chart]')){
+      const heading=figure.querySelector('.figure-heading'),top=Math.round(figure.getBoundingClientRect().top+scrollY);
+      if(!rows.has(top))rows.set(top,[]);rows.get(top).push(heading);
+    }
+    for(const headings of rows.values()){if(headings.length<2)continue;const height=Math.max(...headings.map(h=>h.getBoundingClientRect().height));for(const h of headings)h.style.minHeight=height+'px';}
   }
   function addOption(select, value, text) {const o=document.createElement('option');o.value=value;o.textContent=text;select.append(o);}
   function populateTypes(sights) {
@@ -156,10 +131,11 @@
     const available=Math.max(190,Math.floor(element.parentElement.classList.contains('chart-scroll') ? 760 : element.clientWidth));
     const isVega=spec.$schema.includes('/vega/v');
     if(isVega){spec.width=name.startsWith('07')?Math.max(760,available-10):Math.max(120,available-8);if(name.startsWith('02'))spec.height=Math.max(300,Math.min(400,available*1.04));}
-    else {spec.width=available;if(name.startsWith('01')||name.startsWith('04')){spec.height=Math.min(520,Math.max(285,available*.9));spec.params.find(p=>p.name==='mapDetail').value=available<430?1:name.startsWith('01')?2:3;}if(name.startsWith('11')){const inner=Math.max(145,available-70);spec.width=inner;spec.height=inner;spec.autosize={type:'none',contains:'content'};spec.padding={left:52,right:10,top:10,bottom:55};}if(name.startsWith('08'))spec.height=Math.min(500,available*1.12);}
-    if(name.startsWith('05') && available<430){spec.encoding.x.title='Distance (m)';spec.encoding.x.axis.tickCount=3;spec.encoding.x.axis.values=[0,400,800];spec.encoding.y.axis.labelFontSize=11;spec.encoding.y.axis.labelLimit=112;}
+    else {spec.width=available;if(name.startsWith('01')||name.startsWith('04')){spec.height=Math.min(520,Math.max(285,available*.9));spec.params.find(p=>p.name==='mapDetail').value=available<430?1:name.startsWith('01')?2:3;}if(name.startsWith('11')){const inner=Math.max(145,available-70);spec.width=inner;spec.height=inner;spec.autosize={type:'none',contains:'content'};spec.padding={left:52,right:10,top:10,bottom:55};}if(name.startsWith('08'))spec.height=Math.min(440,Math.max(250,available*.9));}
+    if(name.startsWith('05') && available<430){spec.encoding.x.title='Distance (m)';spec.encoding.x.axis.values=[0,400,800];spec.encoding.y.axis.labelFontSize=11;spec.encoding.y.axis.labelLimit=112;spec.layer[2].transform[1].calculate="format(datum.median_metres, '.0f') + ' m'";}
     if(name.startsWith('06') && available<430){for(const layer of spec.layer){if(layer.encoding?.x?.scale)layer.encoding.x.scale.domain=[0,6];if(layer.encoding?.x?.axis)layer.encoding.x.axis.tickCount=4;}}
     if(name.startsWith('09') && available<430){spec.encoding.x.axis.labelFontSize=11;spec.encoding.x.axis.labelExpr="datum.label === 'Friends / relatives' ? ['Friends /','relatives'] : [datum.label]";spec.encoding.x.axis.labelLimit=85;if(available<300){spec.encoding.x.axis.labelLimit=160;spec.encoding.x.axis.labelExpr='datum.label';spec.encoding.x.axis.labelAngle=-45;spec.encoding.x.axis.labelAlign='left';spec.encoding.x.axis.labelBaseline='middle';spec.encoding.x.axis.labelPadding=18;}}
+    if(name.startsWith('08') && available<430){for(const layer of spec.layer){if(layer.encoding?.text?.field==='map_label')layer.encoding.text.field='state_abbr';}spec.layer[0].encoding.color.legend.gradientLength=Math.min(240,available-30);}
     if(['01','04','08'].includes(name.slice(0,2)))await setMapView(spec,name,available);
     try{
       const result=await vegaEmbed(element,spec,{actions:false,renderer:'svg',tooltip:{theme:'light'},defaultStyle:false});
@@ -176,7 +152,7 @@
         if(name.startsWith('07') && d.key){state.selectedCombo=state.selectedCombo===d.key?'All':d.key;$('combo-filter').value=state.selectedCombo;updateSignals();}
       });
       const svg=element.querySelector('svg');if(svg){svg.setAttribute('role','img');svg.setAttribute('aria-label',element.getAttribute('aria-label'));}
-    }catch(error){figure.dataset.ready='error';element.replaceChildren();const p=document.createElement('p');p.className='chart-error';p.textContent='This chart could not load. The data table and JSON links below are still available.';element.append(p);console.error(name,error);}
+    }catch(error){figure.dataset.ready='error';element.replaceChildren();const p=document.createElement('p');p.className='chart-error';p.textContent='This chart could not load. Source data and readable chart specifications remain in the repository.';element.append(p);console.error(name,error);}
   }
   async function init(){
     const figures=[...document.querySelectorAll('[data-chart]')];
@@ -199,16 +175,16 @@
     await Promise.all(figures.map(async figure=>{
       const name=figure.dataset.chart;
       const [spec,records]=await Promise.all([fetchJSON(`specs/${name}.json`),fetchJSON(`data/dv2/${figure.dataset.table}.json`)]);
-      specs.set(name,spec);buildTable(figure,figure.dataset.table,records);await render(figure);
+      specs.set(name,spec);if(name.startsWith('02'))buildTypeKey(figure,records);await render(figure);
     }));
     const refreshStatus=()=>{
     const errors=figures.filter(f=>f.dataset.ready!=='true');
     document.body.dataset.chartsReady=String(figures.length-errors.length);
-    $('load-status').textContent=errors.length?`${errors.length} charts could not load. Use their data tables.`:'All eleven charts have loaded. Use the labelled filters, source links and data tables.';
+    $('load-status').textContent=errors.length?`${errors.length} charts could not load. Try refreshing the page.`:'All eleven charts have loaded. Use the labelled filters, source links and map controls.';
     };
-    refreshStatus();
+    alignPanelHeadings();refreshStatus();
     let timer;let lastWidth=window.innerWidth;
-    window.addEventListener('resize',()=>{if(window.innerWidth===lastWidth)return;lastWidth=window.innerWidth;clearTimeout(timer);timer=setTimeout(async()=>{document.body.dataset.chartsReady='0';$('load-status').textContent='Resizing charts…';await Promise.all(figures.map(render));refreshStatus();},180);});
+    window.addEventListener('resize',()=>{if(window.innerWidth===lastWidth)return;lastWidth=window.innerWidth;clearTimeout(timer);timer=setTimeout(async()=>{document.body.dataset.chartsReady='0';$('load-status').textContent='Resizing charts…';await Promise.all(figures.map(render));alignPanelHeadings();refreshStatus();},180);});
   }
   init().catch(error=>{console.error('Page setup failed',error);$('load-status').className='notice wrap';$('load-status').textContent='The charts could not be prepared. Try refreshing the page, or open the source files from the links below.';});
 })();

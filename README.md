@@ -1,4 +1,4 @@
-# Melbourne and beyond
+# Local tourism in Melbourne and Victoria
 
 FIT3179 Data Visualisation 2 · Topic 23: Local Tourism Attractions · Minul Lokuliyana
 
@@ -63,3 +63,18 @@ City and Victorian data are attributed at each map. National estimates are Touri
 ## Assessment checklist
 
 The brief requires a public GitHub Pages assessment link in addition to readable chart JSON in the repository. GitHub Pages is not currently enabled for this new repository; Vercel alone should not be represented as meeting that requirement without a tutor exception. The student's actual hand-drawn sketch PDF, tutor feedback and submission template also remain part of the assessment process; generated reference sketches are not hand-drawn student work. Review and understand the final code, data and design, and follow the tutor's confirmed AI-use requirements.
+
+## Current presentation revision
+
+The introductory title is factual and compact. All panels use one responsive
+spacing and typography system; neighbouring headings align using measured
+content rather than arbitrary card heights. Per-chart table/JSON controls have
+been removed. Readable JSON remains indexed in [specs/README.md](specs/README.md);
+each visible figure retains source attribution.
+
+Chart 05 is now a deterministic strip plot of the same 169 artwork distances
+in the same five CLUE areas, with exact x positions, medians and sample counts.
+The brief calls dot plots basic: this lowers the conservative advanced count
+from eight to seven, while retaining eleven charts and three map idioms.
+It therefore does not meet the HD row’s eight-advanced-idiom target as written.
+See `docs/dv2/RUBRIC_REVIEW.md` for the direct brief check and limitations.

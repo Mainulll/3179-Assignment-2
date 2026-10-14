@@ -1,0 +1,11 @@
+# Brief check for the presentation revision
+
+Checked directly against the local original `FIT3179 Data Visualisation 2_v1.2.pdf`, 14 October 2026.
+
+- Page 1 requires Vega-Lite or Vega, a publicly accessible page hosted on the student’s GitHub account, and human-readable JSON for each chart/map easily accessible in the same repository. Per-chart dropdowns are not required. All eleven readable JSON specifications remain, indexed in `specs/README.md`. Vercel hosting alone does not establish the GitHub hosting requirement; GitHub Pages is still a separate unresolved publication step.
+- The brief requires at least three map idioms, and minimum ten charts. The revision retains three distinct map idioms and eleven distinct chart families. Small multiples count once.
+- Page 5’s HD idioms row requires at least eight advanced idioms across more than ten charts. Its footnote explicitly lists dot plots among basic idioms. Chart 05’s requested replacement is therefore counted as a basic strip plot, not renamed advanced. Conservative advanced count: seven (point map, hierarchical treemap, histogram, route map, UpSet, choropleth, heatmap). This is one short of that HD target. The D row’s numeric range is five to eight advanced idioms; no grade is guaranteed.
+- A new chart has not been added merely to inflate the count. Resolving the advanced-count trade-off needs a substantively useful additional advanced idiom or tutor guidance. The current replacement prioritises the user’s requested clarity while documenting this limit.
+- Layout and typography were checked at 320, 390, 768, 1024 and 1280 px. Metadata and source dates remain visible. Removing data tables reduces the accessible tabular fallback; labelled controls, mark tooltips, captions, repository data and specifications remain.
+- Chart 05 retains all 169 selected records, five areas and the same n≥10 group inclusion rule; 33 of 202 source artworks remain outside this view, disclosed in its caption. Distances use 74 recorded toilets and are straight-line, not walking distance or access claims. No density smoothing is introduced.
+- Old municipal inventories and the 2024 NVS series remain explicitly dated. Freshness, the physical sketch, tutor feedback and interview requirements are not established by this visual revision.

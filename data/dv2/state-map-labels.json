@@ -1,0 +1,74 @@
+[
+  {
+    "state_code_2021": "1",
+    "state_abbr": "NSW",
+    "state_name": "New South Wales",
+    "longitude": 146.720328,
+    "latitude": -32.479203,
+    "source": "Display anchor: maximum-clearance interior point of largest ABS polygon; ACT uses original ABS reference point. Labels are not destinations.",
+    "map_label": "New South\nWales"
+  },
+  {
+    "state_code_2021": "2",
+    "state_abbr": "VIC",
+    "state_name": "Victoria",
+    "longitude": 142.622947,
+    "latitude": -36.710014,
+    "source": "Display anchor: maximum-clearance interior point of largest ABS polygon; ACT uses original ABS reference point. Labels are not destinations.",
+    "map_label": "VIC"
+  },
+  {
+    "state_code_2021": "3",
+    "state_abbr": "QLD",
+    "state_name": "Queensland",
+    "longitude": 145.150512,
+    "latitude": -23.806859,
+    "source": "Display anchor: maximum-clearance interior point of largest ABS polygon; ACT uses original ABS reference point. Labels are not destinations.",
+    "map_label": "Queensland"
+  },
+  {
+    "state_code_2021": "4",
+    "state_abbr": "SA",
+    "state_name": "South Australia",
+    "longitude": 135.933296,
+    "latitude": -29.471757,
+    "source": "Display anchor: maximum-clearance interior point of largest ABS polygon; ACT uses original ABS reference point. Labels are not destinations.",
+    "map_label": "South\nAustralia"
+  },
+  {
+    "state_code_2021": "5",
+    "state_abbr": "WA",
+    "state_name": "Western Australia",
+    "longitude": 121.361037,
+    "latitude": -26.746022,
+    "source": "Display anchor: maximum-clearance interior point of largest ABS polygon; ACT uses original ABS reference point. Labels are not destinations.",
+    "map_label": "Western\nAustralia"
+  },
+  {
+    "state_code_2021": "6",
+    "state_abbr": "TAS",
+    "state_name": "Tasmania",
+    "longitude": 146.50132,
+    "latitude": -42.138836,
+    "source": "Display anchor: maximum-clearance interior point of largest ABS polygon; ACT uses original ABS reference point. Labels are not destinations.",
+    "map_label": "TAS"
+  },
+  {
+    "state_code_2021": "7",
+    "state_abbr": "NT",
+    "state_name": "Northern Territory",
+    "longitude": 133.499,
+    "latitude": -21.2675,
+    "source": "Display anchor: maximum-clearance interior point of largest ABS polygon; ACT uses original ABS reference point. Labels are not destinations.",
+    "map_label": "Northern\nTerritory"
+  },
+  {
+    "state_code_2021": "8",
+    "state_abbr": "ACT",
+    "state_name": "Australian Capital Territory",
+    "longitude": 149.081039,
+    "latitude": -35.366727,
+    "source": "Display anchor: maximum-clearance interior point of largest ABS polygon; ACT uses original ABS reference point. Labels are not destinations.",
+    "map_label": "ACT"
+  }
+]

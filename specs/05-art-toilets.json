@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 420,
-  "height": 325,
+  "height": 350,
   "autosize": {
     "type": "fit",
     "contains": "padding"
@@ -39,58 +39,188 @@
       "color": "#203C3A"
     }
   },
-  "description": "169 of all 202 artwork records: five CLUE areas with at least ten records each. Min–max whiskers, median, and linearly interpolated quartiles. Distances use 74 recorded toilet locations and are straight-line, not walking distances.",
+  "description": "All 169 selected artwork distances in the same five CLUE areas; no observations omitted. Exact x distances in metres; deterministic vertical offsets carry no quantity. A directly labelled median summarises each area. Straight-line, not walking distance.",
   "data": {
     "url": "data/dv2/art-toilets.json"
   },
-  "mark": {
-    "type": "boxplot",
-    "extent": "min-max",
-    "size": 22,
-    "color": "#176C65",
-    "median": {
-      "color": "#FFFDF8",
-      "strokeWidth": 2
+  "transform": [
+    {
+      "calculate": "datum.area_label === \"Melbourne CBD · n=45\" ? 0 : datum.area_label === \"Melbourne remainder · n=45\" ? 1 : datum.area_label === \"East Melbourne · n=32\" ? 2 : datum.area_label === \"Carlton · n=16\" ? 3 : datum.area_label === \"Docklands · n=31\" ? 4 : 0",
+      "as": "area_row"
     },
-    "ticks": true
-  },
+    {
+      "calculate": "datum.area_row + ((toNumber(datum.asset_id) % 7) - 3) * 0.065",
+      "as": "dot_row"
+    }
+  ],
   "encoding": {
     "x": {
       "field": "metres",
       "type": "quantitative",
       "title": "Straight-line distance (m)",
       "scale": {
-        "zero": true
+        "domain": [
+          0,
+          900
+        ],
+        "nice": false
       },
       "axis": {
-        "tickCount": 4
+        "values": [
+          0,
+          200,
+          400,
+          600,
+          800
+        ]
       }
     },
     "y": {
-      "field": "area_label",
-      "type": "nominal",
+      "field": "dot_row",
+      "type": "quantitative",
       "title": null,
-      "sort": [
-        "Melbourne CBD · n=45",
-        "Melbourne remainder · n=45",
-        "East Melbourne · n=32",
-        "Carlton · n=16",
-        "Docklands · n=31"
-      ],
+      "scale": {
+        "domain": [
+          4.55,
+          -0.55
+        ],
+        "nice": false
+      },
       "axis": {
+        "values": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "grid": false,
+        "ticks": false,
         "labelFontSize": 12,
-        "labelLimit": 125,
-        "labelLineHeight": 14,
-        "labelExpr": "datum.label === 'Melbourne remainder · n=45' ? ['Melbourne remainder','n=45'] : split(datum.label, ' · ')"
+        "labelLimit": 140,
+        "labelLineHeight": 15,
+        "labelExpr": "datum.value === 0 ? ['Melbourne CBD','n=45'] : datum.value === 1 ? ['Melbourne remainder','n=45'] : datum.value === 2 ? ['East Melbourne','n=32'] : datum.value === 3 ? ['Carlton','n=16'] : ['Docklands','n=31']"
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 26,
+        "opacity": 0.65,
+        "color": "#176C65"
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "title",
+            "title": "Artwork",
+            "type": "nominal"
+          },
+          {
+            "field": "area",
+            "title": "CLUE area",
+            "type": "nominal"
+          },
+          {
+            "field": "metres",
+            "title": "Straight-line metres",
+            "type": "quantitative",
+            "format": ".1f"
+          }
+        ]
       }
     },
-    "tooltip": [
-      {
-        "field": "metres",
-        "title": "Distance (m)",
-        "type": "quantitative",
-        "format": ".1f"
+    {
+      "transform": [
+        {
+          "aggregate": [
+            {
+              "op": "median",
+              "field": "metres",
+              "as": "median_metres"
+            }
+          ],
+          "groupby": [
+            "area_row",
+            "area_label"
+          ]
+        }
+      ],
+      "mark": {
+        "type": "tick",
+        "orient": "vertical",
+        "size": 31,
+        "thickness": 3,
+        "color": "#A6472D",
+        "opacity": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "median_metres",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "area_row",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "area_label",
+            "title": "Area / sample",
+            "type": "nominal"
+          },
+          {
+            "field": "median_metres",
+            "title": "Median metres",
+            "type": "quantitative",
+            "format": ".1f"
+          }
+        ]
       }
-    ]
-  }
+    },
+    {
+      "transform": [
+        {
+          "aggregate": [
+            {
+              "op": "median",
+              "field": "metres",
+              "as": "median_metres"
+            }
+          ],
+          "groupby": [
+            "area_row"
+          ]
+        },
+        {
+          "calculate": "format(datum.median_metres, '.0f') + ' m median'",
+          "as": "median_label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "dy": -25,
+        "align": "left",
+        "fontSize": 11,
+        "fontWeight": 700,
+        "color": "#A6472D"
+      },
+      "encoding": {
+        "x": {
+          "field": "median_metres",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "area_row",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "median_label"
+        }
+      }
+    }
+  ]
 }

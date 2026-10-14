@@ -28,3 +28,14 @@ for(const filename of fs.readdirSync(path.join(root,'specs')).filter(f=>f.endsWi
   fs.writeFileSync(path.join(output,filename.replace('.json','.svg')),svg);
   console.log('PASS',filename,...warnings.map(x=>'WARN: '+x));view.finalize();
 }
+// Display-only label anchors must remain within their own state polygons.
+const {geoContains}=await import('d3-geo');
+const labels=JSON.parse(fs.readFileSync(path.join(root,'data/dv2/state-map-labels.json')));
+for(const label of labels){
+ const feature=states.features.find(f=>f.properties.state===label.state_name);
+ if(!feature || !geoContains(feature,[label.longitude,label.latitude]))throw new Error('State label outside boundary: '+label.state_name);
+}
+const distances=JSON.parse(fs.readFileSync(path.join(root,'data/dv2/art-toilets.json')));
+const strip=JSON.parse(fs.readFileSync(path.join(root,'specs/05-art-toilets.json')));
+if(distances.length!==169 || new Set(distances.map(d=>d.area)).size!==5 || strip.encoding.x.field!=='metres' || strip.transform.some(t=>t.filter))throw new Error('Strip plot coverage or exact distance encoding changed');
+console.log('PASS interior state labels and all 169 exact-distance strip records');

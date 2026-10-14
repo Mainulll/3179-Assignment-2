@@ -74,20 +74,24 @@
         "color": {
           "field": "properties.holiday_nights_share_pct",
           "type": "quantitative",
-          "title": "Holiday share (%)",
+          "title": "Holiday nights / all nights (%)",
           "scale": {
             "domain": [
               0,
               100
             ],
             "range": [
-              "#EDF1D7",
-              "#0B655E"
+              "#F0F7F6",
+              "#B8DAD8",
+              "#6AA9AC",
+              "#2F787F",
+              "#104951"
             ]
           },
           "legend": {
             "orient": "bottom",
-            "gradientLength": 210,
+            "gradientLength": 240,
+            "gradientThickness": 14,
             "values": [
               0,
               25,
@@ -95,8 +99,11 @@
               75,
               100
             ],
-            "format": ".0f",
-            "titleFontSize": 12
+            "labelExpr": "datum.value + '%'",
+            "titleFontSize": 12,
+            "labelFontSize": 12,
+            "titlePadding": 10,
+            "labelPadding": 6
           }
         },
         "tooltip": [
@@ -128,7 +135,7 @@
     },
     {
       "data": {
-        "url": "data/dv2/state-labels.json"
+        "url": "data/dv2/state-map-labels.json"
       },
       "transform": [
         {
@@ -138,10 +145,10 @@
       "mark": {
         "type": "text",
         "fontSize": 12,
-        "fontWeight": 700,
-        "color": "#203C3A",
-        "stroke": "#FFFDF8",
-        "strokeWidth": 0.25
+        "fontWeight": 800,
+        "lineBreak": "\n",
+        "lineHeight": 14,
+        "color": "#163E43"
       },
       "encoding": {
         "longitude": {
@@ -153,13 +160,13 @@
           "type": "quantitative"
         },
         "text": {
-          "field": "state_abbr"
+          "field": "map_label"
         }
       }
     },
     {
       "data": {
-        "url": "data/dv2/state-labels.json"
+        "url": "data/dv2/state-map-labels.json"
       },
       "transform": [
         {
@@ -185,7 +192,7 @@
     },
     {
       "data": {
-        "url": "data/dv2/state-labels.json"
+        "url": "data/dv2/state-map-labels.json"
       },
       "transform": [
         {
@@ -196,9 +203,9 @@
         "type": "text",
         "align": "left",
         "dx": 10,
-        "dy": 14,
+        "dy": 16,
         "fontSize": 12,
-        "fontWeight": 700,
+        "fontWeight": 800,
         "color": "#A6472D"
       },
       "encoding": {
