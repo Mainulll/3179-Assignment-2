@@ -19,3 +19,12 @@
 @media(max-width:760px){.triptych{display:flex;flex-direction:column}.triptych>.map-figure{width:100%}.day-grid{display:flex;flex-direction:column}.type-key{gap:5px}.type-key button{font-size:11px;padding:6px}}
 
 .map-key i.key-walk{border-top-color:var(--clay)}
+
+/* Let the histogram use the formerly empty left column. */
+.triptych>.map-figure{grid-row:auto}.triptych>.figure:last-child{grid-column:1/-1}
+.map-controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:12px 0;font-size:12px}.map-controls label{font-weight:700}.map-controls input{min-width:95px;flex:1;accent-color:var(--teal)}.map-controls output{min-width:36px;font-variant-numeric:tabular-nums}.map-controls button{padding:5px 9px;border:1px solid var(--teal);background:transparent;color:var(--teal);border-radius:3px;font-size:12px}.map-scale{display:flex;align-items:center;gap:9px;margin:8px 0 14px;font-size:11px;color:var(--muted)}.map-scale>span:first-child{display:inline-block;height:6px;border:1.5px solid var(--ink);border-top:0;flex-shrink:0}.endpoint-note{font-size:12px;line-height:1.65;color:var(--muted);margin:12px 0 16px}
+
+/* Consistent readable supporting text and balanced section spacing. */
+.figure{padding:24px 22px 20px}.figure-heading{min-height:96px}.figure-heading p{font-size:13px;line-height:1.7}.figure-no{font-size:11px;letter-spacing:.1em}.figure-tools,.figure summary,.figure-tools>a{font-size:12px}.map-key{font-size:12px}.section-note,.methods-grid,.method-body{font-size:13px}.reading-note .fine-print{font-size:12px}.footer{font-size:12px}.hero-footer{font-size:12px}.chapter{padding-block:64px 48px}.triptych,.day-grid,.pair-grid{gap:24px}.national-grid{grid-template-columns:1fr 1.25fr;gap:24px}.figure-tools{flex-wrap:wrap}.map-controls input{max-width:360px}
+@media(max-width:980px){.national-grid{grid-template-columns:1fr}.national-right{width:100%}.national-right>.figure .figure-heading{min-height:82px}.pair-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.figure{padding:20px 16px 18px}.figure-heading p,.section-note,.methods-grid,.method-body{font-size:12px}.figure-no{font-size:10px}.hero-footer{font-size:11px}.chapter{padding-block:44px 32px}.figure-tools,.figure summary,.figure-tools>a{font-size:11px}.pair-grid{display:flex}.map-controls{gap:8px}.map-controls input{min-width:100px}.map-scale{font-size:11px}}

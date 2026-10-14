@@ -27,7 +27,7 @@ npm run build:specs
 npm run check
 ```
 
-The check validates 68 data/provenance assertions and renders all eleven chart specifications. Detailed source definitions and limitations are in `docs/dv2/IMPLEMENTATION.md`, `docs/dv2/provenance.json` and `docs/dv2/MAP_CONTEXT.md`.
+The check validates 68 data/provenance assertions, renders all eleven chart specifications, and checks exact route endpoints, grouped marker completeness, zoom projection and the geographic scale cue. Detailed source definitions and limitations are in `docs/dv2/IMPLEMENTATION.md`, `docs/dv2/provenance.json` and `docs/dv2/MAP_CONTEXT.md`.
 
 ## Update the live website
 
@@ -56,7 +56,7 @@ Both Melbourne maps use locally stored, clipped vector context under CC BY 4.0:
 - State of Victoria Vicmap Hydro water-area polygons: extract 14 October 2026.
 - Victorian Planning Authority historical open-space polygons: unmaintained inventory, used for background orientation, not current access claims.
 
-Map transformation code, extraction hashes, source URLs and licence links are documented in `docs/dv2/MAP_CONTEXT.md` and `docs/dv2/map_context.json`. Street/place labels retain source coordinates or derive positions along the source lines. Routes retain their original gaps; these maps do not provide navigation directions.
+Map transformation code, extraction hashes, source URLs and licence links are documented in `docs/dv2/MAP_CONTEXT.md` and `docs/dv2/map_context.json`. Street/place labels retain source coordinates or derive positions along the source lines. Both maps have 1–4× zoom sliders, reset controls and an approximate scale bar at the map centre. At zoom above 1×, a selected route becomes the view centre. Selecting a route reveals its source-line start/end markers; nearby endpoints share a marker with every original label in its tooltip. These endpoints are not official itinerary starts or finishes. Routes retain their original gaps; these maps do not provide navigation directions.
 
 City and Victorian data are attributed at each map. National estimates are Tourism Research Australia NVS; state boundaries are ABS 2021. Local font and Vega licences are in `vendor/`. Earlier exploratory research remains in `data/` and `docs/` for reference; the page uses `data/dv2/`.
 

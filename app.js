@@ -4,6 +4,7 @@
   const views = new Map();
   const specs = new Map();
   const cache = new Map();
+  const mapZoom = {'01':1,'04':1};
   const state = {themeFilter:'All',subFilter:'All',routeFilter:'All',selectedCombo:'All'};
   const $ = id => document.getElementById(id);
   const fetchJSON = async url => {
@@ -59,6 +60,7 @@
   }
   async function updateSignals() {
     await Promise.all([...views.values()].map(async view=>{for(const key of Object.keys(state)){try{view.signal(key,state[key]);}catch{ /* This view does not use the shared key. */ }}await view.runAsync();}));
+    if(mapZoom['04']>1){const f=document.querySelector('[data-chart="04-city-routes"]');if(f)await render(f);}
     const sights=await fetchJSON('data/dv2/sights.json');
     const n=sights.filter(s=>(state.themeFilter==='All'||s.theme===state.themeFilter)&&(state.subFilter==='All'||s.sub_theme===state.subFilter)).length;
     $('sight-count').textContent=`${n} of 94 selected records`;
@@ -72,6 +74,28 @@
     fetchJSON('data/dv2/sights.json').then(s=>{populateTypes(s);updateSignals();});
   }
   function selectRoute(route) {state.routeFilter=state.routeFilter===route?'All':route;$('route-filter').value=state.routeFilter;updateSignals();}
+  const mercatorY=latitude=>Math.log(Math.tan(Math.PI/4+latitude*Math.PI/360));
+  async function setMapView(spec,name,available) {
+    const id=name.slice(0,2),zoom=mapZoom[id];
+    const bounds=id==='01'?[144.903,-37.845,144.994,-37.778]:[144.930,-37.835,144.988,-37.792];
+    let longitude=(bounds[0]+bounds[2])/2,latitude=(bounds[1]+bounds[3])/2;
+    if(id==='04' && zoom>1 && state.routeFilter!=='All'){
+      const walks=await fetchJSON('data/dv2/walks.geojson');
+      const points=walks.features.filter(f=>f.properties.route_name===state.routeFilter).flatMap(f=>f.geometry.coordinates);
+      longitude=(Math.min(...points.map(p=>p[0]))+Math.max(...points.map(p=>p[0])))/2;
+      latitude=(Math.min(...points.map(p=>p[1]))+Math.max(...points.map(p=>p[1])))/2;
+    }
+    spec.width=available-10;spec.autosize={type:'none',contains:'content'};spec.padding=5;
+    const base=Math.min((spec.width-12)/((bounds[2]-bounds[0])*Math.PI/180),(spec.height-12)/(mercatorY(bounds[3])-mercatorY(bounds[1])));
+    const scale=base*zoom;
+    spec.projection={type:'mercator',center:[longitude,latitude],scale,translate:[spec.width/2,spec.height/2]};
+    for(const layer of spec.layer){layer.mark={...layer.mark,clip:true};}
+    const pixelsPerKm=scale/(6371.0088*Math.cos(latitude*Math.PI/180));
+    const km=[2,1,.5,.2,.1].find(k=>k*pixelsPerKm<=95)||.05;
+    $('scale-bar-'+id).style.width=(km*pixelsPerKm)+'px';
+    $('scale-label-'+id).textContent=`≈ ${km>=1?km+' km':Math.round(km*1000)+' m'} at map centre`;
+    $('zoom-value-'+id).textContent=zoom+'×';
+  }
   async function render(figure) {
     const name=figure.dataset.chart, element=figure.querySelector('.chart');
     if(views.has(name))views.get(name).finalize();
@@ -80,6 +104,7 @@
     const isVega=spec.$schema.includes('/vega/v');
     if(isVega){spec.width=name.startsWith('07')?Math.max(760,available-10):Math.max(120,available-8);if(name.startsWith('02'))spec.height=Math.max(300,Math.min(400,available*1.04));}
     else {spec.width=available;if(name.startsWith('01')||name.startsWith('04')){spec.height=Math.min(520,Math.max(285,available*.9));spec.params.find(p=>p.name==='mapDetail').value=available<430?1:name.startsWith('01')?2:3;}if(name.startsWith('11')){const inner=Math.max(145,available-70);spec.width=inner;spec.height=inner;spec.autosize={type:'none',contains:'content'};spec.padding={left:52,right:10,top:10,bottom:55};}if(name.startsWith('08'))spec.height=Math.min(500,available*1.12);}
+    if(name.startsWith('01')||name.startsWith('04'))await setMapView(spec,name,available);
     try{
       const result=await vegaEmbed(element,spec,{actions:false,renderer:'svg',tooltip:{theme:'light'},defaultStyle:false});
       const view=result.view;views.set(name,view);
@@ -102,6 +127,11 @@
     await document.fonts.ready;
     const [sights,routes,combos]=await Promise.all(['sights','routes','forest-combinations'].map(n=>fetchJSON(`data/dv2/${n}.json`)));
     populateTypes(sights);
+    for(const id of ['01','04']){
+      const figure=document.querySelector(`[data-chart^="${id}"]`);let zoomTimer;
+      $('zoom-'+id).addEventListener('input',e=>{mapZoom[id]=Number(e.target.value);$('zoom-value-'+id).textContent=mapZoom[id]+'×';clearTimeout(zoomTimer);zoomTimer=setTimeout(()=>render(figure),100);});
+      $('zoom-reset-'+id).addEventListener('click',()=>{clearTimeout(zoomTimer);mapZoom[id]=1;$('zoom-'+id).value='1';render(figure);});
+    }
     for(const r of [...routes].sort((a,b)=>a.geometry_length_km-b.geometry_length_km))addOption($('route-filter'),r.route_name,`${r.route_name} (${r.mode.toLowerCase()})`);
     for(const c of combos)addOption($('combo-filter'),c.key,`${c.combination} · ${c.sites} ${c.sites===1?"site":"sites"}`);
     $('theme-filter').addEventListener('change',e=>{state.themeFilter=e.target.value;state.subFilter='All';populateTypes(sights);updateSignals();});

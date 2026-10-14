@@ -1,0 +1,27 @@
+import fs from 'node:fs';
+import vm from 'node:vm';
+import * as vega from 'vega';
+import * as vl from 'vega-lite';
+const endpoints=JSON.parse(fs.readFileSync('data/dv2/route-endpoints.json'));
+const groups=JSON.parse(fs.readFileSync('data/dv2/route-endpoint-groups.json'));
+const walks=JSON.parse(fs.readFileSync('data/dv2/walks.geojson')).features;
+for(const f of walks){
+ const rows=endpoints.filter(r=>r.part_id===f.properties.part_id && r.route_name===f.properties.route_name),points=f.geometry.coordinates;
+ if(JSON.stringify([rows[0].longitude,rows[0].latitude])!==JSON.stringify(points[0]) || JSON.stringify([rows.at(-1).longitude,rows.at(-1).latitude])!==JSON.stringify(points.at(-1)))throw new Error('Endpoint changed: '+f.properties.part_id);
+}
+if(groups.reduce((n,g)=>n+g.endpoint_count,0)!==endpoints.length)throw new Error('Endpoint display groups lost source labels');
+console.log('PASS exact endpoints for all 34 components; display groups retain all 68 labels');
+const code=fs.readFileSync('app.js','utf8');
+const viewCode=code.slice(code.indexOf('  const mercatorY='),code.indexOf('  async function render(figure)'));
+const nodes={};
+const context={Math, mapZoom:{'01':1,'04':3},state:{routeFilter:'Fitzroy Gardens'},fetchJSON:async p=>JSON.parse(fs.readFileSync(p)), $:id=>nodes[id]??=( {style:{},textContent:''})};
+vm.createContext(context);vm.runInContext(viewCode+'\n globalThis.testMapView=setMapView;',context);
+const spec=JSON.parse(fs.readFileSync('specs/04-city-routes.json'));spec.height=520;
+await context.testMapView(spec,'04-city-routes',944);
+if(nodes['zoom-value-04'].textContent!=='3×'|| !nodes['scale-label-04'].textContent.includes('200 m'))throw new Error('Zoom scale cue is inconsistent');
+const view=new vega.View(vega.parse(vl.compile(spec).spec),{renderer:'none',loader:vega.loader({baseURL:process.cwd()+'/'})});
+await view.runAsync();const before=await view.toSVG();
+view.signal('routeFilter','Fitzroy Gardens');await view.runAsync();const after=await view.toSVG();
+if(after===before || !after.includes('>A/B</text>') || after.includes('NaN'))throw new Error('Selected route endpoint rendering failed');
+fs.writeFileSync('output/chart-svg/selected-route-zoom.svg',after);view.finalize();
+console.log('PASS production zoom projection at 3×, 200 m scale cue, selected route endpoint SVG');

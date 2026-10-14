@@ -243,6 +243,86 @@
           "field": "label"
         }
       }
+    },
+    {
+      "data": {
+        "url": "data/dv2/route-endpoint-groups.json"
+      },
+      "transform": [
+        {
+          "filter": "routeFilter !== 'All' && datum.route_name === routeFilter"
+        }
+      ],
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 330,
+        "fill": "#FFFDF8",
+        "stroke": "#203C3A",
+        "strokeWidth": 1.4
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "route_name",
+            "title": "Route",
+            "type": "nominal"
+          },
+          {
+            "field": "endpoints",
+            "title": "Source endpoints",
+            "type": "nominal"
+          },
+          {
+            "field": "kind",
+            "title": "Endpoint",
+            "type": "nominal"
+          },
+          {
+            "field": "meaning",
+            "title": "Interpretation",
+            "type": "nominal"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/dv2/route-endpoint-groups.json"
+      },
+      "transform": [
+        {
+          "filter": "routeFilter !== 'All' && datum.route_name === routeFilter"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "font": "Manrope",
+        "fontSize": 9,
+        "fontWeight": 800,
+        "color": "#203C3A"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label"
+        }
+      }
     }
   ]
 }

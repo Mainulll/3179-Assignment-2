@@ -30,3 +30,9 @@ The city view covers all 94 points with padding. The route view covers all 34 ac
 Street-label anchors are midpoints along selected source lines. Familiar place labels use the source sight coordinates and short display names. Labels and context remain visible when sights/routes are filtered. Both maps use Mercator; the route legend distinguishes solid clay walking routes from dashed teal cycling. Route gaps are never connected.
 
 The static payload budget increased from 3 to 4 MB to accommodate the local vector context; no remote tiles are required. Validation continues to check the budget and all original data invariants.
+
+## Zoom and source endpoints
+
+Both maps share one Mercator projection across all layers at each zoom level. Sliders range from 1× to 4×; Reset view returns to 1×. A selected route supplies the view centre above 1×. The horizontal scale bar is an approximate east–west distance at that latitude, calculated with Earth mean radius 6371.0088 km. It is not a walking-distance estimate.
+
+`build_route_endpoints.py` retains first/last coordinates of all 34 supplied LineStrings (68 endpoints in this snapshot). A/B indicate source-line start/end, not official itinerary direction. Exactly closed components use one loop marker. Nearby endpoints within 15 m are grouped for legibility, anchored at a real source coordinate; all source labels remain in the tooltip and raw endpoint file. Components are never joined or reordered into an itinerary.
