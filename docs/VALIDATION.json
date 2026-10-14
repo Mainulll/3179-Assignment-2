@@ -1,0 +1,17 @@
+{
+  "result": "passed",
+  "reproducible_files": 12,
+  "same_input_rebuild_identical": true,
+  "checks": [
+    "Preparation assertions passed",
+    "All JSON parses",
+    "Unresolved regions retain null ratios",
+    "Input and output hash manifests written",
+    "Second build produced byte-identical data and audit files"
+  ],
+  "not_yet_checked": [
+    "Rendered charts and map geometry appearance",
+    "Browser performance and accessibility",
+    "Final geographic-vintage confirmation and unresolved names"
+  ]
+}

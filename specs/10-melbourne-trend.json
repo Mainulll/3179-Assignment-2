@@ -1,0 +1,143 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 420,
+  "height": 260,
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "config": {
+    "background": "transparent",
+    "view": {
+      "stroke": null
+    },
+    "font": "Manrope",
+    "axis": {
+      "labelFontSize": 13,
+      "titleFontSize": 13,
+      "titleFontWeight": 500,
+      "labelColor": "#52635F",
+      "titleColor": "#203C3A",
+      "domain": false,
+      "tickColor": "#DDD6C9",
+      "gridColor": "#E8E2D7",
+      "labelPadding": 7,
+      "titlePadding": 12
+    },
+    "legend": {
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "labelColor": "#52635F",
+      "titleColor": "#203C3A"
+    },
+    "text": {
+      "font": "Manrope",
+      "color": "#203C3A"
+    },
+    "title": {
+      "font": "Fraunces",
+      "color": "#203C3A"
+    }
+  },
+  "description": "Six annual published historical NVS observations for Melbourne tourism region, 2019–2024. Domestic overnight trips in millions, not visitors.",
+  "data": {
+    "url": "data/dv2/melbourne-trend.json"
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "color": "#176C65",
+        "strokeWidth": 3,
+        "point": {
+          "filled": true,
+          "size": 45,
+          "color": "#176C65"
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              2019,
+              2024
+            ],
+            "nice": false
+          },
+          "axis": {
+            "values": [
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024
+            ],
+            "format": "d",
+            "labelFontSize": 12
+          },
+          "title": null
+        },
+        "y": {
+          "field": "trips_m",
+          "type": "quantitative",
+          "title": "Overnight trips (m)",
+          "scale": {
+            "domain": [
+              0,
+              12.5
+            ]
+          },
+          "axis": {
+            "tickCount": 4
+          }
+        },
+        "tooltip": [
+          {
+            "field": "year",
+            "title": "Calendar year",
+            "type": "quantitative",
+            "format": "d"
+          },
+          {
+            "field": "trips_m",
+            "title": "Overnight trips (millions)",
+            "type": "quantitative",
+            "format": ".3f"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year === 2024"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "dx": -5,
+        "dy": -15,
+        "align": "right",
+        "fontSize": 13,
+        "fontWeight": 700,
+        "color": "#176C65"
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "trips_m",
+          "type": "quantitative"
+        },
+        "text": {
+          "value": "10.4m"
+        }
+      }
+    }
+  ]
+}

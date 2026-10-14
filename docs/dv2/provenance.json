@@ -1,0 +1,120 @@
+{
+  "snapshot": "2026-10-12",
+  "research_library_file_id": "libfile_23d2fc0bbf0081919239d32087ac33a2",
+  "research_zip_sha256": "69ade35667571983da598f4f983132485a390e2f74dea31414291176d770ff47",
+  "geometry_transform": "ABS state polygon winding normalized for D3/Vega; numerically degenerate parts omitted only from display geometry. See geometry_validation.json. No tourism value changes.",
+  "inputs": {
+    "melbourne/clean/walks.geojson": "04945c39c03cc932668828e66e3c762386f03a83510f9369c842d2458c695c08",
+    "melbourne/clean/public_art_assets.csv": "8753e1811d725b3cb9e8003dbadc7407b9c7ee3913259845ceadcf390d189195",
+    "melbourne/clean/outdoor_artworks.csv": "0ed235d6744ecaf6c3f54e674416b7cab8424d130e74daf5308ecad6adaea6af",
+    "melbourne/clean/building_cultural_leisure_2024.csv": "db3b802d514d1530285b049834e9b51e42c4a482d3b61054ff7b5608d1e438e4",
+    "melbourne/clean/attraction_candidates_94.csv": "b617260693fb27e6849833bf3d5ad2bbbbb87098c362d7f448fd6286d564e642",
+    "melbourne/clean/toilets.csv": "c4bc394dce57e4ddfb3442c1c3eab0257de8c18512dc729fee4bc3a594353735",
+    "melbourne/clean/clue_area_inventory_summary.csv": "59db98f61b34d9d7be588db126058cfb7b76d0f66c1315a8c4814579778119ab",
+    "melbourne/clean/victorian_activity_combinations.csv": "c703d181f38d838f83441a9128275e83aff48bf263ffcae1e81d9521ebb5b73f",
+    "melbourne/clean/visitor_contacts_label_month.csv": "21fc4db78347b4389e245a0bff945f7562dc27c3b84c4fdf2063497bbd74665e",
+    "melbourne/clean/victorian_state_forest_sites.csv": "bf9a9d0de59e2ff9865b57a2e23fa6a073e8daa54005f994ebfb30137572eebc",
+    "melbourne/clean/live_music.csv": "5bf4639d6ddbe849611f895f63a7435023251be24cca24d6d6d3124889482646",
+    "melbourne/clean/fountains.csv": "a15a0b7b404a1497d3e974ccfaf87c516c7e47e7aaebeeb6595c21c82aaea772",
+    "melbourne/clean/landmarks.csv": "bb0b08d90d55ebb3a114a5b63e652f9745ed0b3d768628b7dde99250d2af05ea",
+    "melbourne/clean/clue_areas.geojson": "a1dd995943ce1edaf92c4f88a0ef8e9a3fa50693a3ddec53fbe629d0a7b50fe3",
+    "melbourne/clean/artworks_exact_year_177.csv": "cdc9acd762b95714e698ad79c001ed89de7a0502c16a0996837b4039f4a3ac35",
+    "melbourne/clean/victorian_class_access_counts.csv": "b064f50d2105abc9ef198fd6be180fd7129c21951a6603cb8fa961d59f5b3166",
+    "melbourne/clean/boundary.geojson": "4a86bb3c157a0b0cbb4668885e2f8b2abe32534b02c608d3015d2d39053d6dd3",
+    "melbourne/clean/route_summary.csv": "4295deab766ec7e89c9ef2fafda93c7ef910aa8ce40a4dfef0d7322cdbb354ea",
+    "melbourne/clean/victorian_activity_cooccurrence.csv": "85added66b838decd11abfad996fa9eb51a6a4060b2a5c8312eedf22f3dfa4d5",
+    "melbourne/raw/outdoor_artworks.json": "e03bf15d89274261ed7ca9a4dee809abe1f9f2e9d40c3ee04c6fd900801b6c42",
+    "australia/tidy/abs_state_reference_points_2021.csv": "6f6db75fc8b404cc820a20ea3c70fcaef7a345aa7045a2ad80dc40d4a8808d85",
+    "australia/tidy/nvs_region_map_metrics_2024.csv": "9a608587e71fe0404add714050ebc3e710057e558f02592e41a5cdd96d62e244",
+    "australia/tidy/nvs_regions_purpose_2024.csv": "dc1693c455fd3e70ce29dcf94235b1f6e4f48e812c79326eea8f449106e06557",
+    "australia/tidy/ivs_geographies_2019_2024.csv": "ff9de6c4038e1db89b6e8558f50af6c7ac126b1fbac7a9a2f07825969ec97781",
+    "australia/tidy/validation_summary.json": "853557a8f4a570b5543b41316f91ab7c2003bbb217ffa7a27e078d8ad4b46a2a",
+    "australia/tidy/nvs_8_state_holiday_night_share_2024.csv": "16623aa62fad68535141bbe91bd3e3b10cd63be5160b78e0b7cdb0159e3e3585",
+    "australia/tidy/abs_8_states_2021.geojson": "3a4c719694285fff56ddabface2085bcc37b874d003f57a47c7aefbb8d9aa190",
+    "australia/tidy/nvs_victoria_trip_pairs_2023_2024.csv": "7d599ef8a90ded2007f00593b650107b3e8a55a1447fdebecf4891301609d369",
+    "australia/tidy/nvs_state_origin_destination_2023_2024.csv": "3f797bfd3f8008ec4dafdabe173c81ef68d01dab5acd86583a8171c4b00ac8a3",
+    "australia/tidy/ivs_national_markets_purpose_2019_2024.csv": "24bf3e6804a23d88e17cd4fa2a846521f2078486c69339eda3d4e79380cd1199",
+    "australia/tidy/nvs_8_state_trip_pairs_2019_2024.csv": "81e5b96c19d4a51f524f281df3a863660e6500608e01e2670b75f81c45adc92a",
+    "australia/tidy/nvs_interstate_to_victoria_2024.csv": "c196a5d23f2c5074ff517be5868497e981537c8042cc8a7e2a8886b514253c7a",
+    "australia/tidy/nvs_regions_purpose_2019_2024.csv": "dc383ba7365081ac215880c4fb19b8f7754ddf2bc88b76176a2254ae51729700",
+    "australia/tidy/nvs_top50_regions_2023_2024.csv": "6d08aab14b13b31a49a1078bbf5f270917b1982c5ebf506518c9b03d717827ac",
+    "australia/tidy/abs_tourism_regions_2021.geojson": "d7256b18f229f127d7effe2c8e910975424e1354d6a1b5547ef4b1d840b2fa0c",
+    "australia/tidy/abs_victoria_tourism_regions_2021.geojson": "14f92ce68be9b888f009f2ea825e894ecee035b92d56336acdfaeb7b770fe08a",
+    "australia/tidy/nvs_states_2019_2024.csv": "84f959ea0b280977cd2ddef4838f6e49a485fc73ab4c2c85e6e2e793f1e032bc",
+    "australia/tidy/nvs_capital_regional_2023_2024.csv": "db131da1a0902a324ad1d36eb905e25952e25b82605dcfa2bc2278165df06645"
+  },
+  "outputs": {
+    "art-years.json": {
+      "bytes": 13413,
+      "sha256": "5c71ad5f71e899e190d520374424d2dd79c671bc45fc971517611860da785f98"
+    },
+    "walks.geojson": {
+      "bytes": 147589,
+      "sha256": "d9677a1b80d388766348cce6693615416d58179a6bdc12985e7b488e8d5b6e13"
+    },
+    "sight-tree.json": {
+      "bytes": 1812,
+      "sha256": "c7980967262f7bf2f5448659e1f1cfd4d2e1576cc9770badafc63c0e604a774d"
+    },
+    "forest-combinations.json": {
+      "bytes": 1710,
+      "sha256": "935e5e60be04ad46b798f98a9c46daf2ab138177f0a70ae93ae2fa6ae58d1321"
+    },
+    "states.geojson": {
+      "bytes": 495527,
+      "sha256": "a4cef6098095573fcfebea8cc0213e7f5b22577ed0d1cdfc356ce82fce993699"
+    },
+    "forest-dots.json": {
+      "bytes": 6226,
+      "sha256": "47ff4c89b1ba1f823aa0acc01255f7b95bbbdd1d4b68e7a45205016d7211c751"
+    },
+    "forest-totals.json": {
+      "bytes": 182,
+      "sha256": "06235c0a7298d31fc1845c0e90af49d4037f648292aa0b7e621691035369fac4"
+    },
+    "state-nights.json": {
+      "bytes": 2857,
+      "sha256": "e361244b2ef09a7a6377f197e93af9a09cf5ed5aa71fde577e98719c108bc8eb"
+    },
+    "state-labels.json": {
+      "bytes": 1910,
+      "sha256": "a82d91def7857d8a10693e93042ff6ec24cc642b68dfe551a3ed6b0ec998809e"
+    },
+    "melbourne-trend.json": {
+      "bytes": 460,
+      "sha256": "8e6fae9f2fabd2d74ac740f4e610405c262d2501530d5e14e461dd10d64b4bb4"
+    },
+    "areas.geojson": {
+      "bytes": 66391,
+      "sha256": "a1dd995943ce1edaf92c4f88a0ef8e9a3fa50693a3ddec53fbe629d0a7b50fe3"
+    },
+    "art-decades.json": {
+      "bytes": 853,
+      "sha256": "f272783359e72725939acba93bcdd7c2c72349618fc49c0fbf8734b50b5c0fb4"
+    },
+    "city-purposes.json": {
+      "bytes": 3512,
+      "sha256": "171ed34a87335b32115c29b6217d7d916ca9cd008859147f451007f9bd8dd9b9"
+    },
+    "art-toilets.json": {
+      "bytes": 22241,
+      "sha256": "42fb9cfaf1dac751e90ddeed4d031c6ada6e145b0c29467216d9b5aa694e1470"
+    },
+    "state-pairs.json": {
+      "bytes": 3067,
+      "sha256": "b729734ac1c5b10df777a8f706dfadc55a80f1215c0bce0d4a78db285f391be6"
+    },
+    "boundary.geojson": {
+      "bytes": 24801,
+      "sha256": "4a86bb3c157a0b0cbb4668885e2f8b2abe32534b02c608d3015d2d39053d6dd3"
+    },
+    "routes.json": {
+      "bytes": 1443,
+      "sha256": "4a51f141f7a404c4713c2e936b1d6132b64a865597c6dd745e2c142d68d948dc"
+    },
+    "sights.json": {
+      "bytes": 21804,
+      "sha256": "f4e3c4fb0f3997051639e630ab9e2cef2213b18f722cce01944dbd2fed558cb5"
+    }
+  }
+}

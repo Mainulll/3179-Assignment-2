@@ -1,0 +1,477 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "All 13 observed exact activity-recording combinations, covering 532 Victorian state-forest sites. Zero means not recorded. Top bar frequencies sum to 532. Left marginals sum site frequencies where a flag is one.",
+  "width": 760,
+  "height": 370,
+  "padding": 5,
+  "autosize": "none",
+  "background": "transparent",
+  "signals": [
+    {
+      "name": "matrixLeft",
+      "value": 210
+    },
+    {
+      "name": "selectedCombo",
+      "value": "All"
+    },
+    {
+      "name": "matrixWidth",
+      "update": "width-matrixLeft-10"
+    }
+  ],
+  "data": [
+    {
+      "name": "combos",
+      "url": "data/dv2/forest-combinations.json",
+      "transform": [
+        {
+          "type": "formula",
+          "expr": "datum.camping+datum.picnicing+datum.campervanning+datum.fishing",
+          "as": "ones"
+        }
+      ]
+    },
+    {
+      "name": "dots",
+      "url": "data/dv2/forest-dots.json"
+    },
+    {
+      "name": "totals",
+      "url": "data/dv2/forest-totals.json"
+    },
+    {
+      "name": "connectors",
+      "source": "combos",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.ones > 1"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.camping ? 0 : datum.picnicing ? 1 : datum.campervanning ? 2 : 3",
+          "as": "first"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.fishing ? 3 : datum.campervanning ? 2 : datum.picnicing ? 1 : 0",
+          "as": "last"
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "x",
+      "type": "band",
+      "domain": {
+        "data": "combos",
+        "field": "key",
+        "sort": {
+          "field": "rank"
+        }
+      },
+      "range": [
+        {
+          "signal": "matrixLeft"
+        },
+        {
+          "signal": "width-10"
+        }
+      ],
+      "padding": 0.3
+    },
+    {
+      "name": "counts",
+      "type": "linear",
+      "domain": [
+        0,
+        140
+      ],
+      "range": [
+        185,
+        28
+      ],
+      "zero": true,
+      "nice": false
+    },
+    {
+      "name": "marginals",
+      "type": "linear",
+      "domain": [
+        0,
+        360
+      ],
+      "range": [
+        0,
+        68
+      ],
+      "zero": true
+    },
+    {
+      "name": "rows",
+      "type": "point",
+      "domain": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "range": [
+        238,
+        340
+      ]
+    }
+  ],
+  "axes": [
+    {
+      "orient": "left",
+      "scale": "counts",
+      "position": {
+        "signal": "matrixLeft-8"
+      },
+      "values": [
+        0,
+        50,
+        100
+      ],
+      "domain": false,
+      "grid": false,
+      "ticks": false,
+      "labelFont": "Manrope",
+      "labelFontSize": 12,
+      "labelColor": "#52635F"
+    }
+  ],
+  "marks": [
+    {
+      "type": "text",
+      "encode": {
+        "enter": {
+          "x": {
+            "value": 0
+          },
+          "y": {
+            "value": 15
+          },
+          "text": {
+            "value": "ACTIVITY TOTALS"
+          },
+          "font": {
+            "value": "Manrope"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fontWeight": {
+            "value": 600
+          },
+          "fill": {
+            "value": "#52635F"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "encode": {
+        "enter": {
+          "x": {
+            "signal": "matrixLeft"
+          },
+          "y": {
+            "value": 15
+          },
+          "text": {
+            "value": "SITES WITH THIS EXACT COMBINATION"
+          },
+          "font": {
+            "value": "Manrope"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fontWeight": {
+            "value": 600
+          },
+          "fill": {
+            "value": "#52635F"
+          }
+        }
+      }
+    },
+    {
+      "type": "rect",
+      "from": {
+        "data": "combos"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "scale": "x",
+            "field": "key"
+          },
+          "width": {
+            "scale": "x",
+            "band": 1
+          },
+          "y": {
+            "scale": "counts",
+            "field": "sites"
+          },
+          "y2": {
+            "scale": "counts",
+            "value": 0
+          },
+          "fill": {
+            "value": "#176C65"
+          },
+          "tooltip": {
+            "signal": "{'Combination':datum.combination,'Sites':datum.sites,'Meaning':'Unfilled flags are not recorded'}"
+          },
+          "cursor": {
+            "value": "pointer"
+          }
+        },
+        "update": {
+          "opacity": {
+            "signal": "selectedCombo === 'All' || selectedCombo === datum.key ? 1 : .25"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "combos"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "scale": "x",
+            "field": "key",
+            "band": 0.5
+          },
+          "y": {
+            "scale": "counts",
+            "field": "sites",
+            "offset": -7
+          },
+          "align": {
+            "value": "center"
+          },
+          "text": {
+            "field": "sites"
+          },
+          "font": {
+            "value": "Manrope"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fill": {
+            "value": "#203C3A"
+          }
+        }
+      }
+    },
+    {
+      "type": "rule",
+      "from": {
+        "data": "totals"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "signal": "matrixLeft"
+          },
+          "x2": {
+            "signal": "width"
+          },
+          "y": {
+            "scale": "rows",
+            "field": "row"
+          },
+          "stroke": {
+            "value": "#E7E3D8"
+          },
+          "strokeWidth": {
+            "value": 1
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "totals"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "value": 0
+          },
+          "y": {
+            "scale": "rows",
+            "field": "row"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "text": {
+            "field": "activity"
+          },
+          "font": {
+            "value": "Manrope"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fill": {
+            "value": "#203C3A"
+          }
+        }
+      }
+    },
+    {
+      "type": "rect",
+      "from": {
+        "data": "totals"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "value": 112
+          },
+          "width": {
+            "scale": "marginals",
+            "field": "sites"
+          },
+          "y": {
+            "scale": "rows",
+            "field": "row",
+            "offset": -6
+          },
+          "height": {
+            "value": 12
+          },
+          "fill": {
+            "value": "#A6472D"
+          },
+          "tooltip": {
+            "signal": "datum.activity + ': ' + datum.sites + ' sites recorded'"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "totals"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "signal": "112 + scale('marginals',datum.sites)+4"
+          },
+          "y": {
+            "scale": "rows",
+            "field": "row"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "text": {
+            "field": "sites"
+          },
+          "font": {
+            "value": "Manrope"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fill": {
+            "value": "#203C3A"
+          }
+        }
+      }
+    },
+    {
+      "type": "rule",
+      "from": {
+        "data": "connectors"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "scale": "x",
+            "field": "key",
+            "band": 0.5
+          },
+          "y": {
+            "scale": "rows",
+            "field": "first"
+          },
+          "y2": {
+            "scale": "rows",
+            "field": "last"
+          },
+          "stroke": {
+            "value": "#176C65"
+          },
+          "strokeWidth": {
+            "value": 2
+          }
+        },
+        "update": {
+          "opacity": {
+            "signal": "selectedCombo === 'All' || selectedCombo === datum.key ? 1 : .25"
+          }
+        }
+      }
+    },
+    {
+      "type": "symbol",
+      "from": {
+        "data": "dots"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "scale": "x",
+            "field": "key",
+            "band": 0.5
+          },
+          "y": {
+            "scale": "rows",
+            "field": "row"
+          },
+          "size": {
+            "value": 75
+          },
+          "strokeWidth": {
+            "value": 1.5
+          },
+          "tooltip": {
+            "signal": "{'Combination':datum.combination,'Activity':datum.activity,'Status':datum.recorded ? 'Recorded' : 'Not recorded','Sites':datum.sites}"
+          },
+          "cursor": {
+            "value": "pointer"
+          }
+        },
+        "update": {
+          "fill": {
+            "signal": "datum.recorded ? '#176C65' : '#FFFDF8'"
+          },
+          "stroke": {
+            "signal": "datum.recorded ? '#176C65' : '#9BA9A0'"
+          },
+          "opacity": {
+            "signal": "selectedCombo === 'All' || selectedCombo === datum.key ? 1 : .25"
+          }
+        }
+      }
+    }
+  ]
+}

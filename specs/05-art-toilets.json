@@ -1,0 +1,94 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 420,
+  "height": 325,
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "config": {
+    "background": "transparent",
+    "view": {
+      "stroke": null
+    },
+    "font": "Manrope",
+    "axis": {
+      "labelFontSize": 13,
+      "titleFontSize": 13,
+      "titleFontWeight": 500,
+      "labelColor": "#52635F",
+      "titleColor": "#203C3A",
+      "domain": false,
+      "tickColor": "#DDD6C9",
+      "gridColor": "#E8E2D7",
+      "labelPadding": 7,
+      "titlePadding": 12
+    },
+    "legend": {
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "labelColor": "#52635F",
+      "titleColor": "#203C3A"
+    },
+    "text": {
+      "font": "Manrope",
+      "color": "#203C3A"
+    },
+    "title": {
+      "font": "Fraunces",
+      "color": "#203C3A"
+    }
+  },
+  "description": "169 of all 202 artwork records: five CLUE areas with at least ten records each. Min–max whiskers, median, and linearly interpolated quartiles. Distances use 74 recorded toilet locations and are straight-line, not walking distances.",
+  "data": {
+    "url": "data/dv2/art-toilets.json"
+  },
+  "mark": {
+    "type": "boxplot",
+    "extent": "min-max",
+    "size": 22,
+    "color": "#176C65",
+    "median": {
+      "color": "#FFFDF8",
+      "strokeWidth": 2
+    },
+    "ticks": true
+  },
+  "encoding": {
+    "x": {
+      "field": "metres",
+      "type": "quantitative",
+      "title": "Straight-line distance (m)",
+      "scale": {
+        "zero": true
+      },
+      "axis": {
+        "tickCount": 4
+      }
+    },
+    "y": {
+      "field": "area_label",
+      "type": "nominal",
+      "title": null,
+      "sort": [
+        "Melbourne CBD · n=45",
+        "Melbourne remainder · n=45",
+        "East Melbourne · n=32",
+        "Carlton · n=16",
+        "Docklands · n=31"
+      ],
+      "axis": {
+        "labelFontSize": 12,
+        "labelLimit": 155
+      }
+    },
+    "tooltip": [
+      {
+        "field": "metres",
+        "title": "Distance (m)",
+        "type": "quantitative",
+        "format": ".1f"
+      }
+    ]
+  }
+}

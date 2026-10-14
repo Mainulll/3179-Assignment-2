@@ -1,0 +1,293 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "Genuine root → theme → subtheme treemap. Leaf areas are record counts; parent totals are derived. Highlighting does not change the complete 94-record layout.",
+  "width": 310,
+  "height": 325,
+  "padding": 2,
+  "autosize": "none",
+  "background": "transparent",
+  "signals": [
+    {
+      "name": "themeFilter",
+      "value": "All"
+    },
+    {
+      "name": "subFilter",
+      "value": "All"
+    }
+  ],
+  "data": [
+    {
+      "name": "tree",
+      "url": "data/dv2/sight-tree.json",
+      "transform": [
+        {
+          "type": "stratify",
+          "key": "id",
+          "parentKey": "parent"
+        },
+        {
+          "type": "treemap",
+          "field": "value",
+          "sort": {
+            "field": "value",
+            "order": "descending"
+          },
+          "size": [
+            {
+              "signal": "width"
+            },
+            {
+              "signal": "height"
+            }
+          ],
+          "paddingInner": 2,
+          "paddingOuter": 1,
+          "paddingTop": 18,
+          "round": true
+        }
+      ]
+    },
+    {
+      "name": "parents",
+      "source": "tree",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.depth === 1"
+        }
+      ]
+    },
+    {
+      "name": "parentlabels",
+      "source": "parents",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.x1-datum.x0 > 55"
+        }
+      ]
+    },
+    {
+      "name": "leaves",
+      "source": "tree",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.depth === 2"
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "colour",
+      "type": "ordinal",
+      "domain": [
+        "Leisure/Recreation",
+        "Place Of Assembly",
+        "Purpose Built"
+      ],
+      "range": [
+        "#176C65",
+        "#A6472D",
+        "#8B5B11"
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "type": "rect",
+      "from": {
+        "data": "parents"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "field": "x0"
+          },
+          "y": {
+            "field": "y0"
+          },
+          "x2": {
+            "field": "x1"
+          },
+          "y2": {
+            "field": "y1"
+          },
+          "fill": {
+            "scale": "colour",
+            "field": "theme"
+          },
+          "fillOpacity": {
+            "value": 0.12
+          }
+        }
+      }
+    },
+    {
+      "type": "rect",
+      "from": {
+        "data": "leaves"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "field": "x0"
+          },
+          "y": {
+            "field": "y0"
+          },
+          "x2": {
+            "field": "x1"
+          },
+          "y2": {
+            "field": "y1"
+          },
+          "fill": {
+            "scale": "colour",
+            "field": "theme"
+          },
+          "stroke": {
+            "value": "#FFFDF8"
+          },
+          "strokeWidth": {
+            "value": 1
+          },
+          "cursor": {
+            "value": "pointer"
+          },
+          "tooltip": {
+            "signal": "{'Source subtheme':datum.official, 'Theme':datum.theme, 'Records':datum.value}"
+          }
+        },
+        "update": {
+          "opacity": {
+            "signal": "(themeFilter === 'All' || datum.theme === themeFilter) && (subFilter === 'All' || datum.id === subFilter) ? 1 : 0.22"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "leaves"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "signal": "(datum.x0+datum.x1)/2"
+          },
+          "y": {
+            "signal": "(datum.y0+datum.y1)/2-8"
+          },
+          "align": {
+            "value": "center"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "font": {
+            "value": "Manrope"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fontWeight": {
+            "value": 600
+          },
+          "fill": {
+            "value": "#FFFDF8"
+          },
+          "text": {
+            "field": "label"
+          },
+          "limit": {
+            "signal": "max(0,datum.x1-datum.x0-10)"
+          },
+          "tooltip": {
+            "signal": "datum.official + ': ' + datum.value + ' records'"
+          }
+        },
+        "update": {
+          "opacity": {
+            "signal": "datum.x1-datum.x0 > 65 && datum.y1-datum.y0 > 44 ? 1 : 0"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "leaves"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "signal": "(datum.x0+datum.x1)/2"
+          },
+          "y": {
+            "signal": "(datum.y0+datum.y1)/2+12"
+          },
+          "align": {
+            "value": "center"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "font": {
+            "value": "Fraunces"
+          },
+          "fontSize": {
+            "value": 24
+          },
+          "fill": {
+            "value": "#FFFDF8"
+          },
+          "text": {
+            "field": "value"
+          }
+        },
+        "update": {
+          "opacity": {
+            "signal": "datum.x1-datum.x0 > 35 && datum.y1-datum.y0 > 30 ? 1 : 0"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "parentlabels"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "signal": "datum.x0+5"
+          },
+          "y": {
+            "signal": "datum.y0+11"
+          },
+          "font": {
+            "value": "Manrope"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fontWeight": {
+            "value": 600
+          },
+          "fill": {
+            "value": "#203C3A"
+          },
+          "text": {
+            "signal": "datum.id === 'Leisure/Recreation' ? 'LEISURE' : datum.id === 'Place Of Assembly' ? 'ASSEMBLY' : 'PURPOSE BUILT'"
+          },
+          "limit": {
+            "signal": "max(0,datum.x1-datum.x0-10)"
+          }
+        }
+      }
+    }
+  ]
+}

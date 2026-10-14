@@ -1,0 +1,121 @@
+[
+  {
+    "file": "tra-nvs-quarterly-december-2024-2023.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/nvs/tra-nvs-quarterly-december-2024-2023.xlsx",
+    "retrieved_date_utc": "2026-10-12",
+    "bytes": 292761,
+    "sha256": "8fa3946d428d0dfc21a85519da0704be70cd9664a9d8551483f6b84a5de7f915"
+  },
+  {
+    "file": "ivs-tourism-results-ye-dec-2024-2019.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/ivs/ivs-tourism-results-ye-dec-2024-2019.xlsx",
+    "retrieved_date_utc": "2026-10-12",
+    "bytes": 151472,
+    "sha256": "16eb6e79bc28e4cad2e0a23dc5ce1bbe45937d6016b0974df74ae0c3b94fd87a"
+  },
+  {
+    "file": "tra-nvs-trends-onight-spend-state-ye-dec-24.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/nvs/tra-nvs-trends-onight-spend-state-ye-dec-24.xlsx",
+    "retrieved_date_utc": "2026-10-12",
+    "bytes": 111172,
+    "sha256": "a0699bcda9e2e08e97bf6b0e3e19e46f9b705541d605c59a56ae9cd995eb5589"
+  },
+  {
+    "file": "tra-nvs-trends-onight-purpose-ye-dec-24.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/nvs/tra-nvs-trends-onight-purpose-ye-dec-24.xlsx",
+    "retrieved_date_utc": "2026-10-12",
+    "bytes": 344770,
+    "sha256": "e22f352a8daa12552da98179ff3bf78f54f9dd69c4fa7b8a46531c017a222ed5"
+  },
+  {
+    "file": "abs_tr_layer_metadata.json",
+    "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/TR/MapServer/1?f=pjson",
+    "retrieved_date_utc": "2026-10-12",
+    "bytes": 7258,
+    "sha256": "606c4a5a827298a6f6b73461ac0f679610df940c9ba591795ad9ebdf4e5de25c"
+  },
+  {
+    "file": "abs_tr_2021_generalised.geojson",
+    "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/TR/MapServer/1/query?where=1%3D1&outFields=%2A&outSR=4326&f=geojson&maxAllowableOffset=0.01",
+    "retrieved_date_utc": "2026-10-12",
+    "bytes": 851099,
+    "sha256": "159a73192d1d65d2eb324dce81f912744e07ca358aef29bb6d4421d729a7e39e"
+  },
+  {
+    "file": "abs_states_2021_generalised.geojson",
+    "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/STE/MapServer/1/query?where=1%3D1&outFields=%2A&outSR=4326&f=geojson&maxAllowableOffset=0.01",
+    "retrieved_date_utc": "2026-10-12",
+    "bytes": 668076,
+    "sha256": "fbbe38106d6234907e643274d60531967da74c962190f2c5fd8bb39f54c190cd"
+  },
+  {
+    "file": "tra-tourism-regions-2026-allocation.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/regional/tourism-regions-maps-2026/tra-tourism-regions-2026-allocation.xlsx",
+    "retrieved_date_utc": "2026-10-12",
+    "bytes": 114861,
+    "sha256": "10044d5dfc18b556065ffdcbb26eff4902ddef0653c442bd6c88530e59335ff5"
+  },
+  {
+    "file": "tra-tourism-regions-2024-allocation.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/regional/tourism-regions-maps-2024/tra-tourism-regions-2024-allocation.xlsx",
+    "retrieved_date_utc": "2026-10-12",
+    "bytes": 140436,
+    "sha256": "f441b70dfd12da9abd62c8961314f8dd6a2af88fd7c8072e49040c59a49231f7"
+  },
+  {
+    "file": "abs_state_points.geojson",
+    "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/STE/MapServer/2/query?where=1%3D1&outFields=*&outSR=4326&f=geojson",
+    "retrieved_date_utc": "2026-10-12",
+    "bytes": 4246,
+    "sha256": "1f3ac2b177145ce6cfe6fcbc7b5437511af335b0693a710022426f2ded0b474b"
+  },
+  {
+    "file": "tra-vic-tourism-regions-2024.pdf",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/regional/tourism-regions-maps-2024/tra-vic-tourism-regions-2024.pdf",
+    "retrieved_date_utc": "2026-10-12",
+    "bytes": 972713,
+    "sha256": "3055870d27131a6ab0bc7ee32037fd83fd4c77a5c7526ecd45d164a503f79dbe"
+  },
+  {
+    "file": "TR_2021_AUST.xlsx",
+    "url": "https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/access-and-downloads/allocation-files/TR_2021_AUST.xlsx",
+    "retrieved_date_utc": "2026-10-12",
+    "bytes": 198150,
+    "sha256": "1c9d87587b4bde1b831b5efdb21b0975fc0a3e284388a5809e5fffa7b3cf436d"
+  },
+  {
+    "file": "abs_tr_service.json",
+    "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/TR/MapServer?f=pjson",
+    "retrieved_date_utc": "2026-10-12",
+    "bytes": 11076,
+    "sha256": "5a66607139bf3ae9289c0bd63f894ac48ea5691fc00c9682a4a401a6bfbba2e7"
+  },
+  {
+    "file": "abs_state_service.json",
+    "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/STE/MapServer?f=pjson",
+    "retrieved_date_utc": "2026-10-12",
+    "bytes": 8288,
+    "sha256": "4cc3dfbca7f987be8c4396c146ccb0dee7debe3883172ecca00d4610815d255f"
+  },
+  {
+    "file": "tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+    "retrieved_date_utc": "2026-10-12",
+    "bytes": 142783,
+    "sha256": "f484203d43901d75703a5992db5f6601dd1f43b258edddc41188e9cc873a9523"
+  },
+  {
+    "file": "tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+    "retrieved_date_utc": "2026-10-12",
+    "bytes": 352706,
+    "sha256": "8b8bbd16e7b9995593775eb2c6b033a597f5b579eb21719c01a3d41ebb52e892"
+  },
+  {
+    "file": "tra-dots-2019-2025-daytrip-backcast-data-revised.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2025-daytrip-backcast-data-revised.xlsx",
+    "retrieved_date_utc": "2026-10-12",
+    "bytes": 114696,
+    "sha256": "6e2d0a613fe0e15e2050332cbc6a1a067f8607c1667b3fd3e8fe59008d79eb3e"
+  }
+]

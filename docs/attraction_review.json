@@ -1,0 +1,2198 @@
+{
+  "unassigned": [
+    {
+      "osm_id": "node/19975279",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 151.189479,
+      "latitude": -33.8409667,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/30606318",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 146.3663418,
+      "latitude": -41.1655656,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/127749780",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 150.7642157,
+      "latitude": -35.124695,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/166927395",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 142.1166891,
+      "latitude": -11.2248831,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/244301435",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 142.5315474,
+      "latitude": -10.6872217,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/251453041",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 145.2877717,
+      "latitude": -38.458697,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/380462726",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 153.0342235,
+      "latitude": -27.4750358,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/443617321",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 151.2217616,
+      "latitude": -33.7964042,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/445537514",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 143.0722859,
+      "latitude": -38.6493462,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/458714857",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 153.1866984,
+      "latitude": -24.8523758,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/458716264",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 153.2947757,
+      "latitude": -25.1468629,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/528522469",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 153.0991847,
+      "latitude": -27.447434,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/576491070",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 113.5801327,
+      "latitude": -26.0923837,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/576491078",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 113.5794649,
+      "latitude": -26.0910468,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/728168560",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 151.7618891,
+      "latitude": -32.9087312,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/841918863",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 151.1412293,
+      "latitude": -33.8084983,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/841918915",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 151.1414964,
+      "latitude": -33.808918,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/994402434",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 151.1936255,
+      "latitude": -33.9550663,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/1312618252",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 123.5383884,
+      "latitude": -10.2431356,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/1345595107",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 153.0509826,
+      "latitude": -27.4401743,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/1349114798",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 138.7085639,
+      "latitude": -35.5149268,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/1502354993",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 123.4470894,
+      "latitude": -10.1175294,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/1514038035",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 150.7616514,
+      "latitude": -35.1518576,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/1514038054",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 150.7614861,
+      "latitude": -35.1516811,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/1695390508",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 137.7645207,
+      "latitude": -32.4865243,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/1864329794",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 144.6585154,
+      "latitude": -38.2739008,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/1973968140",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 129.7769583,
+      "latitude": -31.608015,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/1973968475",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 130.1445481,
+      "latitude": -31.5787682,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/2003868827",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 129.5298127,
+      "latitude": -31.6229618,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/2364035433",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 150.7179909,
+      "latitude": -35.1755623,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/2470860627",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 115.7165502,
+      "latitude": -32.5296557,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/2548033231",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 152.9351376,
+      "latitude": -31.4650845,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/2671413764",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 149.1877841,
+      "latitude": -21.1383062,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/2671413772",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 149.1879388,
+      "latitude": -21.1373252,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/2861578384",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 130.8179337,
+      "latitude": -12.4139275,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/2886242178",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 151.0784508,
+      "latitude": -33.8349166,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/2896429062",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 153.0955706,
+      "latitude": -27.3417882,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/2948915647",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 147.1161193,
+      "latitude": -41.4198253,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/2948915675",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 147.1238658,
+      "latitude": -41.4324308,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/3187524024",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 151.8865845,
+      "latitude": -24.1512976,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/3187524036",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 151.885794,
+      "latitude": -24.1489589,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/3256218616",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 143.0601041,
+      "latitude": -38.645763,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/3262789647",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 150.6690593,
+      "latitude": -35.1605638,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/3351541371",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 153.3933031,
+      "latitude": -27.3213371,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/3401075277",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 150.7733899,
+      "latitude": -23.0122377,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/3408800600",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 130.8418615,
+      "latitude": -12.3785138,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/3553591306",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 115.4515521,
+      "latitude": -32.0199193,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/3634971871",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 150.8124587,
+      "latitude": -34.5302978,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/3890020284",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 139.7453137,
+      "latitude": -37.1557111,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/3939038609",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 151.6397527,
+      "latitude": -32.9860549,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/4020928244",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 151.2732973,
+      "latitude": -33.7122888,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/4146130115",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 150.7597986,
+      "latitude": -35.1520164,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/4146186818",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 150.7218613,
+      "latitude": -35.1743963,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/4171862593",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 123.0556159,
+      "latitude": -10.7479592,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/4193071703",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 150.6950304,
+      "latitude": -35.1993636,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/4197101117",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 144.3182884,
+      "latitude": -38.3453757,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/4255774293",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 151.8034706,
+      "latitude": -32.915744,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/4320532789",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 151.0881181,
+      "latitude": -33.982637,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/4324864991",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 115.9404255,
+      "latitude": -31.9203335,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/4368823691",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 153.3717223,
+      "latitude": -27.180936,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/4382811393",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 115.1707823,
+      "latitude": -34.3271836,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/4405637790",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 153.6346612,
+      "latitude": -28.6357247,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/4524097864",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 153.0508237,
+      "latitude": -27.4560744,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/4561931389",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 138.5080419,
+      "latitude": -34.9805125,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/4563411393",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 139.7466104,
+      "latitude": -37.1556093,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/4590296291",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 147.1223722,
+      "latitude": -41.442916,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/4761229566",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 153.027148,
+      "latitude": -27.4802638,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/4761255474",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 153.0279312,
+      "latitude": -27.479607,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/4761255475",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 153.0276362,
+      "latitude": -27.4798393,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/4761255477",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 153.0269169,
+      "latitude": -27.4808596,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/4766246341",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 140.3764247,
+      "latitude": -37.898293,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/4813486124",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 151.2097372,
+      "latitude": -33.8486136,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/4928778562",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 153.065264,
+      "latitude": -27.2922776,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/4963779838",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 138.0946451,
+      "latitude": -35.6054105,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/4969489915",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 153.0185398,
+      "latitude": -27.4693421,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/4969489919",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 153.0179248,
+      "latitude": -27.4695301,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/4969491924",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 153.0176952,
+      "latitude": -27.4696423,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/4969491930",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 153.0175285,
+      "latitude": -27.4694552,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/4975063506",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 151.0830901,
+      "latitude": -33.8289259,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/5295228461",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 142.3087666,
+      "latitude": -38.3565465,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/5332378901",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 151.3310708,
+      "latitude": -33.4288726,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/5465775319",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 153.0049941,
+      "latitude": -27.5157039,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/5468880022",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 115.0088352,
+      "latitude": -30.3128683,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/5522225095",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 150.6924409,
+      "latitude": -35.1934876,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/5523927121",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 150.7602431,
+      "latitude": -35.1400495,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/5523927122",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 150.7637769,
+      "latitude": -35.135315,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/5679357421",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 123.576462,
+      "latitude": -10.1612602,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/5715200002",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 145.2020911,
+      "latitude": -38.3084885,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/5751514185",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 153.1015956,
+      "latitude": -27.4451567,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/5772250754",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 152.9081806,
+      "latitude": -25.2762782,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/5776913050",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 145.176464,
+      "latitude": -38.5134775,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/5776956789",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 145.3105714,
+      "latitude": -38.520689,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/5824673554",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 153.4905274,
+      "latitude": -28.1320919,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/5847845584",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 153.5471518,
+      "latitude": -28.1683857,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/5847919030",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 151.2899452,
+      "latitude": -33.8078886,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/5956380336",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 151.7973612,
+      "latitude": -32.9137286,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/5967857209",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 153.1946569,
+      "latitude": -27.4589943,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/6014797785",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 123.5703014,
+      "latitude": -10.165173,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/6237552064",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 151.2404598,
+      "latitude": -33.8621338,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/6278433945",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 115.7154255,
+      "latitude": -32.5288468,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/6466494085",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 145.6733466,
+      "latitude": -16.7399481,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/6470970086",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 115.0357831,
+      "latitude": -30.3016096,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/6562279646",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 146.2289684,
+      "latitude": -18.1953163,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/6562279647",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 146.2234681,
+      "latitude": -18.1941342,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/6776288186",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 122.8223329,
+      "latitude": -10.8898977,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/6778648885",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 122.8818057,
+      "latitude": -10.9153717,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/6796711584",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 150.6967969,
+      "latitude": -35.1774947,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/6796729530",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 150.7232774,
+      "latitude": -35.1733573,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/6796765500",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 150.7513894,
+      "latitude": -35.1256636,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/6798232814",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 150.7545093,
+      "latitude": -35.1664751,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/6880340049",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 115.94368,
+      "latitude": -31.9211933,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/7021126523",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 150.7580625,
+      "latitude": -35.1257463,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/7367250885",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 151.7705314,
+      "latitude": -32.9056067,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/7367250985",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 151.7701552,
+      "latitude": -32.9024961,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/7367250986",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 151.7702438,
+      "latitude": -32.9041095,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/7775131436",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 151.2785773,
+      "latitude": -33.7096985,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/7857824876",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 145.9083348,
+      "latitude": -41.0493754,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/7896453587",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 113.5166256,
+      "latitude": -25.5137022,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/7896453588",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 113.5164218,
+      "latitude": -25.5136259,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/8282341421",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 151.8846507,
+      "latitude": -24.1501833,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/8460054308",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 145.7246992,
+      "latitude": -16.804027,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/9728614528",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 144.9059235,
+      "latitude": -37.8607667,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/10230401200",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 113.5794766,
+      "latitude": -26.0917691,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/10628327283",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 113.171196,
+      "latitude": -26.1690254,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/10650907005",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 150.6586417,
+      "latitude": -35.1630118,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/10784039001",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 150.846955,
+      "latitude": -34.7182756,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/11038330508",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 151.761938,
+      "latitude": -32.9093926,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/11270980078",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 146.0920905,
+      "latitude": -17.957398,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/11290112880",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 138.6900825,
+      "latitude": -35.5333013,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/11710802840",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 151.2349989,
+      "latitude": -33.8714069,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/12076175898",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 138.5071047,
+      "latitude": -34.8384478,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/12423636293",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 153.0323653,
+      "latitude": -27.471871,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/12513647368",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 115.740537,
+      "latitude": -32.0630881,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/12573424665",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 153.0324107,
+      "latitude": -27.4719469,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/12573450510",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 153.0322726,
+      "latitude": -27.4717886,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/12587224792",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 151.4472101,
+      "latitude": -33.4476812,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/12651677646",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 115.8841145,
+      "latitude": -31.966845,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/12651677648",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 115.8855862,
+      "latitude": -31.9675532,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/12747354813",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 123.1341857,
+      "latitude": -33.9173842,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/12898624646",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 151.2726435,
+      "latitude": -33.7123864,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/13105457052",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 146.0999449,
+      "latitude": -17.9660848,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/13174677399",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 146.030686,
+      "latitude": -17.5267986,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/13257234315",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 147.3263919,
+      "latitude": -42.9767301,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/13313616599",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 130.8207002,
+      "latitude": -12.4043358,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/13338487464",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 130.8159961,
+      "latitude": -12.4068332,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/13339650847",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 130.8314163,
+      "latitude": -12.444068,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/13455911103",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 140.3758597,
+      "latitude": -37.8983585,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/13633349001",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 144.965581,
+      "latitude": -37.8634932,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/13987104323",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 151.2309515,
+      "latitude": -33.8477488,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/14134324028",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 138.5017042,
+      "latitude": -34.8427296,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/14134324029",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 138.5012834,
+      "latitude": -34.8414233,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/880242163",
+      "category": "lookout",
+      "reason": "outside_region_polygons",
+      "longitude": 151.1293882,
+      "latitude": -34.021189,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/189638663",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 120.5310435,
+      "latitude": -10.2118347,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/189638664",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 120.5321846,
+      "latitude": -10.2065118,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/189642739",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 120.5703424,
+      "latitude": -10.2283744,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/191519164",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 120.5518611,
+      "latitude": -10.2278422,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/192027168",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 120.6062247,
+      "latitude": -10.2442314,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/192027169",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 120.6067859,
+      "latitude": -10.2289116,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/192063743",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 120.5635037,
+      "latitude": -10.2290886,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/192063745",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 120.5394306,
+      "latitude": -10.2159977,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/192063746",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 120.5323982,
+      "latitude": -10.2040797,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/192063749",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 120.5456935,
+      "latitude": -10.2187502,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/192074679",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 120.6202406,
+      "latitude": -10.2184284,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/192074681",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 120.6227289,
+      "latitude": -10.2241302,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/192074682",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 120.610945,
+      "latitude": -10.2013579,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/192074685",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 120.6295085,
+      "latitude": -10.2263511,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/192074687",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 120.6298738,
+      "latitude": -10.223059,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/192074691",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 120.6161245,
+      "latitude": -10.2242654,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/192074692",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 120.5918669,
+      "latitude": -10.2288767,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/192074695",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 120.5941374,
+      "latitude": -10.2296388,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/287509196",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 151.19524,
+      "latitude": -10.5881978,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/287510345",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 151.1924935,
+      "latitude": -10.5838081,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/289743477",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 151.1961272,
+      "latitude": -10.5811499,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/289743479",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 151.1948005,
+      "latitude": -10.5828816,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/289743480",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 151.195018,
+      "latitude": -10.5830895,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/289743482",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 151.1950121,
+      "latitude": -10.5836725,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/289743483",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 151.1950852,
+      "latitude": -10.5833926,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/289747033",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 151.2082443,
+      "latitude": -10.5953382,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/289747034",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 151.2084891,
+      "latitude": -10.5945589,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/289747035",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 151.2087711,
+      "latitude": -10.5947902,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/289747036",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 151.2089123,
+      "latitude": -10.5947625,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/289747446",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 151.2092298,
+      "latitude": -10.5943926,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/289747447",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 151.2087887,
+      "latitude": -10.5945949,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/289747448",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 151.2090395,
+      "latitude": -10.5944395,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/289751764",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 151.2053576,
+      "latitude": -10.5958116,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/289751766",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 151.2051557,
+      "latitude": -10.5958861,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/289751767",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 151.2043782,
+      "latitude": -10.5950702,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/289751769",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 151.2047471,
+      "latitude": -10.5956746,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/289754239",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 151.1988433,
+      "latitude": -10.5915395,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/289754240",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 151.2043792,
+      "latitude": -10.5928598,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/289754241",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 151.2049872,
+      "latitude": -10.5924074,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/289754242",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 151.2063771,
+      "latitude": -10.596165,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/289754243",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 151.2055286,
+      "latitude": -10.5963542,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/289755028",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 151.1955619,
+      "latitude": -10.5887577,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/289756270",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 151.1949682,
+      "latitude": -10.5889814,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "way/1339949582",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 153.0240535,
+      "latitude": -27.4746251,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "relation/16221684",
+      "category": "garden",
+      "reason": "outside_region_polygons",
+      "longitude": 150.67311,
+      "latitude": -35.1457849,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/1514056572",
+      "category": "visitor_centre",
+      "reason": "outside_region_polygons",
+      "longitude": 150.6822167,
+      "latitude": -35.1212821,
+      "region_candidates": []
+    },
+    {
+      "osm_id": "node/6203285287",
+      "category": "visitor_centre",
+      "reason": "outside_region_polygons",
+      "longitude": 150.4486539,
+      "latitude": -10.3074305,
+      "region_candidates": []
+    }
+  ],
+  "same_name_within_100m": [
+    {
+      "name": "Desert View Lookout",
+      "objects": [
+        "node/10025910507",
+        "node/10025945219"
+      ],
+      "distance_m_approx": 23
+    },
+    {
+      "name": "Turitable Falls",
+      "objects": [
+        "node/1022287349",
+        "node/1022292818"
+      ],
+      "distance_m_approx": 20
+    },
+    {
+      "name": "The System Garden",
+      "objects": [
+        "node/10709308704",
+        "way/751771831"
+      ],
+      "distance_m_approx": 22
+    },
+    {
+      "name": "Adams Lookout",
+      "objects": [
+        "way/386918046",
+        "way/386918047"
+      ],
+      "distance_m_approx": 9
+    },
+    {
+      "name": "First Falls",
+      "objects": [
+        "node/1437252134",
+        "node/305553548"
+      ],
+      "distance_m_approx": 32
+    },
+    {
+      "name": "Winnie Bay Lookout",
+      "objects": [
+        "node/11154998440",
+        "node/5471739850"
+      ],
+      "distance_m_approx": 4
+    },
+    {
+      "name": "Bird Hide",
+      "objects": [
+        "node/323171275",
+        "way/502313672"
+      ],
+      "distance_m_approx": 4
+    },
+    {
+      "name": "Rose Garden",
+      "objects": [
+        "way/333397952",
+        "way/333397953"
+      ],
+      "distance_m_approx": 68
+    },
+    {
+      "name": "Crocodiles - Southern Viewpoint",
+      "objects": [
+        "node/12125754488",
+        "node/9592660038"
+      ],
+      "distance_m_approx": 23
+    },
+    {
+      "name": "Glen Innes Highlands Skywalk",
+      "objects": [
+        "node/12290994489",
+        "node/12290994490"
+      ],
+      "distance_m_approx": 51
+    },
+    {
+      "name": "Glen Innes Highlands Skywalk",
+      "objects": [
+        "node/12290994490",
+        "node/12290994491"
+      ],
+      "distance_m_approx": 86
+    },
+    {
+      "name": "Ross Bridge",
+      "objects": [
+        "node/12765400702",
+        "node/12765400801"
+      ],
+      "distance_m_approx": 0
+    },
+    {
+      "name": "Ross Bridge",
+      "objects": [
+        "node/12765400702",
+        "node/12765400901"
+      ],
+      "distance_m_approx": 59
+    },
+    {
+      "name": "Ross Bridge",
+      "objects": [
+        "node/12765400801",
+        "node/12765400901"
+      ],
+      "distance_m_approx": 59
+    },
+    {
+      "name": "Barker Creek Lookout",
+      "objects": [
+        "node/12995063241",
+        "node/2510043902"
+      ],
+      "distance_m_approx": 4
+    },
+    {
+      "name": "Bush Tucker Garden",
+      "objects": [
+        "node/1717667694",
+        "way/1443867034"
+      ],
+      "distance_m_approx": 18
+    },
+    {
+      "name": "Visitor Information Centre",
+      "objects": [
+        "node/14081377552",
+        "way/76534018"
+      ],
+      "distance_m_approx": 58
+    },
+    {
+      "name": "Rawnsley Lookout",
+      "objects": [
+        "node/1333627706",
+        "node/1333627710"
+      ],
+      "distance_m_approx": 36
+    },
+    {
+      "name": "Station Hill Lookout",
+      "objects": [
+        "node/1334469228",
+        "node/1334469229"
+      ],
+      "distance_m_approx": 43
+    },
+    {
+      "name": "Station Hill Lookout",
+      "objects": [
+        "node/1334469228",
+        "node/1334469230"
+      ],
+      "distance_m_approx": 54
+    },
+    {
+      "name": "Station Hill Lookout",
+      "objects": [
+        "node/1334469229",
+        "node/1334469230"
+      ],
+      "distance_m_approx": 46
+    },
+    {
+      "name": "viewing platform",
+      "objects": [
+        "node/3099883846",
+        "node/3099884898"
+      ],
+      "distance_m_approx": 13
+    },
+    {
+      "name": "Stony Hill Lookout",
+      "objects": [
+        "node/14050474479",
+        "node/14050474480"
+      ],
+      "distance_m_approx": 30
+    },
+    {
+      "name": "Sky Window",
+      "objects": [
+        "node/1480089090",
+        "node/1480089105"
+      ],
+      "distance_m_approx": 40
+    },
+    {
+      "name": "Boolimba Bluff",
+      "objects": [
+        "node/1540598129",
+        "node/1540598134"
+      ],
+      "distance_m_approx": 70
+    },
+    {
+      "name": "Bay of Martyrs",
+      "objects": [
+        "node/1591512607",
+        "node/1591512608"
+      ],
+      "distance_m_approx": 44
+    },
+    {
+      "name": "Captain Cook Lookout",
+      "objects": [
+        "node/410043858",
+        "node/410043860"
+      ],
+      "distance_m_approx": 67
+    },
+    {
+      "name": "South Nobby Headland",
+      "objects": [
+        "node/185863626",
+        "node/9349869903"
+      ],
+      "distance_m_approx": 89
+    },
+    {
+      "name": "South Nobby Headland",
+      "objects": [
+        "node/677281389",
+        "node/677281393"
+      ],
+      "distance_m_approx": 68
+    },
+    {
+      "name": "South Nobby Headland",
+      "objects": [
+        "node/677281393",
+        "node/9349869903"
+      ],
+      "distance_m_approx": 63
+    },
+    {
+      "name": "Uloola Turrets",
+      "objects": [
+        "node/2423711064",
+        "node/2426665231"
+      ],
+      "distance_m_approx": 66
+    },
+    {
+      "name": "Allambie Lookout",
+      "objects": [
+        "node/263845712",
+        "node/263845718"
+      ],
+      "distance_m_approx": 44
+    },
+    {
+      "name": "Bungonia Lookdown",
+      "objects": [
+        "node/264003508",
+        "way/386918056"
+      ],
+      "distance_m_approx": 67
+    },
+    {
+      "name": "Peterson's Lookout",
+      "objects": [
+        "node/264201779",
+        "node/264201798"
+      ],
+      "distance_m_approx": 44
+    },
+    {
+      "name": "Wanganderry Lookout",
+      "objects": [
+        "node/2857606806",
+        "node/9523313471"
+      ],
+      "distance_m_approx": 72
+    },
+    {
+      "name": "Hopkins Falls Lookout",
+      "objects": [
+        "node/2891649310",
+        "node/928099307"
+      ],
+      "distance_m_approx": 48
+    },
+    {
+      "name": "Davies Creek Falls Viewing Point",
+      "objects": [
+        "node/3204980363",
+        "node/3204980383"
+      ],
+      "distance_m_approx": 53
+    },
+    {
+      "name": "Platypus Valley Lookout",
+      "objects": [
+        "node/331134270",
+        "node/331134299"
+      ],
+      "distance_m_approx": 86
+    },
+    {
+      "name": "Dights Falls",
+      "objects": [
+        "node/3362701007",
+        "node/4690264755"
+      ],
+      "distance_m_approx": 48
+    },
+    {
+      "name": "Mitchells Ridge Lookout",
+      "objects": [
+        "node/398873040",
+        "node/398873775"
+      ],
+      "distance_m_approx": 70
+    },
+    {
+      "name": "Mitchells Ridge Lookout",
+      "objects": [
+        "node/398873040",
+        "node/398873986"
+      ],
+      "distance_m_approx": 32
+    },
+    {
+      "name": "Cahills Lookout",
+      "objects": [
+        "node/400988444",
+        "node/6403857792"
+      ],
+      "distance_m_approx": 29
+    },
+    {
+      "name": "Cahills Lookout",
+      "objects": [
+        "node/400988444",
+        "node/6403857795"
+      ],
+      "distance_m_approx": 23
+    },
+    {
+      "name": "Cahills Lookout",
+      "objects": [
+        "node/6403857792",
+        "node/6403857795"
+      ],
+      "distance_m_approx": 22
+    },
+    {
+      "name": "Cessnock Visitors Centre",
+      "objects": [
+        "node/4350422825",
+        "way/68295204"
+      ],
+      "distance_m_approx": 2
+    },
+    {
+      "name": "Kinaba Information Centre",
+      "objects": [
+        "node/4359468717",
+        "way/322419027"
+      ],
+      "distance_m_approx": 3
+    },
+    {
+      "name": "Beech Lookout",
+      "objects": [
+        "node/4378249059",
+        "node/977434606"
+      ],
+      "distance_m_approx": 49
+    },
+    {
+      "name": "Badgerys Lookout",
+      "objects": [
+        "node/4378249258",
+        "node/7927464276"
+      ],
+      "distance_m_approx": 32
+    },
+    {
+      "name": "Gap Creek Lookout",
+      "objects": [
+        "node/4380404835",
+        "node/959120270"
+      ],
+      "distance_m_approx": 9
+    },
+    {
+      "name": "Creek",
+      "objects": [
+        "node/4627483355",
+        "node/4627484108"
+      ],
+      "distance_m_approx": 46
+    },
+    {
+      "name": "Formal Flower Garden",
+      "objects": [
+        "node/4753134083",
+        "way/482725703"
+      ],
+      "distance_m_approx": 26
+    },
+    {
+      "name": "Tiger enclosure",
+      "objects": [
+        "node/4866118488",
+        "node/4866124383"
+      ],
+      "distance_m_approx": 39
+    },
+    {
+      "name": "Frank Jackman Lookout",
+      "objects": [
+        "node/513236715",
+        "way/1191050669"
+      ],
+      "distance_m_approx": 44
+    },
+    {
+      "name": "Irwin Lookout",
+      "objects": [
+        "node/5648603932",
+        "node/5648603933"
+      ],
+      "distance_m_approx": 27
+    },
+    {
+      "name": "Glenelg River",
+      "objects": [
+        "node/601349099",
+        "node/601349103"
+      ],
+      "distance_m_approx": 21
+    },
+    {
+      "name": "Blowhard View Point",
+      "objects": [
+        "node/611557447",
+        "node/6147859517"
+      ],
+      "distance_m_approx": 39
+    },
+    {
+      "name": "Waterfall Viewpoint",
+      "objects": [
+        "node/6982001102",
+        "node/6982001105"
+      ],
+      "distance_m_approx": 68
+    },
+    {
+      "name": "London Bridge",
+      "objects": [
+        "node/656344586",
+        "node/656344596"
+      ],
+      "distance_m_approx": 26
+    },
+    {
+      "name": "London Bridge",
+      "objects": [
+        "node/656344586",
+        "node/656344609"
+      ],
+      "distance_m_approx": 77
+    },
+    {
+      "name": "London Bridge",
+      "objects": [
+        "node/656344586",
+        "node/656344640"
+      ],
+      "distance_m_approx": 68
+    },
+    {
+      "name": "London Bridge",
+      "objects": [
+        "node/656344596",
+        "node/656344609"
+      ],
+      "distance_m_approx": 52
+    },
+    {
+      "name": "London Bridge",
+      "objects": [
+        "node/656344596",
+        "node/656344640"
+      ],
+      "distance_m_approx": 94
+    },
+    {
+      "name": "Skyline Lookouts",
+      "objects": [
+        "node/7811304459",
+        "node/7811304460"
+      ],
+      "distance_m_approx": 35
+    },
+    {
+      "name": "Woo-la-ra",
+      "objects": [
+        "node/7856142074",
+        "way/176785127"
+      ],
+      "distance_m_approx": 42
+    },
+    {
+      "name": "Yandina Community Gardens",
+      "objects": [
+        "node/8041507538",
+        "way/908564680"
+      ],
+      "distance_m_approx": 3
+    },
+    {
+      "name": "Old Ghan Railway Engine",
+      "objects": [
+        "node/8193306609",
+        "node/8193306610"
+      ],
+      "distance_m_approx": 60
+    },
+    {
+      "name": "Hervey Bay Visitor Information Centre",
+      "objects": [
+        "node/8285680454",
+        "way/1155718502"
+      ],
+      "distance_m_approx": 2
+    },
+    {
+      "name": "Blowholes",
+      "objects": [
+        "way/71376038",
+        "way/71376053"
+      ],
+      "distance_m_approx": 42
+    },
+    {
+      "name": "Whites Creek Food Forest",
+      "objects": [
+        "way/1091970487",
+        "way/1091970488"
+      ],
+      "distance_m_approx": 52
+    },
+    {
+      "name": "Indigenous Resouce Garden",
+      "objects": [
+        "way/1186659151",
+        "way/1186659152"
+      ],
+      "distance_m_approx": 16
+    },
+    {
+      "name": "Indigenous Resouce Garden",
+      "objects": [
+        "way/1186659151",
+        "way/1186659153"
+      ],
+      "distance_m_approx": 21
+    },
+    {
+      "name": "Indigenous Resouce Garden",
+      "objects": [
+        "way/1186659152",
+        "way/1186659153"
+      ],
+      "distance_m_approx": 16
+    },
+    {
+      "name": "O.B. Bell Memorial Park",
+      "objects": [
+        "way/463971255",
+        "way/463971256"
+      ],
+      "distance_m_approx": 28
+    },
+    {
+      "name": "Parterre Garden",
+      "objects": [
+        "way/929647901",
+        "way/929647902"
+      ],
+      "distance_m_approx": 8
+    },
+    {
+      "name": "Residential Garden",
+      "objects": [
+        "way/885327745",
+        "way/885327746"
+      ],
+      "distance_m_approx": 32
+    }
+  ]
+}

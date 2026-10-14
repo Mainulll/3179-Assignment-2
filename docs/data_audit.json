@@ -1,0 +1,125 @@
+{
+  "source_snapshot": "2026-09-10",
+  "checks": {
+    "geometry_repairs": [],
+    "allocated_sa2_count": 2452,
+    "unallocated_population_rows": [
+      "901011001",
+      "901021002"
+    ],
+    "regions_below_any_sample_threshold": 38,
+    "economy_geographic_matches": {
+      "matched_regions": 74,
+      "total_regions": 76
+    },
+    "osm": {
+      "categories": {
+        "lookout": {
+          "input": 8100,
+          "accepted_memberships": 7945,
+          "outside_region_polygons": 152,
+          "excluded_access": 3,
+          "snapshot": "2026-09-09T23:09:06Z"
+        },
+        "garden": {
+          "input": 1279,
+          "accepted_memberships": 1214,
+          "excluded_access": 20,
+          "outside_region_polygons": 45,
+          "snapshot": "2026-09-09T23:10:02Z"
+        },
+        "visitor_centre": {
+          "input": 771,
+          "accepted_memberships": 753,
+          "excluded_non_tourism_office": 15,
+          "outside_region_polygons": 2,
+          "excluded_access": 1,
+          "snapshot": "2026-09-09T23:12:06Z"
+        }
+      },
+      "unique_accepted_objects": 9912,
+      "multi_category_objects": 0,
+      "nearby_same_name_pairs_for_review": 75
+    },
+    "heritage": {
+      "input_features": 151,
+      "listed_unique_places": 126
+    },
+    "case_study_metrics": 6,
+    "total_data_bytes": 2968322
+  },
+  "issues": [
+    {
+      "id": "economy_boundary_names",
+      "records": [
+        {
+          "economy_name": "Capricorn",
+          "state": "QLD",
+          "candidate_boundary_name": "Capricorn Coast",
+          "status": "not joined; geographic equivalence unverified"
+        },
+        {
+          "economy_name": "Mackay Isaac",
+          "state": "QLD",
+          "candidate_boundary_name": "Mackay",
+          "status": "not joined; geographic equivalence unverified"
+        }
+      ],
+      "action": "Resolve from authoritative geographic metadata before mapping these two economy regions. Show missing data, never zero."
+    },
+    {
+      "id": "sample_sizes",
+      "action": "TRA flags component samples below 1000 domestic day, 500 domestic overnight, or 40 international. These are confidence cautions, not zero values or confidence intervals. Appendix Mornington Peninsula does not exact-match economy Peninsula, so that sample flag is null pending verification."
+    },
+    {
+      "id": "osm_coverage",
+      "action": "Label counts as mapped OSM records, not unique attractions or a complete national inventory. Unknown access is not confirmed public access. Review same-name nearby pairs before site-level claims."
+    },
+    {
+      "id": "domestic_header_correction",
+      "source": "raw/domestic_visitors/tra-dots-march-quarter-2026-compared-to-march-quarter-2025.xlsx",
+      "cell": "Table 1b!F4",
+      "original": "March Quarter 2025",
+      "derived": "2026-Q1",
+      "evidence": "All 27 numeric observations in the final column match Table 1a column C, explicitly March Quarter 2026. Table 5b also labels its final quarter March 2026. Original file unchanged."
+    }
+  ],
+  "outputs": {
+    "community_case_studies.json": {
+      "bytes": 2319,
+      "sha256": "f5e40515cded2f3c587765912796c4cb849140480e90a1c7208aed343401fe57"
+    },
+    "domestic_state_quarters.json": {
+      "bytes": 21292,
+      "sha256": "de52197c21f02e2972352812c46a3dc508aa97ecb862734c0fb6a6dc4bf9e900"
+    },
+    "listed_national_heritage.json": {
+      "bytes": 26118,
+      "sha256": "351c461e2f5332ce07b7fc45fbeefb4f81ac84b2d134e8a179a43084555acdc5"
+    },
+    "mapped_attractions.json": {
+      "bytes": 1457894,
+      "sha256": "58dd9eb27140710270401a7efff4dfbd8f6f564cd7166d2af86eb686e845790e"
+    },
+    "regional_economy.json": {
+      "bytes": 111412,
+      "sha256": "779f6067341ec8f545c1f68411301efd663c046a45271e4b2e07a7fbdd5f4c96"
+    },
+    "regional_jobs_by_industry.json": {
+      "bytes": 281462,
+      "sha256": "6dbe2f7c6e6fb2ebed4180adf5d472017682deefff5793519668547be9771c88"
+    },
+    "regional_population.json": {
+      "bytes": 8770,
+      "sha256": "0d58f54979280ccb361b89ee1a2c28d1bf99e5e5d5ca32a920feb18f3a25d9ba"
+    },
+    "regional_sample_sizes.json": {
+      "bytes": 12385,
+      "sha256": "7a870e6ec504d2004cf6ae885b4743df52f8c0d3c9b918a4080747ac385730e5"
+    },
+    "tourism_regions_2024.geojson": {
+      "bytes": 1046670,
+      "sha256": "129ce24ade56e0427461308288eeffddd735b17d925e00f920805d4e7ed97628"
+    }
+  }
+}

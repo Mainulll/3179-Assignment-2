@@ -1,0 +1,110 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 420,
+  "height": 300,
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "config": {
+    "background": "transparent",
+    "view": {
+      "stroke": null
+    },
+    "font": "Manrope",
+    "axis": {
+      "labelFontSize": 13,
+      "titleFontSize": 13,
+      "titleFontWeight": 500,
+      "labelColor": "#52635F",
+      "titleColor": "#203C3A",
+      "domain": false,
+      "tickColor": "#DDD6C9",
+      "gridColor": "#E8E2D7",
+      "labelPadding": 7,
+      "titlePadding": 12
+    },
+    "legend": {
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "labelColor": "#52635F",
+      "titleColor": "#203C3A"
+    },
+    "text": {
+      "font": "Manrope",
+      "color": "#203C3A"
+    },
+    "title": {
+      "font": "Fraunces",
+      "color": "#203C3A"
+    }
+  },
+  "description": "Histogram of exact recorded artwork years in adjacent ten-year intervals. 177 exact years; 25 uncertain dates excluded. Recorded dates are not installation or construction dates.",
+  "data": {
+    "url": "data/dv2/art-decades.json"
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "color": "#A6472D",
+        "binSpacing": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "decade",
+          "type": "quantitative",
+          "bin": "binned",
+          "title": "Recorded decade",
+          "scale": {
+            "domain": [
+              1860,
+              2020
+            ],
+            "nice": false
+          },
+          "axis": {
+            "values": [
+              1860,
+              1900,
+              1940,
+              1980,
+              2020
+            ],
+            "format": "d",
+            "labelAngle": -45
+          }
+        },
+        "x2": {
+          "field": "end"
+        },
+        "y": {
+          "field": "count",
+          "type": "quantitative",
+          "title": "Artworks",
+          "scale": {
+            "domain": [
+              0,
+              50
+            ]
+          },
+          "axis": {
+            "tickCount": 5
+          }
+        },
+        "tooltip": [
+          {
+            "field": "label",
+            "title": "Recorded decade",
+            "type": "nominal"
+          },
+          {
+            "field": "count",
+            "title": "Artworks",
+            "type": "quantitative"
+          }
+        ]
+      }
+    }
+  ]
+}

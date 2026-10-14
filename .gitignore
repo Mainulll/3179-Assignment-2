@@ -22,3 +22,14 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# Local data preparation
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+raw/
+
+# Local DV2 build tools and QA output
+node_modules/
+output/

@@ -1,0 +1,524 @@
+[
+  {
+    "path": "raw/attractions/national_heritage.geojson",
+    "url": "https://gis.environment.gov.au/gispubmap/rest/services/ogc_services/National_Heritage_List/MapServer/0",
+    "bytes": 41221944,
+    "sha256": "9f5633135c8508fbcbc4ca39189207096b0d6aa31c7d91d71ddfb74d4486dd79"
+  },
+  {
+    "path": "raw/attractions/osm_gardens_bbox.json",
+    "url": "https://overpass-api.de/api/interpreter",
+    "bytes": 308318,
+    "sha256": "1d892b1310e78f422cf4ef3779e54450d992a25d08d4db80bee628815cee589a"
+  },
+  {
+    "path": "raw/attractions/osm_lookouts_bbox.json",
+    "url": "https://overpass-api.de/api/interpreter",
+    "bytes": 1331593,
+    "sha256": "db178db000bc0e66c0d7c5e87c5e2ac36ea8ade2d67b958541cc185a0f646fd6"
+  },
+  {
+    "path": "raw/attractions/osm_visitor_centres_bbox_retry.json",
+    "url": "https://overpass-api.de/api/interpreter",
+    "bytes": 252089,
+    "sha256": "32db0388c657c6563df6fa02f4dbb8f4168ddd1391f727ad6d5976d8b537a737"
+  },
+  {
+    "path": "raw/case_studies/port_arthur_2024-25.pdf",
+    "url": "https://portarthur.org.au/wp-content/uploads/2025/11/PAHSMA-Annual-Report-2024-25.pdf",
+    "bytes": 4300643,
+    "sha256": "cfc0a0eafbc890b7a5622a6c21a96629d00f41729ca48b94f9b637b834409276"
+  },
+  {
+    "path": "raw/case_studies/rbg_victoria_2024-25.pdf",
+    "url": "https://cdn.rbg.vic.gov.au/media/jc0jkbhl/rbg535-annual-report-2024-25-fa-web.pdf",
+    "bytes": 6974920,
+    "sha256": "66d52a93bd381ba8f81ae16e87499250e6d0e5a591596b5156980935214cafce"
+  },
+  {
+    "path": "raw/domestic_visitors/tra-dots-march-quarter-2026-compared-to-march-quarter-2025.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-march-quarter-2026-compared-to-march-quarter-2025.xlsx",
+    "bytes": 358568,
+    "sha256": "b52721093974e2dd866af83f3773e66724a63e06eba3aeca3edd5e6b06b90965"
+  },
+  {
+    "path": "raw/population/32180DS0003_2001-25.xlsx",
+    "url": "https://www.abs.gov.au/statistics/people/population/regional-population/2024-25/32180DS0003_2001-25.xlsx",
+    "bytes": 688233,
+    "sha256": "f35d0ca0caaf70b0933871747210e62ac3ff5f7ab7fb4876c92bb1f6e1f6a0a8"
+  },
+  {
+    "path": "raw/tourism_boundaries/tra-tourism-regions-2024-allocation.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/regional/tourism-regions-maps-2024/tra-tourism-regions-2024-allocation.xlsx",
+    "bytes": 140436,
+    "sha256": "f441b70dfd12da9abd62c8961314f8dd6a2af88fd7c8072e49040c59a49231f7"
+  },
+  {
+    "path": "raw/tourism_boundaries/tra-tourism-regions-2024-shapefiles.zip",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/regional/tourism-regions-maps-2024/tra-tourism-regions-2024-shapefiles.zip",
+    "bytes": 28913962,
+    "sha256": "f557a636c8595002a7d970570f82685ec0331000b3a3c8c9d2b5c2526001311a"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-act-canberra-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-act-canberra-srtsa.xlsx",
+    "bytes": 99940,
+    "sha256": "39f06e54819652ac5b5e4744eedfeffede4f3a16b9748d35e36c24dfc72a370e"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-nsw-blue-mountains-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-nsw-blue-mountains-srtsa.xlsx",
+    "bytes": 103029,
+    "sha256": "4d536ba7c4d3fa459766440c90ced9d14760dc50fb31778ff408aac170a54584"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-nsw-capital-country-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-nsw-capital-country-srtsa.xlsx",
+    "bytes": 153101,
+    "sha256": "8a294a679d988388011d39adc6bfd035a4b18641d4145acc8f84f8f437927886"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-nsw-central-coast-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-nsw-central-coast-srtsa.xlsx",
+    "bytes": 151373,
+    "sha256": "d047183ff9b0d08f1334ac52221637803bf0eece7ef06697fe899c7856972dbc"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-nsw-central-nsw-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-nsw-central-nsw-srtsa.xlsx",
+    "bytes": 103519,
+    "sha256": "ef161a200967d9e8d20d1a41868415090ef35daaf927b1f7fece8bd3f09d5b07"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-nsw-hunter-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-nsw-hunter-srtsa.xlsx",
+    "bytes": 103011,
+    "sha256": "c46e9e262ee6438b4a99377a2756012576c5fa087dd94e380e4834e727dfe651"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-nsw-new-england-north-west-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-nsw-new-england-north-west-srtsa.xlsx",
+    "bytes": 102960,
+    "sha256": "9979e836e5a241e6fb81b7af33f6d0668f46036783b21f8cd084d2d516f49c6d"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-nsw-north-coast-nsw-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-nsw-north-coast-nsw-srtsa.xlsx",
+    "bytes": 164735,
+    "sha256": "0967907e9e43211d92758ce1a07151314cb3ad43e265a3cba7b6aa19a2f8e545"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-nsw-outback-nsw-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-nsw-outback-nsw-srtsa.xlsx",
+    "bytes": 102931,
+    "sha256": "300a1d2b1689dc5d4fa81f4079c0f9fb2e9129d1a01ce640f7ef386c1992271d"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-nsw-riverina-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-nsw-riverina-srtsa.xlsx",
+    "bytes": 103242,
+    "sha256": "a60d9f7d4f148810c36ceac93042d5483204649d89cf3e666f49bdeec2cbdbb1"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-nsw-snowy-mountains-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-nsw-snowy-mountains-srtsa.xlsx",
+    "bytes": 166160,
+    "sha256": "c446efa84acee5a6317820202ba5ec74b33dda9b92f8a92b00dba580a543970d"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-nsw-south-coast-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-nsw-south-coast-srtsa.xlsx",
+    "bytes": 103352,
+    "sha256": "428fbb3bbdf2b6f650f9637d77f85adef4287b273d195128e0b7bbe31649be4e"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-nsw-sydney-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-nsw-sydney-srtsa.xlsx",
+    "bytes": 102939,
+    "sha256": "c5967ac31a32823527fb8d5ecb62ffee346ba49f16f1489ee979d160a48b5a61"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-nsw-the-murray-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-nsw-the-murray-srtsa.xlsx",
+    "bytes": 103304,
+    "sha256": "64795a98fca6b2aef5cf15aa9485a8fdb1491081602e159d863de34e838d941a"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-nt-alice-springs-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-nt-alice-springs-srtsa.xlsx",
+    "bytes": 101844,
+    "sha256": "907aacb8b4e81bd1e6ab960413c0745107eca885b7778847a38ae6f45fc3ec57"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-nt-barkly-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-nt-barkly-srtsa.xlsx",
+    "bytes": 101956,
+    "sha256": "b13c18972d3a1ef42746a2b949d7f32b0dbd1a5a1ad6c83ab769da1ab7e319e4"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-nt-darwin-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-nt-darwin-srtsa.xlsx",
+    "bytes": 101593,
+    "sha256": "41b37bdde2c18f2a1351a8c9b167398f7089b84f7acce5a6306dad00ef8aed2d"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-nt-katherine-daly-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-nt-katherine-daly-srtsa.xlsx",
+    "bytes": 101589,
+    "sha256": "6302a676a060f0a802d176b7b910932c5a8f8e8a6d8f32d6814b628c4c1339ca"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-nt-lasseter-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-nt-lasseter-srtsa.xlsx",
+    "bytes": 101586,
+    "sha256": "3708dbed3819ebdf4b4f7c38ee57bedec65d2378407ffcaa46bdc7784310d4e3"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-nt-litchfield-kakadu-arnhem-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-nt-litchfield-kakadu-arnhem-srtsa.xlsx",
+    "bytes": 102092,
+    "sha256": "fcba61a874d9d09fd19b883f632bb6df9c2d6091c840c53c4427804baacce241"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-nt-macdonnell-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-nt-macdonnell-srtsa.xlsx",
+    "bytes": 101601,
+    "sha256": "38d7386bc69ab385717ccc8ad259a75c709ec593a90ede3eab709ca9b95e7b89"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-qld-brisbane-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-qld-brisbane-srtsa.xlsx",
+    "bytes": 102969,
+    "sha256": "48c6347b8058f23d6ed81a5c3b43b835ad7a91f591905083dd17e7cfb68ecd49"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-qld-bundaberg-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-qld-bundaberg-srtsa.xlsx",
+    "bytes": 103023,
+    "sha256": "d5cbf05d5e87d0d9a69d9449f0110b042c57dbfd3e7e25fc01d420a0b9815ac2"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-qld-capricorn-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-qld-capricorn-srtsa.xlsx",
+    "bytes": 103001,
+    "sha256": "b6fe0bf1eb723741f4fb4d8d7d77624599476c96c1ff878ca5243588b1441017"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-qld-fraser-coast-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-qld-fraser-coast-srtsa.xlsx",
+    "bytes": 103491,
+    "sha256": "3864e27ad747cdc564501ea62c84a6a88e678ad61c3990bb930917f100155345"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-qld-gladstone-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-qld-gladstone-srtsa.xlsx",
+    "bytes": 103386,
+    "sha256": "ef2634e9a63842a14ce8982432867d48ae5c1690fbe1aa3fab3ae349c71f668a"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-qld-gold-coast-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-qld-gold-coast-srtsa.xlsx",
+    "bytes": 103505,
+    "sha256": "c8607264457ea89a9bb5051fe6055255c81337d9394ab1412fe9dd9614f47004"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-qld-mackay-isaac-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-qld-mackay-isaac-srtsa.xlsx",
+    "bytes": 103043,
+    "sha256": "ff52c4148aaba35848af94ea9ff0c9fb99fe03588b90292e4f47d65920ecb0a6"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-qld-outback-queensland-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-qld-outback-queensland-srtsa.xlsx",
+    "bytes": 103112,
+    "sha256": "e0de85012a88b52040648cfbfad729d25f382df9eb2416be633f16064f6239a7"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-qld-queensland-country-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-qld-queensland-country-srtsa.xlsx",
+    "bytes": 102984,
+    "sha256": "b7630c318b0016cb1a4b7cf93e6f46053dff265680e779b3e4e3bac19d4acb1f"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-qld-sunshine-coast-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-qld-sunshine-coast-srtsa.xlsx",
+    "bytes": 103012,
+    "sha256": "56d2bf429761587ca003aedb164d812c7ffdc8f8957593e2e6ba0fd844bfcfad"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-qld-townsville-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-qld-townsville-srtsa.xlsx",
+    "bytes": 103467,
+    "sha256": "12386f547f4b9006aa176a9584329eecbee9ed6816fdc4c9614244f4ca197d04"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-qld-tropical-north-queensland-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-qld-tropical-north-queensland-srtsa.xlsx",
+    "bytes": 103030,
+    "sha256": "7e527445700e0d930204f3b45d0e2d1b6b5c3bd58642dccc47542d5b0cea4966"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-qld-whitsundays-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-qld-whitsundays-srtsa.xlsx",
+    "bytes": 103412,
+    "sha256": "a741e5f00d583528f373dbd6775c6d0c258f402ca46beb825faed9112b9e4740"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-sa-adelaide-hills-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-sa-adelaide-hills-srtsa.xlsx",
+    "bytes": 105884,
+    "sha256": "f63afaf1af24334d3d7236fe546760057c83a2b59a9e95714fd23346fc468981"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-sa-adelaide-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-sa-adelaide-srtsa.xlsx",
+    "bytes": 102924,
+    "sha256": "d8e820afc7cbd9ec9eaf562dc2fe4885157cc38553977f468571bb545b135541"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-sa-barossa-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-sa-barossa-srtsa.xlsx",
+    "bytes": 104519,
+    "sha256": "7a34df6527a1a7662712fe287a249f10fbaa23af1c621698f8b1bcba498f6573"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-sa-clare-valley-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-sa-clare-valley-srtsa.xlsx",
+    "bytes": 102903,
+    "sha256": "0a6e8e47d36c8f793cb240ff7787248726ad5219e5c20fe9842e5d06bfae95d2"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-sa-eyre-peninsula-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-sa-eyre-peninsula-srtsa.xlsx",
+    "bytes": 102708,
+    "sha256": "72fcc191dd9e1a33029f8d98113b52910a34de81e23706a3c24f9b555d82e523"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-sa-fleurieu-peninsula-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-sa-fleurieu-peninsula-srtsa.xlsx",
+    "bytes": 104587,
+    "sha256": "837f15335d4b3a69014871579fcd68e9efdab28ad008c216f5b0b3ec66c41ce0"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-sa-flinders-rangers-and-outback-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-sa-flinders-rangers-and-outback-srtsa.xlsx",
+    "bytes": 102889,
+    "sha256": "34f2a50fa7f8b37c69e0ebc9027eef62ef48cf1e6413f3bb7399f71b50b3d83c"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-sa-kangaroo-island-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-sa-kangaroo-island-srtsa.xlsx",
+    "bytes": 104606,
+    "sha256": "30aaaf434214fefc53d71d5786a8477e46d80d0a06dfa56d16e51a173f99b076"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-sa-limestone-coast-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-sa-limestone-coast-srtsa.xlsx",
+    "bytes": 102719,
+    "sha256": "fd7d17d8ef1d7cda2bd6e556532b21b9c8c863db7cd3175d844ba45eb63a13a5"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-sa-murray-river-lakes-and-coorong-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-sa-murray-river-lakes-and-coorong-srtsa.xlsx",
+    "bytes": 102750,
+    "sha256": "06e329c39e5590f13e8ed48c93650343e68587f5a8d5a1d5394e498b5bff0fb2"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-sa-riverland-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-sa-riverland-srtsa.xlsx",
+    "bytes": 104547,
+    "sha256": "911ecf5782dc01cd6607457f0491876408aa09f27e1b73fb34d2612571e5aebf"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-sa-yorke-peninsula-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-sa-yorke-peninsula-srtsa.xlsx",
+    "bytes": 102836,
+    "sha256": "58ad01be47d4dab304adf0dcc4e0b596d1385d94a26711238a71a2fd63e90777"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-tas-east-coast-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-tas-east-coast-srtsa.xlsx",
+    "bytes": 102802,
+    "sha256": "3aa811e4ae4c3662c684d8ba5c03c1234f7a025a7a9b8ebbb94e92fda4196d45"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-tas-hobart-and-the-south-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-tas-hobart-and-the-south-srtsa.xlsx",
+    "bytes": 101075,
+    "sha256": "fdf92c0ae79a43def50edca4d38feb08d892c4b7e793c29bda7228b85f51ae0e"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-tas-launceston-and-the-north-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-tas-launceston-and-the-north-srtsa.xlsx",
+    "bytes": 102821,
+    "sha256": "987b3f9005bf3d1d09667d27948cb35dffb56d3b0cd72bf3cc6940d6d00a92bb"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-tas-north-west-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-tas-north-west-srtsa.xlsx",
+    "bytes": 104083,
+    "sha256": "f84fe40a1b2677a67d7b31f96d2b57ef23d5f35e1c76d15a46e20be34213fddc"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-tas-west-coast-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-tas-west-coast-srtsa.xlsx",
+    "bytes": 101038,
+    "sha256": "7dca1c6731229e25b23b80fe0fb6eb009ff03c51c22c4a0c43b6c0827e3db856"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-vic-ballarat-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-vic-ballarat-srtsa.xlsx",
+    "bytes": 104722,
+    "sha256": "30ad1ec5c4359c12d73254972c90acead7a9b9d9b49b805df7e890f0ccaa3f4c"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-vic-bendigo-loddon-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-vic-bendigo-loddon-srtsa.xlsx",
+    "bytes": 104646,
+    "sha256": "629231ac0fd899304bb2e953a68e60419b0a6b265e533e4329eafafbe701c6bf"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-vic-central-highlands-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-vic-central-highlands-srtsa.xlsx",
+    "bytes": 104652,
+    "sha256": "80fbbd075e2edd72529069a63f343298f01acd0b1e8c164ffa187989ba479ea9"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-vic-central-murray-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-vic-central-murray-srtsa.xlsx",
+    "bytes": 107598,
+    "sha256": "d22323c43fd37cc0981ffea6f74ab9a125532830b9a8f5436319c3ba02ecd7fc"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-vic-geelong-and-the-bellarine-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-vic-geelong-and-the-bellarine-srtsa.xlsx",
+    "bytes": 106429,
+    "sha256": "f31f167f594600a4b8f76a63ff35fb349f2448dae3a4c4988d8321504a758608"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-vic-gippsland-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-vic-gippsland-srtsa.xlsx",
+    "bytes": 106388,
+    "sha256": "bb7f773bb867bebfe52130231f86e5828cbd843003dfce444dad84a5e03d63b7"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-vic-goulburn-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-vic-goulburn-srtsa.xlsx",
+    "bytes": 106390,
+    "sha256": "6ba953c8b00e32b75168d5802a58d1bd7794dab884c4be0c052d5ebad0775bab"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-vic-great-ocean-road-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-vic-great-ocean-road-srtsa.xlsx",
+    "bytes": 106343,
+    "sha256": "c38795c6e995b4eb817fccf9349e06f781f2683cbab6f571c230c61d52e6ec67"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-vic-high-country-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-vic-high-country-srtsa.xlsx",
+    "bytes": 106377,
+    "sha256": "52688da255a0408cecc12d8260df098270ae1b6762579674959519967af7bb90"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-vic-lakes-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-vic-lakes-srtsa.xlsx",
+    "bytes": 106356,
+    "sha256": "6d73f2160ab146e7341dc0361c44fb48f16e82e50bcc6bf1a5d5c3b262fadd3c"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-vic-macedon-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-vic-macedon-srtsa.xlsx",
+    "bytes": 106426,
+    "sha256": "ca84ac76239ac8c282dbb2bba6d421288761b357c4f278b4c9c9576e95549b96"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-vic-mallee-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-vic-mallee-srtsa.xlsx",
+    "bytes": 106355,
+    "sha256": "6fa4f3247fa342548ae007d1f701d580516f139d57a1a8108325c4bab8c9efee"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-vic-melbourne-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-vic-melbourne-srtsa.xlsx",
+    "bytes": 104524,
+    "sha256": "76bbfefcbb97b41e2dad0de6fae7ce67d21ad58035b5f1a8f03f5962d482d5da"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-vic-murray-east-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-vic-murray-east-srtsa.xlsx",
+    "bytes": 104600,
+    "sha256": "29b13fb326195a2e4bd10c50c101749cc5eadcdca89637dc2e62334b5ac80a3c"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-vic-peninsula-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-vic-peninsula-srtsa.xlsx",
+    "bytes": 104543,
+    "sha256": "d2242d810eceb69cbd1bad00b8770a88762e7d8c606375b8d9d87e049298e37e"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-vic-phillip-island-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-vic-phillip-island-srtsa.xlsx",
+    "bytes": 106396,
+    "sha256": "04013e061e482736a6498dbbafa519fd960e9116503ddca6824b8fe4cf25377f"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-vic-spa-country-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-vic-spa-country-srtsa.xlsx",
+    "bytes": 107620,
+    "sha256": "4ee924aa6c11fccf9ce97ae808f5451cbff49359d25e3fad0ae866475d04f2a8"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-vic-western-grampians-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-vic-western-grampians-srtsa.xlsx",
+    "bytes": 104571,
+    "sha256": "d50b0b05758735dcfde142eabd0c45986582e489b784af3be939c7a11e09d556"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-vic-wimmera-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-vic-wimmera-srtsa.xlsx",
+    "bytes": 107678,
+    "sha256": "9bbe77886af7779a45f9ea81408343d4a0c1ce2f0b819a13a972e766c913b719"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-vic-yarra-valley-and-dandenong-ranges-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-vic-yarra-valley-and-dandenong-ranges-srtsa.xlsx",
+    "bytes": 107641,
+    "sha256": "20e05d473109b35e42a0b5c7d2d5ea459772e6d94b7f5519345c951868914cb9"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-wa-australias-coral-coast-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-wa-australias-coral-coast-srtsa.xlsx",
+    "bytes": 101163,
+    "sha256": "d949ef928012d07718026a9813999d88b7444b0d54c20a57d9e5a316f733c9bd"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-wa-australias-destination-perth-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-wa-australias-destination-perth-srtsa.xlsx",
+    "bytes": 101185,
+    "sha256": "adb288ba29ab9d500e473f2a70d63f9785007f41018083d2f4a75543bf94c40c"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-wa-australias-golden-outback-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-wa-australias-golden-outback-srtsa.xlsx",
+    "bytes": 104131,
+    "sha256": "84cd007ef5002b846100f79dd4013b252c79e75bf517fbcb1131e9edcdfae58b"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-wa-australias-north-west-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-wa-australias-north-west-srtsa.xlsx",
+    "bytes": 101038,
+    "sha256": "4bb85cd2554cf4b99059141a38c394834c44cb57329173c03eccef59c617a9a2"
+  },
+  {
+    "path": "raw/tourism_economy/2024-25-wa-australias-south-west-srtsa.xlsx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/2024-25-wa-australias-south-west-srtsa.xlsx",
+    "bytes": 101034,
+    "sha256": "2a13afcb5501656f8b86a4b5f0cddd1b89d1e7167eb9b79b199ac5748622c839"
+  },
+  {
+    "path": "raw/tourism_economy/appendix-1-change-in-direct-tourism-output.docx",
+    "url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/tsa/2025/appendix-1-change-in-direct-tourism-output.docx",
+    "bytes": 56394,
+    "sha256": "8517f4d8ca1d2e00377e7385376920ee1d4a7a2341d6c14b31644ae8ff0ef70d"
+  }
+]

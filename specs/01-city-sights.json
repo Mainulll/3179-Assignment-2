@@ -1,0 +1,184 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 420,
+  "height": 375,
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "config": {
+    "background": "transparent",
+    "view": {
+      "stroke": null
+    },
+    "font": "Manrope",
+    "axis": {
+      "labelFontSize": 13,
+      "titleFontSize": 13,
+      "titleFontWeight": 500,
+      "labelColor": "#52635F",
+      "titleColor": "#203C3A",
+      "domain": false,
+      "tickColor": "#DDD6C9",
+      "gridColor": "#E8E2D7",
+      "labelPadding": 7,
+      "titlePadding": 12
+    },
+    "legend": {
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "labelColor": "#52635F",
+      "titleColor": "#203C3A"
+    },
+    "text": {
+      "font": "Manrope",
+      "color": "#203C3A"
+    },
+    "title": {
+      "font": "Fraunces",
+      "color": "#203C3A"
+    }
+  },
+  "description": "Equal-sized cultural/leisure inventory points within the City of Melbourne. Source processed November 2022. Shapes and colours encode theme, not popularity.",
+  "projection": {
+    "type": "mercator"
+  },
+  "params": [
+    {
+      "name": "themeFilter",
+      "value": "All"
+    },
+    {
+      "name": "subFilter",
+      "value": "All"
+    }
+  ],
+  "layer": [
+    {
+      "data": {
+        "url": "data/dv2/areas.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#ECECE0",
+        "stroke": "#D6D8C9",
+        "strokeWidth": 0.7
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "properties.featurenam",
+            "title": "CLUE analysis area",
+            "type": "nominal"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/dv2/boundary.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": null,
+        "stroke": "#9BA89C",
+        "strokeWidth": 1.1
+      }
+    },
+    {
+      "data": {
+        "url": "data/dv2/sights.json"
+      },
+      "transform": [
+        {
+          "filter": "themeFilter === 'All' || datum.theme === themeFilter"
+        },
+        {
+          "filter": "subFilter === 'All' || datum.sub_theme === subFilter"
+        }
+      ],
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 76,
+        "opacity": 0.88,
+        "stroke": "#FFFDF8",
+        "strokeWidth": 0.7
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "theme",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Leisure/Recreation",
+              "Place Of Assembly",
+              "Purpose Built"
+            ],
+            "range": [
+              "#176C65",
+              "#A6472D",
+              "#8B5B11"
+            ]
+          },
+          "legend": null
+        },
+        "shape": {
+          "field": "theme",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Leisure/Recreation",
+              "Place Of Assembly",
+              "Purpose Built"
+            ],
+            "range": [
+              "circle",
+              "square",
+              "triangle-up"
+            ]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          {
+            "field": "feature_name",
+            "title": "Place",
+            "type": "nominal"
+          },
+          {
+            "field": "sub_theme",
+            "title": "Source type",
+            "type": "nominal"
+          },
+          {
+            "field": "theme",
+            "title": "Source theme",
+            "type": "nominal"
+          },
+          {
+            "field": "clue_area",
+            "title": "CLUE area",
+            "type": "nominal"
+          }
+        ]
+      }
+    }
+  ]
+}

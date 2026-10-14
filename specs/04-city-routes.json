@@ -1,0 +1,167 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 420,
+  "height": 375,
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "config": {
+    "background": "transparent",
+    "view": {
+      "stroke": null
+    },
+    "font": "Manrope",
+    "axis": {
+      "labelFontSize": 13,
+      "titleFontSize": 13,
+      "titleFontWeight": 500,
+      "labelColor": "#52635F",
+      "titleColor": "#203C3A",
+      "domain": false,
+      "tickColor": "#DDD6C9",
+      "gridColor": "#E8E2D7",
+      "labelPadding": 7,
+      "titlePadding": 12
+    },
+    "legend": {
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "labelColor": "#52635F",
+      "titleColor": "#203C3A"
+    },
+    "text": {
+      "font": "Manrope",
+      "color": "#203C3A"
+    },
+    "title": {
+      "font": "Fraunces",
+      "color": "#203C3A"
+    }
+  },
+  "description": "34 separate LineString components for 11 self-guided routes. Components are never joined across gaps. Cycling is derived from the exact route name Southbank and Docklands by Bike.",
+  "projection": {
+    "type": "mercator"
+  },
+  "params": [
+    {
+      "name": "routeFilter",
+      "value": "All"
+    }
+  ],
+  "layer": [
+    {
+      "data": {
+        "url": "data/dv2/areas.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#ECECE0",
+        "stroke": "#D6D8C9",
+        "strokeWidth": 0.7
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "properties.featurenam",
+            "title": "CLUE analysis area",
+            "type": "nominal"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/dv2/boundary.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": null,
+        "stroke": "#9BA89C",
+        "strokeWidth": 1.1
+      }
+    },
+    {
+      "data": {
+        "url": "data/dv2/walks.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "filled": false,
+        "strokeWidth": 3
+      },
+      "encoding": {
+        "color": {
+          "condition": {
+            "test": "routeFilter === 'All' || datum.properties.route_name === routeFilter",
+            "value": "#176C65"
+          },
+          "value": "#B4C2B9"
+        },
+        "opacity": {
+          "condition": {
+            "test": "routeFilter === 'All' || datum.properties.route_name === routeFilter",
+            "value": 0.9
+          },
+          "value": 0.15
+        },
+        "strokeDash": {
+          "field": "properties.mode",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Walking",
+              "Cycling"
+            ],
+            "range": [
+              [
+                1,
+                0
+              ],
+              [
+                6,
+                3
+              ]
+            ]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          {
+            "field": "properties.route_name",
+            "title": "Route",
+            "type": "nominal"
+          },
+          {
+            "field": "properties.mode",
+            "title": "Mode",
+            "type": "nominal"
+          },
+          {
+            "field": "properties.geometry_length_km",
+            "title": "Derived whole-route km",
+            "type": "quantitative",
+            "format": ".2f"
+          },
+          {
+            "field": "properties.part_id",
+            "title": "Component",
+            "type": "quantitative"
+          }
+        ]
+      }
+    }
+  ]
+}

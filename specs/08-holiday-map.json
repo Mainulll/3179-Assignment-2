@@ -1,0 +1,219 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 420,
+  "height": 470,
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "config": {
+    "background": "transparent",
+    "view": {
+      "stroke": null
+    },
+    "font": "Manrope",
+    "axis": {
+      "labelFontSize": 13,
+      "titleFontSize": 13,
+      "titleFontWeight": 500,
+      "labelColor": "#52635F",
+      "titleColor": "#203C3A",
+      "domain": false,
+      "tickColor": "#DDD6C9",
+      "gridColor": "#E8E2D7",
+      "labelPadding": 7,
+      "titlePadding": 12
+    },
+    "legend": {
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "labelColor": "#52635F",
+      "titleColor": "#203C3A"
+    },
+    "text": {
+      "font": "Manrope",
+      "color": "#203C3A"
+    },
+    "title": {
+      "font": "Fraunces",
+      "color": "#203C3A"
+    }
+  },
+  "description": "Eight-state choropleth. Colour = holiday/leisure domestic overnight nights divided by all overnight nights in each state in calendar 2024. ABS2021 boundaries; Australia-centred equal-area Albers projection.",
+  "projection": {
+    "type": "albers",
+    "rotate": [
+      -132,
+      0,
+      0
+    ],
+    "center": [
+      0,
+      -27
+    ],
+    "parallels": [
+      -18,
+      -36
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "data/dv2/states.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#FFFDF8",
+        "strokeWidth": 1.4
+      },
+      "encoding": {
+        "color": {
+          "field": "properties.holiday_nights_share_pct",
+          "type": "quantitative",
+          "title": "Holiday share (%)",
+          "scale": {
+            "domain": [
+              0,
+              100
+            ],
+            "range": [
+              "#EDF1D7",
+              "#0B655E"
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "gradientLength": 210,
+            "values": [
+              0,
+              25,
+              50,
+              75,
+              100
+            ],
+            "format": ".0f",
+            "titleFontSize": 12
+          }
+        },
+        "tooltip": [
+          {
+            "field": "properties.state",
+            "title": "State / territory",
+            "type": "nominal"
+          },
+          {
+            "field": "properties.holiday_nights_share_pct",
+            "title": "Holiday nights (%)",
+            "type": "quantitative",
+            "format": ".1f"
+          },
+          {
+            "field": "properties.holiday_nights_000",
+            "title": "Holiday nights (thousands)",
+            "type": "quantitative",
+            "format": ",.0f"
+          },
+          {
+            "field": "properties.nights_000",
+            "title": "All overnight nights (thousands)",
+            "type": "quantitative",
+            "format": ",.0f"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/dv2/state-labels.json"
+      },
+      "transform": [
+        {
+          "filter": "datum.state_abbr !== 'ACT'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fontWeight": 700,
+        "color": "#203C3A",
+        "stroke": "#FFFDF8",
+        "strokeWidth": 0.25
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "state_abbr"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "data/dv2/state-labels.json"
+      },
+      "transform": [
+        {
+          "filter": "datum.state_abbr === 'ACT'"
+        }
+      ],
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 40,
+        "color": "#A6472D"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "data/dv2/state-labels.json"
+      },
+      "transform": [
+        {
+          "filter": "datum.state_abbr === 'ACT'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 10,
+        "dy": 14,
+        "fontSize": 12,
+        "fontWeight": 700,
+        "color": "#A6472D"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "text": {
+          "value": "ACT"
+        }
+      }
+    }
+  ]
+}

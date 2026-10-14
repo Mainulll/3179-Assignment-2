@@ -1,0 +1,69 @@
+{
+  "method": "Spherical ring orientation normalized for D3/Vega. Parts with area <= 1e-12 steradians (about 40 square metres) are numerically degenerate after source rounding and omitted only from display geometry; tourism statistics are unchanged.",
+  "states": [
+    {
+      "state": "New South Wales",
+      "source_parts": 249,
+      "retained_parts": 100,
+      "reversed_parts": 1,
+      "numerically_degenerate_parts_omitted": 149,
+      "omitted_spherical_area_km2_upper_bound": 2.7657970195699983e-7
+    },
+    {
+      "state": "Victoria",
+      "source_parts": 153,
+      "retained_parts": 98,
+      "reversed_parts": 1,
+      "numerically_degenerate_parts_omitted": 55,
+      "omitted_spherical_area_km2_upper_bound": 3.605094279073512e-7
+    },
+    {
+      "state": "Queensland",
+      "source_parts": 1128,
+      "retained_parts": 1032,
+      "reversed_parts": 1,
+      "numerically_degenerate_parts_omitted": 96,
+      "omitted_spherical_area_km2_upper_bound": 0.0000028281387295960442
+    },
+    {
+      "state": "South Australia",
+      "source_parts": 222,
+      "retained_parts": 179,
+      "reversed_parts": 0,
+      "numerically_degenerate_parts_omitted": 43,
+      "omitted_spherical_area_km2_upper_bound": 2.5783398596274477e-7
+    },
+    {
+      "state": "Western Australia",
+      "source_parts": 2587,
+      "retained_parts": 2191,
+      "reversed_parts": 2,
+      "numerically_degenerate_parts_omitted": 396,
+      "omitted_spherical_area_km2_upper_bound": 0.0000019061207814024056
+    },
+    {
+      "state": "Tasmania",
+      "source_parts": 1908,
+      "retained_parts": 479,
+      "reversed_parts": 4,
+      "numerically_degenerate_parts_omitted": 1429,
+      "omitted_spherical_area_km2_upper_bound": 0.000012664294640837391
+    },
+    {
+      "state": "Northern Territory",
+      "source_parts": 250,
+      "retained_parts": 247,
+      "reversed_parts": 0,
+      "numerically_degenerate_parts_omitted": 3,
+      "omitted_spherical_area_km2_upper_bound": 0
+    },
+    {
+      "state": "Australian Capital Territory",
+      "source_parts": 1,
+      "retained_parts": 1,
+      "reversed_parts": 0,
+      "numerically_degenerate_parts_omitted": 0,
+      "omitted_spherical_area_km2_upper_bound": 0
+    }
+  ]
+}

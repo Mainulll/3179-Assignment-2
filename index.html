@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="An illustrated data journey through Melbourne's selected city sights, local routes, Victorian forest activities and Australia's overnight travel story.">
+  <title>Melbourne and beyond · A local tourism story</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="vendor/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="vendor/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="vendor/vega.min.js"></script>
+  <script defer src="vendor/vega-lite.min.js"></script>
+  <script defer src="vendor/vega-embed.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to the story</a>
+  <header class="masthead wrap">
+    <a class="wordmark" href="#top" aria-label="Melbourne and beyond, back to top"><span class="sunmark" aria-hidden="true">✳</span> A PLACE TO BEGIN</a>
+    <span class="edition">FIELD NOTES · VICTORIA, AUSTRALIA</span>
+  </header>
+  <main id="main">
+    <section class="hero wrap" id="top" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow">A journey through local tourism</p>
+        <h1 id="page-title">Melbourne<br><em>and beyond.</em></h1>
+        <p class="hero-question">What can we explore close to home, and how does it fit into Australian travel?</p>
+        <p class="hero-intro">Begin with a city of parks, galleries and small discoveries. Follow a local route, look towards Victoria’s forests, then step back to see the bigger visitor story.</p>
+        <a class="start-link" href="#city">Start with the city <span aria-hidden="true">↘</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 500 460" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="338" cy="131" r="79" fill="#D7A655"/>
+          <path d="M29 341C140 311 221 373 306 349S431 326 488 344V430H29Z" fill="#D5E7E4"/>
+          <path d="M40 364C174 333 219 394 336 367S442 360 488 370" fill="none" stroke="#8DAF9F" stroke-width="2"/>
+          <g stroke="#203C3A" stroke-width="2" fill="#F2DDAD" stroke-linejoin="round">
+            <path d="M66 325V241H304V325Z"/>
+            <path d="M59 241L84 218H295L313 241Z" fill="#A6472D"/>
+            <path d="M184 325V198H231V325Z"/>
+            <path d="M184 198L208 163L231 198Z" fill="#176C65"/>
+            <path d="M194 168Q184 137 208 121Q231 137 221 168Z" fill="#176C65"/>
+            <path d="M208 121V102" fill="none"/>
+            <circle cx="207" cy="217" r="12" fill="#FFFDF8"/>
+            <path d="M207 208V217L214 221" fill="none"/>
+            <path d="M83 325V276Q95 254 108 276V325M123 325V276Q135 254 148 276V325M252 325V276Q265 254 279 276V325" fill="#203C3A"/>
+            <path d="M197 325V279Q208 263 219 279V325" fill="#203C3A"/>
+          </g>
+          <g fill="#176C65"><path d="M321 328V201H364V328Z" opacity=".65"/><path d="M373 328V156H398V328Z" opacity=".35"/><path d="M405 328V231H435V328Z" opacity=".5"/></g>
+          <g fill="#203C3A"><path d="M26 336H466V341H26Z"/><path d="M63 254H178V259H63ZM235 254H304V259H235Z"/></g>
+          <g fill="none" stroke="#203C3A" stroke-width="1.5"><path d="M104 151Q114 144 124 151Q134 143 144 151M265 77Q277 68 288 77Q300 68 311 77"/></g>
+          <path d="M37 388Q67 376 103 390M366 405Q418 389 461 405" stroke="#8DAF9F" fill="none"/>
+        </svg>
+        <p>From a familiar corner<br>to a wider horizon.</p>
+      </div>
+      <div class="hero-footer"><span>By Minul Lokuliyana</span><span>13 October 2026 · FIT3179</span><span>Four chapters. One journey.</span></div>
+    </section>
+    <nav class="chapter-nav" aria-label="Story chapters"><div class="wrap"><a href="#city"><span>01</span> City</a><a href="#day"><span>02</span> Day out</a><a href="#forest"><span>03</span> Forest</a><a href="#australia"><span>04</span> Australia</a></div></nav>
+    <p id="load-status" class="sr-only" role="status" aria-live="polite">Loading the charts.</p>
+    <noscript><p class="wrap notice">Enable JavaScript to view the charts. The source files and chart specifications remain available through the links below.</p></noscript>
+
+    <section class="chapter wrap" id="city" aria-labelledby="city-title">
+      <div class="chapter-heading"><span class="chapter-number">01</span><div><p class="eyebrow">Discover what is close</p><h2 id="city-title">Start with the city.</h2></div><p class="chapter-deck">The everyday places are part of the attraction. <strong>37 of 94</strong> selected city records are parks, gardens or reserves.</p></div>
+      <div class="section-note"><span class="note-tag">The lens</span> A selected cultural and leisure inventory within the <strong>City of Melbourne</strong> municipality. The places source was processed in November 2022; this is an older snapshot, not a current visitor guide.</div>
+      <div class="filter-bar" aria-label="City chart filters"><label for="theme-filter">Sight theme</label><select id="theme-filter"><option value="All">All three themes</option><option value="Leisure/Recreation">Leisure / recreation</option><option value="Place Of Assembly">Place of assembly</option><option value="Purpose Built">Purpose built</option></select><label for="type-filter">Sight type</label><select id="type-filter"><option value="All">All nine types</option></select><button id="reset-city" type="button">Reset</button><output id="sight-count" aria-live="polite">94 selected records</output></div>
+      <div class="triptych">
+        <figure class="figure map-figure" data-chart="01-city-sights" data-table="sights"><div class="figure-heading"><span class="figure-no">01 / POINT MAP</span><h3>Where could you begin?</h3><p>Selected city sights · equal-sized symbols</p></div><div class="map-key"><span><i class="key-circle"></i> Leisure</span><span><i class="key-square"></i> Assembly</span><span><i class="key-triangle"></i> Purpose built</span></div><div class="chart" id="chart-01" aria-label="Point map of 94 selected City of Melbourne sights"></div><figcaption>Administrative outlines show CLUE analysis areas. Select a type here or in the treemap to focus the map. <a href="https://data.melbourne.vic.gov.au/explore/dataset/landmarks-and-places-of-interest-including-schools-theatres-health-services-spor/">City of Melbourne · Nov 2022</a></figcaption></figure>
+        <figure class="figure" data-chart="02-sight-treemap" data-table="sight-tree"><div class="figure-heading"><span class="figure-no">02 / TREEMAP</span><h3>Room for many kinds of day.</h3><p>Theme → source type · area = records</p></div><div class="chart" id="chart-02" aria-label="Treemap of three sight themes and nine subthemes"></div><figcaption>Parks lead with 37 records, followed by galleries and museums with 19. The complete 94-record layout stays fixed when highlighted. <a href="https://data.melbourne.vic.gov.au/explore/dataset/landmarks-and-places-of-interest-including-schools-theatres-health-services-spor/">City of Melbourne · Nov 2022</a></figcaption></figure>
+        <figure class="figure" data-chart="03-art-histogram" data-table="art-decades"><div class="figure-heading"><span class="figure-no">03 / HISTOGRAM</span><h3>Art leaves a record.</h3><p>Exact recorded artwork years · 177 works</p></div><div class="chart" id="chart-03" aria-label="Histogram of artwork recorded years from 1860 to 2019"></div><figcaption>The 2000s contain 45 records. <strong>25 uncertain dates are omitted</strong> from the 202-work catalogue. These are recorded years, not verified installation dates. <a href="https://data.melbourne.vic.gov.au/explore/dataset/outdoor-artworks/">City of Melbourne · Nov 2022</a></figcaption></figure>
+      </div>
+      <p class="chapter-close">An inventory tells us where places were recorded. It cannot tell us which are most popular, open today or free to visit.</p>
+    </section>
+
+    <section class="day-band"><div class="chapter wrap" id="day" aria-labelledby="day-title">
+      <div class="chapter-heading"><span class="chapter-number">02</span><div><p class="eyebrow">Give the day a direction</p><h2 id="day-title">Make a local day of it.</h2></div><p class="chapter-deck">A little structure can reveal a new side of a familiar city. <strong>11 mapped routes</strong> range from about 1.4 to 4.8 km.</p></div>
+      <div class="filter-bar"><label for="route-filter">Follow a route</label><select id="route-filter"><option value="All">All 11 routes</option></select><button id="reset-route" type="button">Reset</button><output id="route-readout" aria-live="polite">10 walking routes · 1 cycling route</output></div>
+      <div class="triptych day-grid">
+        <figure class="figure map-figure" data-chart="04-city-routes" data-table="routes"><div class="figure-heading"><span class="figure-no">04 / ROUTE MAP</span><h3>Take a different way.</h3><p>Self-guided routes · actual mapped lines</p></div><div class="map-key"><span><i class="key-walk"></i> Walking</span><span><i class="key-cycle"></i> Cycling</span></div><div class="chart" id="chart-04" aria-label="Map of eleven Melbourne routes with a dashed cycling route"></div><figcaption>Some routes have separate mapped components; gaps stay as supplied. The cycling label comes from “Southbank and Docklands by Bike”. <a href="https://data.melbourne.vic.gov.au/explore/dataset/self-guided-walks/">City of Melbourne · Apr 2025</a></figcaption></figure>
+        <figure class="figure" data-chart="05-art-toilets" data-table="art-toilets"><div class="figure-heading"><span class="figure-no">05 / BOX PLOT</span><h3>A practical pause near art.</h3><p>Nearest recorded toilet · straight-line metres</p></div><div class="chart" id="chart-05" aria-label="Boxplot of straight-line artwork to toilet distances in five CLUE areas"></div><figcaption>The box holds the middle half; its line is the median. Whiskers span the minimum to maximum. Five CLUE areas with ≥10 works cover <strong>169 of 202</strong> records. “Melbourne remainder” shortens the source’s “Melbourne (Remainder)”. <a href="https://data.melbourne.vic.gov.au/explore/dataset/outdoor-artworks/">Art · Nov 2022</a> · <a href="https://data.melbourne.vic.gov.au/explore/dataset/public-toilets/">74 toilets · Aug 2024</a></figcaption></figure>
+        <figure class="figure" data-chart="06-route-lengths" data-table="routes"><div class="figure-heading"><span class="figure-no">06 / BAR CHART</span><h3>How far is the mapped route?</h3><p>Derived geometry length · kilometres</p></div><div class="chart" id="chart-06" aria-label="Eleven route lengths in kilometres, with linked route selection"></div><figcaption>Laneways and arcades is shortest at 1.4 km; Culture and Ideas is longest at 4.8 km. Select a bar to highlight its route. <a href="https://data.melbourne.vic.gov.au/explore/dataset/self-guided-walks/">City of Melbourne · Apr 2025</a></figcaption></figure>
+      </div>
+      <p class="chapter-close">The route lengths are calculated from geometry because the source distance fields disagree. Toilet distances describe proximity to an inventory, not walking distance, opening hours or an accessible journey.</p>
+    </div></section>
+
+    <section class="chapter wrap" id="forest" aria-labelledby="forest-title">
+      <div class="chapter-heading"><span class="chapter-number">03</span><div><p class="eyebrow">Towards a wider horizon</p><h2 id="forest-title">Look beyond Melbourne.</h2></div><p class="chapter-deck">In Victoria’s state forests, activities often come together. Camping is recorded at <strong>360 of 532</strong> recreation sites.</p></div>
+      <div class="forest-grid">
+        <figure class="figure" data-chart="07-forest-upset" data-table="forest-combinations"><div class="figure-heading"><span class="figure-no">07 / UPSET CHART</span><h3>Which activities are recorded together?</h3><p>All 13 observed combinations · 532 state-forest sites</p></div><div class="forest-controls"><label for="combo-filter">Highlight a combination</label><select id="combo-filter"><option value="All">All 13 combinations</option></select></div><div class="chart-scroll" tabindex="0" role="region" aria-label="Forest activity chart; scroll horizontally on small screens"><div class="chart" id="chart-07" aria-label="UpSet chart of recorded camping, picnicking, campervanning and fishing combinations"></div></div><figcaption>All combinations are shown, including 32 sites with none of these four activities recorded. <a href="https://discover.data.vic.gov.au/dataset/recreation-sites">DEECA · snapshot 12 Oct 2026</a></figcaption></figure>
+        <aside class="reading-note"><span class="eyebrow">A way to read the forest</span><h3>Read down the dots,<br>then up the bar.</h3><div class="dot-demo" aria-hidden="true"><span class="filled"></span><b></b><span class="filled"></span><span class="open"></span></div><p>Each column is one exact combination. Joined filled dots show activities recorded together; the bar above counts those sites.</p><p>The small bars on the left count all sites with each activity recorded. A site can contribute to several of these totals.</p><div class="dot-key"><span><i class="filled"></i> Recorded</span><span><i class="open"></i> Not recorded</span></div><p class="fine-print">“Not recorded” does not mean unavailable or prohibited. These are state-forest sites, not every Victorian park or campsite. Closure fields are stale, so this chart makes no live access claim.</p></aside>
+      </div>
+      <p class="chapter-close">This is a picture of documented possibilities. Check current official site advice before planning a visit.</p>
+    </section>
+
+    <section class="national-band"><div class="chapter wrap" id="australia" aria-labelledby="australia-title">
+      <div class="chapter-heading"><span class="chapter-number">04</span><div><p class="eyebrow">Step back and see the context</p><h2 id="australia-title">Put Melbourne in perspective.</h2></div><p class="chapter-deck">Melbourne’s tourism region recorded <strong>10.4 million</strong> domestic overnight trips in 2024 — <strong>9.0% below 2019.</strong></p></div>
+      <div class="section-note"><span class="note-tag">A historical lens</span> These charts use the consistent <strong>2019–2024 National Visitor Survey</strong> series. It is not the latest 2026 release. Overnight trips and nights provide wider travel context, not attraction attendance.</div>
+      <div class="national-grid">
+        <figure class="figure national-map" data-chart="08-holiday-map" data-table="state-nights"><div class="figure-heading"><span class="figure-no">08 / CHOROPLETH MAP</span><h3>How much of the stay is a holiday?</h3><p>Holiday nights ÷ all domestic overnight nights · 2024</p></div><div class="chart" id="chart-08" aria-label="Australian states coloured by 2024 holiday-night shares, on a zero to one hundred percent scale"></div><figcaption>Victoria’s holiday share is <strong>50.0%</strong>; Tasmania’s is 58.0% and the ACT’s 28.4%. The ACT is marked for visibility. Each state uses its own all-night denominator. <a href="https://www.tra.gov.au/en/tourism-statistics/national-visitor-survey-trends">TRA · calendar 2024 NVS</a> · <a href="https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/access-and-downloads/data-services-and-apis">ABS · 2021 state boundaries</a></figcaption></figure>
+        <div class="national-right">
+          <figure class="figure" data-chart="09-city-heatmap" data-table="city-purposes"><div class="figure-heading"><span class="figure-no">09 / HEATMAP</span><h3>Different cities, different reasons to stay.</h3><p>Share of each tourism region’s overnight nights (%) · 2024</p></div><div class="chart" id="chart-09" aria-label="Heatmap of four tourism regions and four travel purposes"></div><figcaption>In Melbourne, holiday nights account for 37.7%, and friends or relatives for 35.3%. Colours use the map’s 0–100% scale. “Other” includes “Other and Not Asked”. <a href="https://www.tra.gov.au/en/tourism-statistics/national-visitor-survey-trends">TRA · calendar 2024 NVS</a></figcaption></figure>
+          <div class="pair-grid">
+            <figure class="figure" data-chart="10-melbourne-trend" data-table="melbourne-trend"><div class="figure-heading"><span class="figure-no">10 / LINE CHART</span><h3>A return, still short of 2019.</h3><p>Melbourne tourism region · domestic overnight trips</p></div><div class="chart" id="chart-10" aria-label="Melbourne domestic overnight trips trend from 2019 to 2024"></div><figcaption>The six annual observations rise from 3.5m in 2020 to 10.4m in 2024. They count trips, not unique people. <a href="https://www.tra.gov.au/en/tourism-statistics/national-visitor-survey-trends">TRA · 2019–2024 NVS</a></figcaption></figure>
+            <figure class="figure" data-chart="11-state-scatter" data-table="state-pairs"><div class="figure-heading"><span class="figure-no">11 / SCATTERPLOT</span><h3>The state view of the return.</h3><p>2019 vs 2024 · domestic overnight trips</p></div><div class="chart" id="chart-11" aria-label="Eight states' 2019 and 2024 trip counts on equal scales, with Victoria highlighted"></div><figcaption>Above the dashed line means more trips in 2024. Victoria is highlighted; Queensland is the only state above the line. Small differences are not proof of statistical significance. <a href="https://www.tra.gov.au/en/tourism-statistics/national-visitor-survey-trends">TRA · 2019 &amp; 2024 NVS</a></figcaption></figure>
+          </div>
+        </div>
+      </div>
+      <p class="chapter-close">A place can be part of a journey without explaining the whole journey. These inventories and tourism estimates share a story, but no causal link or attraction popularity measure has been established.</p>
+    </div></section>
+
+    <section class="endnote wrap" aria-labelledby="endnote-title"><p class="eyebrow">Where the journey leaves us</p><h2 id="endnote-title">A familiar city.<br><em>A little more to notice.</em></h2><p>Local records reveal a varied starting point; routes give it a shape. Forest inventories widen the possibilities, and overnight travel statistics place Melbourne within a larger Australian story.</p><a href="#top" class="start-link">Back to the beginning <span aria-hidden="true">↗</span></a></section>
+    <section class="methods wrap" aria-labelledby="methods-title"><h2 id="methods-title">About the data &amp; the design</h2><div class="methods-grid"><p><strong>For curious Australians.</strong> This page helps an everyday reader compare local places, routes and recorded activities, and understand broader travel context. Geographic position locates records; area and length compare counts and distances; colour compares night shares. Hover or tap marks for details, and use the labelled selectors and data tables for keyboard access.</p><p><strong>Four sources, different populations.</strong> City of Melbourne inventories, Victorian DEECA recreation records, Tourism Research Australia’s historical NVS and ABS geography. The Melbourne tourism region differs from the City of Melbourne and Greater Melbourne. State trips can span states and must not be added into a national total.</p></div>
+      <details><summary>Methods, source vintages and reproducible files</summary><div class="method-body"><p>Research snapshot: 12 October 2026. The 242-place municipal source was transparently filtered to 94 records using nine cultural/leisure subthemes. Treemap leaves count these records once. Artwork geometry points correct the reversed raw latitude/longitude columns. Recorded years are exact four-digit source values; 25 uncertain dates are excluded only from the histogram. The toilet chart starts with all 202 works and selects five areas with at least ten records, leaving 33 outside that chart.</p><p>Routes retain all 34 components for 11 named itineraries. Distances are summed geodesic geometry lengths from the validated summary, not the undocumented source-distance fields. Boxplot quartiles use linear interpolation; whiskers show minimum and maximum. CLUE polygons are municipal analysis areas, not official suburbs.</p><p>Forest activity flags indicate documentation: empty source flags remain “not recorded”. The 13 exact combinations sum to 532. The site version was extracted on 12 October 2026; this date does not mean every site was surveyed then. No live closure, accessibility, fee or availability information is claimed.</p><p>National charts use published historical NVS estimates for Australian residents aged 15 and over, calendar years ending December. Purpose night shares divide by published Total nights; purpose trip estimates overlap and are not added. No newer DoTS observations are spliced into the series. The older municipal and national vintages are intentional limitations that need justification against the brief’s request for recent data before submission.</p><p>Local maps use Mercator at a city scale. The national map uses an Australia-centred Albers equal-area projection and a shared 0–100% sequential colour scale. Tiny ACT is marked and listed in the data table; geography is not resized. Generalised state polygons have been oriented for Vega; numerically collapsed parts were omitted from display geometry (<a href="docs/dv2/geometry_validation.json">geometry report</a>). The scatter’s two domains and inner plot dimensions are identical.</p><ul><li><a href="docs/dv2/source_catalog_city.csv">Municipal and forest source catalogue</a></li><li><a href="docs/dv2/source_catalog_national.json">National source files, exact URLs and hashes</a></li><li><a href="docs/dv2/provenance.json">Input/output provenance and hashes</a></li><li><a href="docs/dv2/validation.json">Automated data validation</a></li><li><a href="docs/dv2/IMPLEMENTATION.md">Design, idiom ledger and local build notes</a></li></ul><p>Data attribution: © City of Melbourne; © State of Victoria (DEECA); Tourism Research Australia; Australian Bureau of Statistics. Publisher catalogue licences and exclusions apply; the catalogues document source URLs. Fraunces by Undercase Type and Manrope by Mikhail Sharanda / Mirko Velimirović are distributed under the SIL Open Font License. <a href="vendor/fonts/Fraunces-LICENSE.txt">Fraunces licence</a> · <a href="vendor/fonts/Manrope-LICENSE.txt">Manrope licence</a>. The decorative city illustration is original SVG drawn for this page and is not a map.</p></div></details>
+    </section>
+  </main>
+  <footer class="footer wrap"><div><strong>Melbourne and beyond.</strong><p>Minul Lokuliyana · FIT3179 Data Visualisation 2<br>Created 13 October 2026 · Research snapshot 12 October 2026</p></div><p>AI assistance was used for research support, data preparation, code, copy and design. Minul should review, understand and explain the final work. This local build is a draft; the physical hand-drawn sketch and tutor feedback remain part of the submission process.</p></footer>
+</body>
+</html>

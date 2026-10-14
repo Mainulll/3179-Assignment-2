@@ -1,0 +1,159 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 420,
+  "height": 230,
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "config": {
+    "background": "transparent",
+    "view": {
+      "stroke": null
+    },
+    "font": "Manrope",
+    "axis": {
+      "labelFontSize": 13,
+      "titleFontSize": 13,
+      "titleFontWeight": 500,
+      "labelColor": "#52635F",
+      "titleColor": "#203C3A",
+      "domain": false,
+      "tickColor": "#DDD6C9",
+      "gridColor": "#E8E2D7",
+      "labelPadding": 7,
+      "titlePadding": 12
+    },
+    "legend": {
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "labelColor": "#52635F",
+      "titleColor": "#203C3A"
+    },
+    "text": {
+      "font": "Manrope",
+      "color": "#203C3A"
+    },
+    "title": {
+      "font": "Fraunces",
+      "color": "#203C3A"
+    }
+  },
+  "description": "Four named tourism regions × four purpose groups. Each cell = purpose nights / the published Total nights for the same region in 2024. Other includes Other and Not Asked.",
+  "data": {
+    "url": "data/dv2/city-purposes.json"
+  },
+  "encoding": {
+    "x": {
+      "field": "purpose_label",
+      "type": "ordinal",
+      "sort": [
+        "Holiday",
+        "Friends / relatives",
+        "Business",
+        "Other"
+      ],
+      "title": null,
+      "axis": {
+        "orient": "top",
+        "labelAngle": 0,
+        "labelFontSize": 12,
+        "labelLimit": 120,
+        "labelLineHeight": 13,
+        "labelPadding": 9,
+        "labelExpr": "datum.label === 'Friends / relatives' ? ['Friends /', 'relatives'] : [datum.label]"
+      }
+    },
+    "y": {
+      "field": "city",
+      "type": "ordinal",
+      "sort": [
+        "Melbourne",
+        "Sydney",
+        "Brisbane",
+        "Adelaide"
+      ],
+      "title": null,
+      "axis": {
+        "labelFontSize": 12
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rect",
+        "stroke": "#FFFDF8",
+        "strokeWidth": 3
+      },
+      "encoding": {
+        "color": {
+          "field": "share_pct",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              100
+            ],
+            "range": [
+              "#EDF1D7",
+              "#0B655E"
+            ]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          {
+            "field": "city",
+            "title": "Tourism region",
+            "type": "nominal"
+          },
+          {
+            "field": "purpose",
+            "title": "Official purpose",
+            "type": "nominal"
+          },
+          {
+            "field": "share_pct",
+            "title": "Share of region nights (%)",
+            "type": "quantitative",
+            "format": ".1f"
+          },
+          {
+            "field": "nights_000",
+            "title": "Purpose nights (thousands)",
+            "type": "quantitative",
+            "format": ",.0f"
+          },
+          {
+            "field": "total_nights_000",
+            "title": "All nights (thousands)",
+            "type": "quantitative",
+            "format": ",.0f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 13,
+        "fontWeight": 600
+      },
+      "encoding": {
+        "text": {
+          "field": "share_pct",
+          "type": "quantitative",
+          "format": ".1f"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.share_pct > 58",
+            "value": "#FFFDF8"
+          },
+          "value": "#203C3A"
+        }
+      }
+    }
+  ]
+}

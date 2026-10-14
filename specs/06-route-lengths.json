@@ -1,0 +1,149 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 420,
+  "height": 340,
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "config": {
+    "background": "transparent",
+    "view": {
+      "stroke": null
+    },
+    "font": "Manrope",
+    "axis": {
+      "labelFontSize": 13,
+      "titleFontSize": 13,
+      "titleFontWeight": 500,
+      "labelColor": "#52635F",
+      "titleColor": "#203C3A",
+      "domain": false,
+      "tickColor": "#DDD6C9",
+      "gridColor": "#E8E2D7",
+      "labelPadding": 7,
+      "titlePadding": 12
+    },
+    "legend": {
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "labelColor": "#52635F",
+      "titleColor": "#203C3A"
+    },
+    "text": {
+      "font": "Manrope",
+      "color": "#203C3A"
+    },
+    "title": {
+      "font": "Fraunces",
+      "color": "#203C3A"
+    }
+  },
+  "description": "Full-precision geometry-derived kilometres for 11 routes, sorted ascending, with a zero baseline. Source distance fields are not used. Shares a route key with the map.",
+  "data": {
+    "url": "data/dv2/routes.json"
+  },
+  "params": [
+    {
+      "name": "routeFilter",
+      "value": "All"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 2
+      },
+      "encoding": {
+        "x": {
+          "field": "geometry_length_km",
+          "type": "quantitative",
+          "title": "Mapped length (km)",
+          "scale": {
+            "domain": [
+              0,
+              5.3
+            ]
+          },
+          "axis": {
+            "tickCount": 5
+          }
+        },
+        "y": {
+          "field": "label",
+          "type": "nominal",
+          "sort": {
+            "field": "geometry_length_km",
+            "op": "min",
+            "order": "ascending"
+          },
+          "title": null,
+          "axis": {
+            "labelFontSize": 12,
+            "labelLimit": 145
+          }
+        },
+        "color": {
+          "condition": {
+            "test": "routeFilter === 'All' || datum.route_name === routeFilter",
+            "value": "#176C65"
+          },
+          "value": "#CCD5CC"
+        },
+        "tooltip": [
+          {
+            "field": "route_name",
+            "title": "Source route name",
+            "type": "nominal"
+          },
+          {
+            "field": "mode",
+            "title": "Mode",
+            "type": "nominal"
+          },
+          {
+            "field": "geometry_length_km",
+            "title": "Derived km",
+            "type": "quantitative",
+            "format": ".2f"
+          },
+          {
+            "field": "parts",
+            "title": "Components",
+            "type": "quantitative"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "fontSize": 12,
+        "color": "#203C3A"
+      },
+      "encoding": {
+        "x": {
+          "field": "geometry_length_km",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "label",
+          "type": "nominal",
+          "sort": {
+            "field": "geometry_length_km",
+            "op": "min",
+            "order": "ascending"
+          }
+        },
+        "text": {
+          "field": "geometry_length_km",
+          "type": "quantitative",
+          "format": ".1f"
+        }
+      }
+    }
+  ]
+}
