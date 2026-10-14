@@ -81,7 +81,9 @@
           "title": null,
           "axis": {
             "labelFontSize": 12,
-            "labelLimit": 145
+            "labelLimit": 125,
+            "labelLineHeight": 14,
+            "labelExpr": "datum.label === 'Southbank / Docklands' ? ['Southbank /','Docklands'] : datum.label === 'Icons & architecture' ? ['Icons &','architecture'] : [datum.label]"
           }
         },
         "color": {

@@ -30,3 +30,13 @@ The histogram now spans both grid columns, removing its previous empty left colu
 After the transient shell reconnect, all 68 data checks, all 11 chart renders and syntax checks passed. The production map-projection function was tested at 3×, produced the expected 200 m scale cue, and rendered selected-route endpoint markers to `output/chart-svg/selected-route-zoom.svg`. All 34 components retain exact first/last coordinates and all 68 endpoint labels remain accounted for.
 
 Fresh Firefox screenshots of this latest grouping/spacing checkpoint are pending: the previously callable CUA browser tool is currently absent from the active tool catalog. Earlier screenshots remain baseline evidence, not proof of the latest layout. No push is authorised or attempted for this checkpoint.
+
+## Final repair checkpoint: header, pan and compact labels
+
+The masthead requested for removal is gone. The histogram-only grid rule is now scoped away from Day out; charts 05 and 06 share exactly the same row top at 768/1024/1280 and stack at 320/390. Map pointer drags and keyboard-arrow controls use one shared geographic projection for all layers; Reset view clears pan and zoom. Render requests are serialised per figure so rapid controls cannot replace newer views with an older render.
+
+Mobile boxplot labels show exact n on a second line and explicit 0/400/800 metre ticks. Heatmap headings use a single angled line at the narrowest size. The forest chart has a visible swipe cue and an always-available row key outside the scrolling region, reveals selected combinations automatically, and no longer draws the misplaced count-axis fragments. Every bar retains its direct count.
+
+The previously unavailable browser fallback recovered. Firefox 158 was launched in a new temporary headless profile, without personal accounts. Current screenshots and DOM layout reports are in ignored `output/revision-qa/repair-3-*`: full page, all eleven charts at 1280/390, and compact problem charts at 1024/768/320. All eleven charts loaded at every width; document width matched the CSS viewport at all five sizes. Actual pointer gestures changed map geometry on both maps; reset restored byte-identical path coordinates. Choosing the last forest combination scrolled the chart 430 px into view and retained its row key. See `repair-3-interactions.json` and `repair-3-layout.json`.
+
+`npm run check` and JavaScript syntax checks pass. Fresh anonymous local HTTP verification confirms the latest header-free page with pan guidance and forest key is served at http://127.0.0.1:8000/. Nothing has been pushed for this revision. Independent final recheck remains pending.

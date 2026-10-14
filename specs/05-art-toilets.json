@@ -79,7 +79,9 @@
       ],
       "axis": {
         "labelFontSize": 12,
-        "labelLimit": 155
+        "labelLimit": 125,
+        "labelLineHeight": 14,
+        "labelExpr": "datum.label === 'Melbourne remainder · n=45' ? ['Melbourne remainder','n=45'] : split(datum.label, ' · ')"
       }
     },
     "tooltip": [

@@ -5,6 +5,10 @@
   const specs = new Map();
   const cache = new Map();
   const mapZoom = {'01':1,'04':1};
+  const mapPan = {'01':{longitude:0,mercator:0},'04':{longitude:0,mercator:0}};
+  const mapProjection = {};
+  const renderQueues = new Map();
+  let lastPanAt=0,lastRouteFilter='All',lastCombo='All';
   const state = {themeFilter:'All',subFilter:'All',routeFilter:'All',selectedCombo:'All'};
   const $ = id => document.getElementById(id);
   const fetchJSON = async url => {
@@ -60,7 +64,13 @@
   }
   async function updateSignals() {
     await Promise.all([...views.values()].map(async view=>{for(const key of Object.keys(state)){try{view.signal(key,state[key]);}catch{ /* This view does not use the shared key. */ }}await view.runAsync();}));
-    if(mapZoom['04']>1){const f=document.querySelector('[data-chart="04-city-routes"]');if(f)await render(f);}
+    const routeChanged=state.routeFilter!==lastRouteFilter;
+    if(routeChanged){mapPan['04']={longitude:0,mercator:0};lastRouteFilter=state.routeFilter;}
+    if(routeChanged || mapZoom['04']>1){const f=document.querySelector('[data-chart="04-city-routes"]');if(f)await render(f);}
+    if(lastCombo!==state.selectedCombo){
+      lastCombo=state.selectedCombo;const scroll=document.querySelector('.chart-scroll'),forest=views.get('07-forest-upset');
+      if(scroll && forest){const x=state.selectedCombo==='All'?0:forest.scale('x')(state.selectedCombo);scroll.scrollLeft=state.selectedCombo==='All'?0:Math.max(0,x-scroll.clientWidth/2+20);}
+    }
     const sights=await fetchJSON('data/dv2/sights.json');
     const n=sights.filter(s=>(state.themeFilter==='All'||s.theme===state.themeFilter)&&(state.subFilter==='All'||s.sub_theme===state.subFilter)).length;
     $('sight-count').textContent=`${n} of 94 selected records`;
@@ -85,9 +95,13 @@
       longitude=(Math.min(...points.map(p=>p[0]))+Math.max(...points.map(p=>p[0])))/2;
       latitude=(Math.min(...points.map(p=>p[1]))+Math.max(...points.map(p=>p[1])))/2;
     }
+    longitude=Math.max(bounds[0],Math.min(bounds[2],longitude+mapPan[id].longitude));
+    latitude=2*Math.atan(Math.exp(mercatorY(latitude)+mapPan[id].mercator))*180/Math.PI-90;
+    latitude=Math.max(bounds[1],Math.min(bounds[3],latitude));
     spec.width=available-10;spec.autosize={type:'none',contains:'content'};spec.padding=5;
     const base=Math.min((spec.width-12)/((bounds[2]-bounds[0])*Math.PI/180),(spec.height-12)/(mercatorY(bounds[3])-mercatorY(bounds[1])));
     const scale=base*zoom;
+    mapProjection[id]={scale,longitude,latitude};
     spec.projection={type:'mercator',center:[longitude,latitude],scale,translate:[spec.width/2,spec.height/2]};
     for(const layer of spec.layer){layer.mark={...layer.mark,clip:true};}
     const pixelsPerKm=scale/(6371.0088*Math.cos(latitude*Math.PI/180));
@@ -96,7 +110,27 @@
     $('scale-label-'+id).textContent=`≈ ${km>=1?km+' km':Math.round(km*1000)+' m'} at map centre`;
     $('zoom-value-'+id).textContent=zoom+'×';
   }
+  function applyMapPan(id,dx,dy){
+    const projection=mapProjection[id];if(!projection)return;
+    mapPan[id].longitude-=dx/projection.scale*180/Math.PI;
+    mapPan[id].mercator+=dy/projection.scale;
+  }
+  function bindMapPan(figure,id){
+    const element=figure.querySelector('.chart');let drag;
+    element.dataset.pannable='true';element.tabIndex=0;
+    element.setAttribute('aria-label',element.getAttribute('aria-label')+'. Drag to pan, or use arrow keys when focused.');
+    element.addEventListener('pointerdown',e=>{if(!e.isPrimary || (e.pointerType==='mouse' && e.button!==0))return;drag={x:e.clientX,y:e.clientY,moved:false};element.setPointerCapture(e.pointerId);});
+    element.addEventListener('pointermove',e=>{if(!drag)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(Math.hypot(dx,dy)>5)drag.moved=true;if(drag.moved){element.dataset.dragging='true';const svg=element.querySelector('svg');if(svg)svg.style.transform=`translate(${dx}px,${dy}px)`;}});
+    const finish=(e,cancel=false)=>{if(!drag)return;const ended=drag;drag=null;delete element.dataset.dragging;const svg=element.querySelector('svg');if(svg)svg.style.transform='';if(element.hasPointerCapture(e.pointerId))element.releasePointerCapture(e.pointerId);if(ended.moved&&!cancel){lastPanAt=Date.now();applyMapPan(id,e.clientX-ended.x,e.clientY-ended.y);render(figure);}};
+    element.addEventListener('pointerup',e=>finish(e));element.addEventListener('pointercancel',e=>finish(e,true));
+    element.addEventListener('keydown',e=>{const offset={ArrowLeft:[60,0],ArrowRight:[-60,0],ArrowUp:[0,60],ArrowDown:[0,-60]}[e.key];if(offset){e.preventDefault();lastPanAt=Date.now();applyMapPan(id,...offset);render(figure);}});
+  }
   async function render(figure) {
+    const name=figure.dataset.chart;
+    const task=(renderQueues.get(name)||Promise.resolve()).catch(()=>{}).then(()=>renderFigure(figure));
+    renderQueues.set(name,task);return task;
+  }
+  async function renderFigure(figure) {
     const name=figure.dataset.chart, element=figure.querySelector('.chart');
     if(views.has(name))views.get(name).finalize();
     const original=specs.get(name),spec=structuredClone(original);
@@ -104,6 +138,9 @@
     const isVega=spec.$schema.includes('/vega/v');
     if(isVega){spec.width=name.startsWith('07')?Math.max(760,available-10):Math.max(120,available-8);if(name.startsWith('02'))spec.height=Math.max(300,Math.min(400,available*1.04));}
     else {spec.width=available;if(name.startsWith('01')||name.startsWith('04')){spec.height=Math.min(520,Math.max(285,available*.9));spec.params.find(p=>p.name==='mapDetail').value=available<430?1:name.startsWith('01')?2:3;}if(name.startsWith('11')){const inner=Math.max(145,available-70);spec.width=inner;spec.height=inner;spec.autosize={type:'none',contains:'content'};spec.padding={left:52,right:10,top:10,bottom:55};}if(name.startsWith('08'))spec.height=Math.min(500,available*1.12);}
+    if(name.startsWith('05') && available<430){spec.encoding.x.title='Distance (m)';spec.encoding.x.axis.tickCount=3;spec.encoding.x.axis.values=[0,400,800];spec.encoding.y.axis.labelFontSize=11;spec.encoding.y.axis.labelLimit=112;}
+    if(name.startsWith('06') && available<430){for(const layer of spec.layer){if(layer.encoding?.x?.scale)layer.encoding.x.scale.domain=[0,6];if(layer.encoding?.x?.axis)layer.encoding.x.axis.tickCount=4;}}
+    if(name.startsWith('09') && available<430){spec.encoding.x.axis.labelFontSize=11;spec.encoding.x.axis.labelExpr="datum.label === 'Friends / relatives' ? ['Friends /','relatives'] : [datum.label]";spec.encoding.x.axis.labelLimit=85;if(available<300){spec.encoding.x.axis.labelLimit=160;spec.encoding.x.axis.labelExpr='datum.label';spec.encoding.x.axis.labelAngle=-45;spec.encoding.x.axis.labelAlign='left';spec.encoding.x.axis.labelBaseline='middle';spec.encoding.x.axis.labelPadding=18;}}
     if(name.startsWith('01')||name.startsWith('04'))await setMapView(spec,name,available);
     try{
       const result=await vegaEmbed(element,spec,{actions:false,renderer:'svg',tooltip:{theme:'light'},defaultStyle:false});
@@ -112,7 +149,7 @@
       for(const key of Object.keys(state)){try{view.signal(key,state[key]);}catch{}}
       await view.runAsync();
       view.addEventListener('click',(_,item)=>{
-        if(!item?.datum)return;const d=item.datum;
+        if(Date.now()-lastPanAt<250 || !item?.datum)return;const d=item.datum;
         if(name.startsWith('01') && d.sub_theme)selectType(d.sub_theme,d.theme);
         if(name.startsWith('02') && d.official)selectType(d.id,d.theme);
         if(name.startsWith('04') && d.properties?.route_name)selectRoute(d.properties.route_name);
@@ -128,9 +165,9 @@
     const [sights,routes,combos]=await Promise.all(['sights','routes','forest-combinations'].map(n=>fetchJSON(`data/dv2/${n}.json`)));
     populateTypes(sights);
     for(const id of ['01','04']){
-      const figure=document.querySelector(`[data-chart^="${id}"]`);let zoomTimer;
+      const figure=document.querySelector(`[data-chart^="${id}"]`);let zoomTimer;bindMapPan(figure,id);
       $('zoom-'+id).addEventListener('input',e=>{mapZoom[id]=Number(e.target.value);$('zoom-value-'+id).textContent=mapZoom[id]+'×';clearTimeout(zoomTimer);zoomTimer=setTimeout(()=>render(figure),100);});
-      $('zoom-reset-'+id).addEventListener('click',()=>{clearTimeout(zoomTimer);mapZoom[id]=1;$('zoom-'+id).value='1';render(figure);});
+      $('zoom-reset-'+id).addEventListener('click',()=>{clearTimeout(zoomTimer);mapZoom[id]=1;mapPan[id]={longitude:0,mercator:0};$('zoom-'+id).value='1';render(figure);});
     }
     for(const r of [...routes].sort((a,b)=>a.geometry_length_km-b.geometry_length_km))addOption($('route-filter'),r.route_name,`${r.route_name} (${r.mode.toLowerCase()})`);
     for(const c of combos)addOption($('combo-filter'),c.key,`${c.combination} · ${c.sites} ${c.sites===1?"site":"sites"}`);

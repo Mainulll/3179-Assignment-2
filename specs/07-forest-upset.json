@@ -124,26 +124,7 @@
       ]
     }
   ],
-  "axes": [
-    {
-      "orient": "left",
-      "scale": "counts",
-      "position": {
-        "signal": "matrixLeft-8"
-      },
-      "values": [
-        0,
-        50,
-        100
-      ],
-      "domain": false,
-      "grid": false,
-      "ticks": false,
-      "labelFont": "Manrope",
-      "labelFontSize": 12,
-      "labelColor": "#52635F"
-    }
-  ],
+  "axes": [],
   "marks": [
     {
       "type": "text",
