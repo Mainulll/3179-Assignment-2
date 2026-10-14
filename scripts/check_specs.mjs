@@ -38,4 +38,15 @@ for(const label of labels){
 const distances=JSON.parse(fs.readFileSync(path.join(root,'data/dv2/art-toilets.json')));
 const strip=JSON.parse(fs.readFileSync(path.join(root,'specs/05-art-toilets.json')));
 if(distances.length!==169 || new Set(distances.map(d=>d.area)).size!==5 || strip.encoding.x.field!=='metres' || strip.transform.some(t=>t.filter))throw new Error('Strip plot coverage or exact distance encoding changed');
-console.log('PASS interior state labels and all 169 exact-distance strip records');
+console.log('PASS interior state labels and all 169 exact-distance artwork records');
+// The violin is a density view, with five separate shapes and unchanged raw observations.
+const violinView=new vega.View(vega.parse(vl.compile(strip).spec),{renderer:'none',loader:vega.loader({baseURL:root+'/'})});
+await violinView.runAsync();
+const density=violinView.data('data_0'),dots=violinView.data('data_1');
+if(dots.length!==169 || dots.some(d=>d.metres!==distances.find(r=>r.asset_id===d.asset_id).metres))throw new Error('Raw violin dots displaced or omitted');
+if(new Set(density.map(d=>d.area_row)).size!==5 || strip.layer[0].encoding.detail.field!=='area_row')throw new Error('Violin groups joined');
+for(let i=0;i<5;i++){
+ const raw=dots.filter(d=>d.area_row===i).map(d=>d.metres),curve=density.filter(d=>d.area_row===i);
+ if(curve.some(d=>d.distance<Math.min(...raw)-1e-6 || d.distance>Math.max(...raw)+1e-6 || d.density<0))throw new Error('Violin exceeds observed range');
+}
+violinView.finalize();console.log('PASS five independent violin shapes within observed ranges and all 169 unchanged dots');

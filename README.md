@@ -72,9 +72,14 @@ content rather than arbitrary card heights. Per-chart table/JSON controls have
 been removed. Readable JSON remains indexed in [specs/README.md](specs/README.md);
 each visible figure retains source attribution.
 
-Chart 05 is now a deterministic strip plot of the same 169 artwork distances
-in the same five CLUE areas, with exact x positions, medians and sample counts.
-The brief calls dot plots basic: this lowers the conservative advanced count
-from eight to seven, while retaining eleven charts and three map idioms.
-It therefore does not meet the HD row’s eight-advanced-idiom target as written.
-See `docs/dv2/RUBRIC_REVIEW.md` for the direct brief check and limitations.
+Chart 05 is a violin distribution with all 169 original artwork dots at their
+exact x distances, labelled medians and each area's sample count. All five
+shapes use one data-derived 33.512 m smoothing bandwidth and stop at their
+observed ranges. Width is estimated density, not count; raw values remain
+visible and no boxes are restored.
+
+The brief lists dot and line plots as basic and says other idioms are advanced.
+The violin is counted under that explicit exclusion rule, restoring eight
+advanced candidates across eleven chart families and three map idioms. This
+is an interpretation of the rule, not a named violin endorsement or grade
+guarantee. See `docs/dv2/RUBRIC_REVIEW.md`.

@@ -39,7 +39,7 @@
       "color": "#203C3A"
     }
   },
-  "description": "All 169 selected artwork distances in the same five CLUE areas; no observations omitted. Exact x distances in metres; deterministic vertical offsets carry no quantity. A directly labelled median summarises each area. Straight-line, not walking distance.",
+  "description": "All 169 selected artwork distances in the same five CLUE areas; no observations omitted. Exact x distances in metres; deterministic vertical offsets carry no quantity. Violin width is Gaussian estimated probability density per area, not count. Shared pooled Silverman bandwidth 33.512 metres; density restricted to each observed range. A directly labelled median summarises each area. Straight-line, not walking distance.",
   "data": {
     "url": "data/dv2/art-toilets.json"
   },
@@ -104,6 +104,57 @@
     }
   },
   "layer": [
+    {
+      "transform": [
+        {
+          "density": "metres",
+          "groupby": [
+            "area_row"
+          ],
+          "bandwidth": 33.512,
+          "resolve": "independent",
+          "counts": false,
+          "steps": 181,
+          "as": [
+            "distance",
+            "density"
+          ]
+        },
+        {
+          "calculate": "datum.area_row - datum.density * 25",
+          "as": "density_top"
+        },
+        {
+          "calculate": "datum.area_row + datum.density * 25",
+          "as": "density_bottom"
+        }
+      ],
+      "mark": {
+        "type": "area",
+        "orient": "vertical",
+        "fill": "#D6E6E1",
+        "stroke": "#88B0A7",
+        "strokeWidth": 1,
+        "opacity": 0.85
+      },
+      "encoding": {
+        "detail": {
+          "field": "area_row",
+          "type": "nominal"
+        },
+        "x": {
+          "field": "distance",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "density_top",
+          "type": "quantitative"
+        },
+        "y2": {
+          "field": "density_bottom"
+        }
+      }
+    },
     {
       "mark": {
         "type": "point",
