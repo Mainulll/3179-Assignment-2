@@ -15,7 +15,7 @@ const code=fs.readFileSync('app.js','utf8');
 const viewCode=code.slice(code.indexOf('  const mercatorY='),code.indexOf('  async function render(figure)'));
 const nodes={};
 const context={Math,mapPan:{'01':{longitude:0,mercator:0},'04':{longitude:0,mercator:0}},mapProjection:{}, mapZoom:{'01':1,'04':3},state:{routeFilter:'Fitzroy Gardens'},fetchJSON:async p=>JSON.parse(fs.readFileSync(p)), $:id=>nodes[id]??=( {style:{},textContent:''})};
-vm.createContext(context);vm.runInContext(viewCode+'\n globalThis.testMapView=setMapView;',context);
+vm.createContext(context);vm.runInContext(viewCode+'\n globalThis.testMapView=setMapView;globalThis.testNationalSignals=makeNationalSignals;globalThis.testNationalUpdate=updateNationalProjection;',context);
 const spec=JSON.parse(fs.readFileSync('specs/04-city-routes.json'));spec.height=520;
 await context.testMapView(spec,'04-city-routes',944);
 if(nodes['zoom-value-04'].textContent!=='3×'|| !nodes['scale-label-04'].textContent.includes('200 m'))throw new Error('Zoom scale cue is inconsistent');
@@ -44,3 +44,18 @@ if(JSON.stringify(national.projection.translate)!==JSON.stringify(nationalTransl
 const nationalView=new vega.View(vega.parse(vl.compile(national).spec),{renderer:'none',loader:vega.loader({baseURL:process.cwd()+'/'})});
 await nationalView.runAsync();if((await nationalView.toSVG()).includes('NaN'))throw new Error('National zoom invalid');nationalView.finalize();
 console.log('PASS national Albers zoom, screen-space pan and exact reset');
+
+// Exercise the exact reactive helpers used by the production national map.
+const reactive=JSON.parse(fs.readFileSync('specs/08-holiday-map.json'));reactive.height=440;
+await context.testMapView(reactive,'08-holiday-map',390);
+const originalProjection=structuredClone(reactive.projection);
+context.testNationalSignals(reactive);
+if(reactive.layer.some(l=>l.data?.url))throw new Error('National map still refetches geometry/labels');
+const reactiveView=new vega.View(vega.parse(vl.compile(reactive).spec),{renderer:'none'});
+await reactiveView.runAsync();const resetSVG=await reactiveView.toSVG();
+await context.testNationalUpdate(reactiveView,{...originalProjection,scale:originalProjection.scale*1.25});
+const zoomSVG=await reactiveView.toSVG();
+if(zoomSVG===resetSVG || zoomSVG.includes('NaN'))throw new Error('Reactive national zoom failed');
+await context.testNationalUpdate(reactiveView,originalProjection);
+if(await reactiveView.toSVG()!==resetSVG)throw new Error('Reactive national reset differs');
+reactiveView.finalize();console.log('PASS same-view reactive national zoom/reset with no external geometry fetches');

@@ -1,0 +1,75 @@
+{
+  "method": "Display only: retain largest part of each state; omit detached components with longitude/latitude bounding-box dimensions both below 0.02 degrees; simplify retained boundaries with topology-preserving tolerance 0.005 degrees; round to four decimal places. ACT geometry is copied unchanged. Original geometry, all eight tourism-property records, labels and denominators remain in the repository. Do not use this outline for geographic analysis.",
+  "source": "data/dv2/states.geojson",
+  "display": "data/dv2/states-display.geojson",
+  "source_sha256": "a4cef6098095573fcfebea8cc0213e7f5b22577ed0d1cdfc356ce82fce993699",
+  "display_sha256": "e2eefa7a70953728dc761946d35f05766bf7e796780bb2b35c9768d53a526093",
+  "source_bytes": 495527,
+  "display_bytes": 205276,
+  "states": [
+    {
+      "state": "New South Wales",
+      "source_parts": 100,
+      "display_parts": 3,
+      "source_vertices": 1589,
+      "display_vertices": 1193,
+      "planar_area_change_pct_diagnostic": -0.0006552808399895582
+    },
+    {
+      "state": "Victoria",
+      "source_parts": 98,
+      "display_parts": 16,
+      "source_vertices": 1103,
+      "display_vertices": 757,
+      "planar_area_change_pct_diagnostic": -0.0027986369228627517
+    },
+    {
+      "state": "Queensland",
+      "source_parts": 1032,
+      "display_parts": 132,
+      "source_vertices": 5666,
+      "display_vertices": 2033,
+      "planar_area_change_pct_diagnostic": -0.007344087290694912
+    },
+    {
+      "state": "South Australia",
+      "source_parts": 179,
+      "display_parts": 21,
+      "source_vertices": 1336,
+      "display_vertices": 700,
+      "planar_area_change_pct_diagnostic": -0.001986910239548667
+    },
+    {
+      "state": "Western Australia",
+      "source_parts": 2191,
+      "display_parts": 211,
+      "source_vertices": 11507,
+      "display_vertices": 3497,
+      "planar_area_change_pct_diagnostic": -0.0071366139450468324
+    },
+    {
+      "state": "Tasmania",
+      "source_parts": 479,
+      "display_parts": 36,
+      "source_vertices": 3059,
+      "display_vertices": 1259,
+      "planar_area_change_pct_diagnostic": -0.03272900310957727
+    },
+    {
+      "state": "Northern Territory",
+      "source_parts": 247,
+      "display_parts": 89,
+      "source_vertices": 2452,
+      "display_vertices": 1801,
+      "planar_area_change_pct_diagnostic": -0.002750261208062099
+    },
+    {
+      "state": "Australian Capital Territory",
+      "source_parts": 1,
+      "display_parts": 1,
+      "source_vertices": 47,
+      "display_vertices": 47,
+      "planar_area_change_pct_diagnostic": 0.0
+    }
+  ]
+}

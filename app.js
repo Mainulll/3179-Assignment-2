@@ -8,6 +8,7 @@
   const mapPan = {'01':{longitude:0,mercator:0},'04':{longitude:0,mercator:0},'08':{longitude:0,mercator:0}};
   const mapProjection = {};
   const renderQueues = new Map();
+  const renderVersions = new Map();
   let lastPanAt=0,lastRouteFilter='All',lastCombo='All';
   const state = {themeFilter:'All',subFilter:'All',routeFilter:'All',selectedCombo:'All'};
   const $ = id => document.getElementById(id);
@@ -60,6 +61,7 @@
   }
   function selectRoute(route) {state.routeFilter=state.routeFilter===route?'All':route;$('route-filter').value=state.routeFilter;updateSignals();}
   const mercatorY=latitude=>Math.log(Math.tan(Math.PI/4+latitude*Math.PI/360));
+  const nationalFits=new Map();
   async function setMapView(spec,name,available) {
     const id=name.slice(0,2),zoom=mapZoom[id];
     if(id==='08')return setNationalView(spec,available);
@@ -89,8 +91,13 @@
   async function setNationalView(spec,available){
     const id='08',zoom=mapZoom[id],width=available-10,height=spec.height;
     const projection=vega.projection('albers')().rotate([-132,0,0]).center([0,-27]).parallels([-18,-36]);
-    projection.fitExtent([[8,8],[width-8,height-8]],await fetchJSON('data/dv2/states.geojson'));
-    const scale=projection.scale()*zoom,baseTranslate=projection.translate();
+    const [states,labels]=await Promise.all([fetchJSON('data/dv2/states-display.geojson'),fetchJSON('data/dv2/state-map-labels.json')]);
+    const key=width+':'+height;
+    if(!nationalFits.has(key)){projection.fitExtent([[8,8],[width-8,height-8]],states);nationalFits.set(key,{scale:projection.scale(),translate:projection.translate()});}
+    const fitted=nationalFits.get(key),scale=fitted.scale*zoom,baseTranslate=fitted.translate;
+    // Inline one cached geometry/label set: zoom must never reload the boundaries.
+    spec.layer[0].data={values:states.features};
+    for(const layer of spec.layer){if(layer.data?.url?.endsWith('state-map-labels.json'))layer.data={values:labels};}
     const translate=[width/2+(baseTranslate[0]-width/2)*zoom-mapPan[id].longitude*Math.PI/180*scale,height/2+(baseTranslate[1]-height/2)*zoom+mapPan[id].mercator*scale];
     spec.width=width;spec.autosize={type:'none',contains:'content'};spec.padding={left:5,right:5,top:5,bottom:80};
     spec.projection={type:'albers',rotate:[-132,0,0],center:[0,-27],parallels:[-18,-36],scale,translate};
@@ -103,6 +110,14 @@
     $('scale-bar-'+id).style.width=km*pixelsPerKm+'px';
     $('scale-label-'+id).textContent=`≈ ${km} km near central Australia`;
     $('zoom-value-'+id).textContent=zoom+'×';
+  }
+  function makeNationalSignals(spec){
+    const {scale,translate}=spec.projection;
+    spec.params=[{name:'nationalScale',value:scale},{name:'nationalTranslate',value:translate}];
+    spec.projection.scale={expr:'nationalScale'};spec.projection.translate={expr:'nationalTranslate'};
+  }
+  async function updateNationalProjection(view,projection){
+    await view.signal('nationalScale',projection.scale).signal('nationalTranslate',projection.translate).runAsync();
   }
   function applyMapPan(id,dx,dy){
     const projection=mapProjection[id];if(!projection)return;
@@ -137,12 +152,16 @@
   }
   async function render(figure) {
     const name=figure.dataset.chart;
-    const task=(renderQueues.get(name)||Promise.resolve()).catch(()=>{}).then(()=>renderFigure(figure));
+    const version=(renderVersions.get(name)||0)+1;renderVersions.set(name,version);
+    const task=(renderQueues.get(name)||Promise.resolve()).catch(()=>{}).then(()=>{
+      if(name.startsWith('08') && version!==renderVersions.get(name))return;
+      return renderFigure(figure);
+    });
     renderQueues.set(name,task);return task;
   }
   async function renderFigure(figure) {
     const name=figure.dataset.chart, element=figure.querySelector('.chart');
-    if(views.has(name))views.get(name).finalize();
+    const previousView=views.get(name);
     const original=specs.get(name),spec=structuredClone(original);
     const available=Math.max(190,Math.floor(element.parentElement.classList.contains('chart-scroll') ? 760 : element.clientWidth));
     const isVega=spec.$schema.includes('/vega/v');
@@ -153,12 +172,21 @@
     if(name.startsWith('09') && available<430){spec.encoding.x.axis.labelFontSize=11;spec.encoding.x.axis.labelExpr="datum.label === 'Friends / relatives' ? ['Friends /','relatives'] : [datum.label]";spec.encoding.x.axis.labelLimit=85;if(available<300){spec.encoding.x.axis.labelLimit=160;spec.encoding.x.axis.labelExpr='datum.label';spec.encoding.x.axis.labelAngle=-45;spec.encoding.x.axis.labelAlign='left';spec.encoding.x.axis.labelBaseline='middle';spec.encoding.x.axis.labelPadding=18;}}
     if(name.startsWith('08') && available<430){for(const layer of spec.layer){if(layer.encoding?.text?.field==='map_label')layer.encoding.text.field='state_abbr';}spec.layer[0].encoding.color.legend.gradientLength=Math.min(240,available-30);}
     if(['01','04','08'].includes(name.slice(0,2)))await setMapView(spec,name,available);
+    if(name.startsWith('08')){
+      if(previousView && element.dataset.renderWidth===String(available)){
+        await updateNationalProjection(previousView,spec.projection);
+        figure.dataset.ready='true';return;
+      }
+      makeNationalSignals(spec);
+    }
+    if(previousView)previousView.finalize();
     try{
       const result=await vegaEmbed(element,spec,{actions:false,renderer:'svg',tooltip:{theme:'light'},defaultStyle:false});
       const view=result.view;views.set(name,view);
       figure.dataset.ready='true';
       for(const key of Object.keys(state)){try{view.signal(key,state[key]);}catch{}}
       await view.runAsync();
+      element.dataset.renderWidth=String(available);
       view.addEventListener('click',(_,item)=>{
         if(Date.now()-lastPanAt<250 || !item?.datum)return;const d=item.datum;
         if(name.startsWith('01') && d.sub_theme)selectType(d.sub_theme,d.theme);
@@ -172,12 +200,14 @@
   }
   async function init(){
     const figures=[...document.querySelectorAll('[data-chart]')];
+    // Begin boundary/data reads while fonts load, rather than serialising both waits.
+    const startup=Promise.all(['sights.json','routes.json','forest-combinations.json','states-display.geojson','state-map-labels.json'].map(n=>fetchJSON('data/dv2/'+n)));
     await document.fonts.ready;
-    const [sights,routes,combos]=await Promise.all(['sights','routes','forest-combinations'].map(n=>fetchJSON(`data/dv2/${n}.json`)));
+    const [sights,routes,combos]=await startup;
     populateTypes(sights);
     for(const id of ['01','04','08']){
       const figure=document.querySelector(`[data-chart^="${id}"]`);let zoomTimer;bindMapPan(figure,id);
-      $('zoom-'+id).addEventListener('input',e=>{mapZoom[id]=Number(e.target.value);$('zoom-value-'+id).textContent=mapZoom[id]+'×';clearTimeout(zoomTimer);zoomTimer=setTimeout(()=>render(figure),100);});
+      $('zoom-'+id).addEventListener('input',e=>{mapZoom[id]=Number(e.target.value);$('zoom-value-'+id).textContent=mapZoom[id]+'×';clearTimeout(zoomTimer);if(id==='08')render(figure);else zoomTimer=setTimeout(()=>render(figure),100);});
       $('zoom-reset-'+id).addEventListener('click',()=>{clearTimeout(zoomTimer);mapZoom[id]=1;mapPan[id]={longitude:0,mercator:0};$('zoom-'+id).value='1';render(figure);});
     }
     for(const r of [...routes].sort((a,b)=>a.geometry_length_km-b.geometry_length_km))addOption($('route-filter'),r.route_name,`${r.route_name} (${r.mode.toLowerCase()})`);

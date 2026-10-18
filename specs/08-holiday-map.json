@@ -59,7 +59,7 @@
   "layer": [
     {
       "data": {
-        "url": "data/dv2/states.geojson",
+        "url": "data/dv2/states-display.geojson",
         "format": {
           "type": "json",
           "property": "features"

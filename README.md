@@ -86,5 +86,13 @@ guarantee. See `docs/dv2/RUBRIC_REVIEW.md`.
 
 The local preview explicitly serves this checkout and disables browser caching;
 restart it with `npm start` when updating the server script. The current preview
-identity is `20261018-1` (also used in app/CSS URLs). For a previously open older
-page, open `http://127.0.0.1:8000/?build=20261018-1` to request fresh HTML.
+identity is `20261018-2` (also used in app/CSS URLs). For a previously open older
+page, open `http://127.0.0.1:8000/?build=20261018-2` to request fresh HTML.
+
+The national map now keeps its existing view during zoom/pan and uses a lighter
+web-display outline. Original boundaries and tourism data remain unchanged in
+the repository. See `docs/dv2/CHOROPLETH_PERFORMANCE.md` and
+`docs/dv2/national_display.json` for the transformations and measured checks.
+To rebuild the display outline after source changes, run
+`python3 scripts/build_national_display.py` with the existing optional Shapely
+build dependency installed, followed by `npm run build:specs` and the checks.

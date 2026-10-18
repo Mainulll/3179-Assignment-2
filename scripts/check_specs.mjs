@@ -50,3 +50,14 @@ for(let i=0;i<5;i++){
  if(curve.some(d=>d.distance<Math.min(...raw)-1e-6 || d.distance>Math.max(...raw)+1e-6 || d.density<0))throw new Error('Violin exceeds observed range');
 }
 violinView.finalize();console.log('PASS five independent violin shapes within observed ranges and all 169 unchanged dots');
+
+const displayStates=JSON.parse(fs.readFileSync(path.join(root,'data/dv2/states-display.geojson')));
+if(displayStates.features.length!==8)throw new Error('Display geometry lost a state');
+for(const f of displayStates.features){
+ const original=states.features.find(s=>s.properties.state===f.properties.state);
+ if(JSON.stringify(original.properties)!==JSON.stringify(f.properties)||!(geoArea(f)>0&&geoArea(f)<1))throw new Error('Display state properties/winding changed');
+ if(f.properties.state==='Australian Capital Territory'&&JSON.stringify(f.geometry)!==JSON.stringify(original.geometry))throw new Error('ACT display geometry changed');
+ const label=labels.find(l=>l.state_name===f.properties.state);
+ if(!geoContains(f,[label.longitude,label.latitude]))throw new Error('Label outside display outline');
+}
+console.log('PASS all eight display states retain exact tourism properties, interior labels and unchanged ACT');
