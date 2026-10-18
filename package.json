@@ -4,7 +4,7 @@
   "private": true,
   "description": "FIT3179 DV2 local tourism data story",
   "scripts": {
-    "start": "python3 -m http.server 8000 --bind 127.0.0.1",
+    "start": "python3 scripts/serve_local.py",
     "build:specs": "node scripts/build_specs.mjs",
     "check": "python3 scripts/check_dv2.py && node scripts/check_specs.mjs && node scripts/check_map_interactions.mjs"
   },

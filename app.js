@@ -12,7 +12,7 @@
   const state = {themeFilter:'All',subFilter:'All',routeFilter:'All',selectedCombo:'All'};
   const $ = id => document.getElementById(id);
   const fetchJSON = async url => {
-    if (!cache.has(url)) cache.set(url, fetch(url).then(r => {if (!r.ok) throw new Error(`${r.status}: ${url}`); return r.json();}));
+    if (!cache.has(url)) cache.set(url, fetch(url,{cache:'no-store'}).then(r => {if (!r.ok) throw new Error(`${r.status}: ${url}`); return r.json();}));
     return cache.get(url);
   };
   function buildTypeKey(figure,records){
@@ -114,8 +114,24 @@
     element.dataset.pannable='true';element.tabIndex=0;
     element.setAttribute('aria-label',element.getAttribute('aria-label')+'. Drag to pan, or use arrow keys when focused.');
     element.addEventListener('pointerdown',e=>{if(!e.isPrimary || (e.pointerType==='mouse' && e.button!==0))return;drag={x:e.clientX,y:e.clientY,moved:false};});
-    element.addEventListener('pointermove',e=>{if(!drag)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(!drag.moved && Math.hypot(dx,dy)>5){drag.moved=true;element.setPointerCapture(e.pointerId);}if(drag.moved){element.dataset.dragging='true';for(const mark of element.querySelectorAll('svg .role-mark'))mark.style.transform=`translate(${dx}px,${dy}px)`;}});
-    const finish=(e,cancel=false)=>{if(!drag)return;const ended=drag;drag=null;delete element.dataset.dragging;for(const mark of element.querySelectorAll('svg .role-mark'))mark.style.transform='';if(element.hasPointerCapture(e.pointerId))element.releasePointerCapture(e.pointerId);if(ended.moved&&!cancel){lastPanAt=Date.now();applyMapPan(id,e.clientX-ended.x,e.clientY-ended.y);render(figure);}};
+    element.addEventListener('dragstart',e=>e.preventDefault());
+    element.addEventListener('pointermove',e=>{
+      if(!drag)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;
+      if(!drag.moved && Math.hypot(dx,dy)>5){
+        drag.moved=true;element.setPointerCapture(e.pointerId);
+        drag.marks=[...element.querySelectorAll('svg g.role-mark')].map(mark=>({mark,transform:mark.getAttribute('transform')}));
+      }
+      if(drag.moved){
+        e.preventDefault();element.dataset.dragging='true';
+        for(const {mark,transform} of drag.marks)mark.setAttribute('transform',`translate(${dx},${dy}) ${transform||''}`);
+      }
+    });
+    const finish=(e,cancel=false)=>{
+      if(!drag)return;const ended=drag;drag=null;delete element.dataset.dragging;
+      for(const {mark,transform} of ended.marks||[]){if(transform===null)mark.removeAttribute('transform');else mark.setAttribute('transform',transform);}
+      if(element.hasPointerCapture(e.pointerId))element.releasePointerCapture(e.pointerId);
+      if(ended.moved&&!cancel){lastPanAt=Date.now();applyMapPan(id,e.clientX-ended.x,e.clientY-ended.y);render(figure);}
+    };
     element.addEventListener('pointerup',e=>finish(e));element.addEventListener('pointercancel',e=>finish(e,true));
     element.addEventListener('keydown',e=>{const offset={ArrowLeft:[60,0],ArrowRight:[-60,0],ArrowUp:[0,60],ArrowDown:[0,-60]}[e.key];if(offset){e.preventDefault();lastPanAt=Date.now();applyMapPan(id,...offset);render(figure);}});
   }

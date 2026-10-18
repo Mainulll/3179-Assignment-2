@@ -88,3 +88,6 @@
 
 @media(max-width:900px){.triptych:not(.day-grid){display:flex;flex-direction:column}}
 .map-controls{max-width:560px}.map-controls input{max-width:360px}
+
+/* Map labels should move with a drag rather than start native text/image dragging. */
+.chart[data-pannable],.chart[data-pannable] svg,.chart[data-pannable] svg *{user-select:none;-webkit-user-select:none}

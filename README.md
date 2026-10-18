@@ -83,3 +83,8 @@ The violin is counted under that explicit exclusion rule, restoring eight
 advanced candidates across eleven chart families and three map idioms. This
 is an interpretation of the rule, not a named violin endorsement or grade
 guarantee. See `docs/dv2/RUBRIC_REVIEW.md`.
+
+The local preview explicitly serves this checkout and disables browser caching;
+restart it with `npm start` when updating the server script. The current preview
+identity is `20261018-1` (also used in app/CSS URLs). For a previously open older
+page, open `http://127.0.0.1:8000/?build=20261018-1` to request fresh HTML.
