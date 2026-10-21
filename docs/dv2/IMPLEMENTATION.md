@@ -1,6 +1,6 @@
-# Melbourne and beyond
+# Local tourism in Melbourne and Victoria
 
-Local-only implementation · 13 October 2026 · Minul Lokuliyana · FIT3179 DV2
+Published static implementation · updated 21 October 2026 · Minul Lokuliyana · FIT3179 DV2
 
 ## Run locally
 
@@ -109,11 +109,12 @@ its main chapters.
   historical NVS series is not spliced with 2025/2026 DoTS. Melbourne tourism
   region, City of Melbourne and Greater Melbourne are different geographies.
 - Visual QA found that some rounded ABS offshore polygon parts were degenerate
-  or had the wrong spherical winding for D3. Display geometry retains every
-  measurable part, normalises winding and omits only parts with area ≤1e-12
-  steradians (about 40 m²). The state records and tourism values are unchanged;
-  `geometry_validation.json` documents all eight results. Original geometry is
-  retained in the private research archive.
+  or had the wrong spherical winding for D3. The original normalised `states.geojson` is retained in the repository. The
+  live map uses the smaller `states-display.geojson`, with very small detached
+  components omitted and retained rings simplified only for display. ACT and
+  all eight tourism-property objects are unchanged; `national_display.json`
+  documents the transformation. Original source geometry remains in the
+  research archive.
 
 ## Local validation
 
@@ -123,8 +124,9 @@ geometry joins, source hashes and payload size. It compiles and renders all
 eleven Vega/Vega-Lite specifications to SVG with finite coordinates and checks
 bounded spherical state geometry. SVG QA files are ignored under `output/`.
 
-Browser QA is recorded separately in `BROWSER_QA.md`. The static payload is under
-2 MB uncompressed including local chart libraries and font files. The private
+Browser QA is recorded separately in `BROWSER_QA.md`. The saved validation report records 2,332,341 data bytes and a 3,445,318-byte
+site upper bound including local chart libraries/fonts, within the 4 MB check.
+These are uncompressed repository-budget figures, not measured transfer sizes. The private
 research archive and existing foundation datasets are not requested by the page.
 
 ## Remaining submission decisions
@@ -134,14 +136,13 @@ older static municipal inventories and the comparable 2019–2024 historical NVS
 series. Its on-page disclosure does not resolve the assessment requirement;
 Minul should discuss this justification with the tutor before submission.
 
-The brief explicitly requests a publicly accessible GitHub page, readable chart
-JSON in the same GitHub repository, and a PDF containing the student's actual
-physical hand-drawn sketch. It states zero marks if the page/embedded elements
-are not publicly accessible on GitHub. A connected Vercel project should not be
-assumed to substitute for that requirement without tutor approval. No push,
-deployment, visibility change or external communication has been performed.
-Publication needs a later approval identifying exact content and destination;
-a push to the connected repository may trigger automatic Vercel deployment.
+The website and readable chart JSON are published in
+`https://github.com/Mainulll/3179-Assignment-2` and on the existing Vercel site,
+`https://3179-assignment-2.vercel.app/`. GitHub Pages has also been authorised
+for the same repository, main branch and root directory; use the live URL
+returned by GitHub after its build and asset checks complete. No Moodle
+submission has been performed. The actual physical hand-drawn sketch is still
+pending and must not be replaced by the digital reference.
 
 The digital V2 guide is a reference only; it is not a hand-drawn submission.
 Tutor feedback, the student's physical sketch, final description/template and
