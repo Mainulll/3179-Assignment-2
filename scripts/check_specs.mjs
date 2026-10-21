@@ -61,3 +61,7 @@ for(const f of displayStates.features){
  if(!geoContains(f,[label.longitude,label.latitude]))throw new Error('Label outside display outline');
 }
 console.log('PASS all eight display states retain exact tourism properties, interior labels and unchanged ACT');
+const current=JSON.parse(fs.readFileSync(path.join(root,'data/dv2/dots-quarter.json')));
+if(current.length!==16||new Set(current.map(r=>r.geography)).size!==2||current.some(r=>![2025,2026].includes(r.year)||Math.abs(r.value*1000-r.raw_value)>1e-7))throw new Error('Current DoTS units/coverage failed');
+if(current.find(r=>r.geography==='Victoria'&&r.metric==='overnight_trips'&&r.year===2026).raw_value!==7301.035)throw new Error('Current source-cell fidelity failed');
+console.log('PASS current DoTS quarter comparison:16 source cells, units and separate2025/2026 periods');

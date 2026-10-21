@@ -9,7 +9,7 @@
   const mapProjection = {};
   const renderQueues = new Map();
   const renderVersions = new Map();
-  let lastPanAt=0,lastRouteFilter='All',lastCombo='All';
+  let lastPanAt=0,lastRouteFilter='All',lastCombo='All',currentGeography='Victoria';
   const state = {themeFilter:'All',subFilter:'All',routeFilter:'All',selectedCombo:'All'};
   const $ = id => document.getElementById(id);
   const fetchJSON = async url => {
@@ -165,8 +165,16 @@
     const original=specs.get(name),spec=structuredClone(original);
     const available=Math.max(190,Math.floor(element.parentElement.classList.contains('chart-scroll') ? 760 : element.clientWidth));
     const isVega=spec.$schema.includes('/vega/v');
+    if(name.startsWith('12')){
+      const panels=spec.hconcat,columns=available>=950?4:available>=600?2:1;
+      for(const panel of panels)panel.width=Math.max(125,Math.floor(available/columns)-88);
+      spec.params[0].value=currentGeography;
+      delete spec.width;delete spec.height;
+      if(columns===1){delete spec.hconcat;spec.vconcat=panels;}
+      if(columns===2){delete spec.hconcat;spec.vconcat=[{hconcat:panels.slice(0,2),spacing:24},{hconcat:panels.slice(2),spacing:24}];}
+    }
     if(isVega){spec.width=name.startsWith('07')?Math.max(760,available-10):Math.max(120,available-8);if(name.startsWith('02'))spec.height=Math.max(300,Math.min(400,available*1.04));}
-    else {spec.width=available;if(name.startsWith('01')||name.startsWith('04')){spec.height=Math.min(520,Math.max(285,available*.9));spec.params.find(p=>p.name==='mapDetail').value=available<430?1:name.startsWith('01')?2:3;}if(name.startsWith('11')){const inner=Math.max(145,available-70);spec.width=inner;spec.height=inner;spec.autosize={type:'none',contains:'content'};spec.padding={left:52,right:10,top:10,bottom:55};}if(name.startsWith('08'))spec.height=Math.min(440,Math.max(250,available*.9));}
+    else {if(!name.startsWith('12'))spec.width=available;if(name.startsWith('01')||name.startsWith('04')){spec.height=Math.min(520,Math.max(285,available*.9));spec.params.find(p=>p.name==='mapDetail').value=available<430?1:name.startsWith('01')?2:3;}if(name.startsWith('11')){const inner=Math.max(145,available-70);spec.width=inner;spec.height=inner;spec.autosize={type:'none',contains:'content'};spec.padding={left:52,right:10,top:10,bottom:55};}if(name.startsWith('08'))spec.height=Math.min(440,Math.max(250,available*.9));}
     if(name.startsWith('05') && available<430){spec.encoding.x.title='Distance (m)';spec.encoding.x.axis.values=[0,400,800];spec.encoding.y.axis.labelFontSize=11;spec.encoding.y.axis.labelLimit=112;spec.layer.find(l=>l.mark.type==='text').transform[1].calculate="format(datum.median_metres, '.0f') + ' m'";}
     if(name.startsWith('06') && available<430){for(const layer of spec.layer){if(layer.encoding?.x?.scale)layer.encoding.x.scale.domain=[0,6];if(layer.encoding?.x?.axis)layer.encoding.x.axis.tickCount=4;}}
     if(name.startsWith('09') && available<430){spec.encoding.x.axis.labelFontSize=11;spec.encoding.x.axis.labelExpr="datum.label === 'Friends / relatives' ? ['Friends /','relatives'] : [datum.label]";spec.encoding.x.axis.labelLimit=85;if(available<300){spec.encoding.x.axis.labelLimit=160;spec.encoding.x.axis.labelExpr='datum.label';spec.encoding.x.axis.labelAngle=-45;spec.encoding.x.axis.labelAlign='left';spec.encoding.x.axis.labelBaseline='middle';spec.encoding.x.axis.labelPadding=18;}}
@@ -217,6 +225,7 @@
     $('reset-city').addEventListener('click',()=>{state.themeFilter='All';state.subFilter='All';$('theme-filter').value='All';populateTypes(sights);updateSignals();});
     $('route-filter').addEventListener('change',e=>{state.routeFilter=e.target.value;updateSignals();});
     $('reset-route').addEventListener('click',()=>{state.routeFilter='All';$('route-filter').value='All';updateSignals();});
+    $('current-geography').addEventListener('change',async e=>{currentGeography=e.target.value;$('current-readout').textContent=currentGeography+' · June quarter 2026 versus June quarter 2025';const view=views.get('12-current-quarter');if(view)await view.signal('currentGeography',currentGeography).runAsync();});
     $('combo-filter').addEventListener('change',e=>{state.selectedCombo=e.target.value;updateSignals();});
     await Promise.all(figures.map(async figure=>{
       const name=figure.dataset.chart;
@@ -226,7 +235,7 @@
     const refreshStatus=()=>{
     const errors=figures.filter(f=>f.dataset.ready!=='true');
     document.body.dataset.chartsReady=String(figures.length-errors.length);
-    $('load-status').textContent=errors.length?`${errors.length} charts could not load. Try refreshing the page.`:'All eleven charts have loaded. Use the labelled filters, source links and map controls.';
+    $('load-status').textContent=errors.length?`${errors.length} charts could not load. Try refreshing the page.`:`All ${figures.length} charts have loaded. Use the labelled filters, source links and map controls.`;
     };
     alignPanelHeadings();refreshStatus();
     let timer;let lastWidth=window.innerWidth;

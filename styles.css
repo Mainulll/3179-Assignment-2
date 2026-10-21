@@ -91,3 +91,5 @@
 
 /* Map labels should move with a drag rather than start native text/image dragging. */
 .chart[data-pannable],.chart[data-pannable] svg,.chart[data-pannable] svg *{user-select:none;-webkit-user-select:none}
+
+.current-quarter{margin-bottom:24px}.current-quarter .filter-bar output{flex-basis:100%;margin:0}.current-quarter .chart{overflow:hidden}

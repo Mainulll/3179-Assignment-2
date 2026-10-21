@@ -1,0 +1,108 @@
+[
+  {
+    "dataset": "landmarks",
+    "retrieved_date_utc": "2026-10-21",
+    "metadata_url": "https://data.melbourne.vic.gov.au/api/explore/v2.1/catalog/datasets/landmarks-and-places-of-interest-including-schools-theatres-health-services-spor",
+    "export_url": "https://data.melbourne.vic.gov.au/api/explore/v2.1/catalog/datasets/landmarks-and-places-of-interest-including-schools-theatres-health-services-spor/exports/json",
+    "records": 242,
+    "data_processed": "2022-11-13T10:19:40+00:00",
+    "modified": "2021-03-12T00:00:00+00:00",
+    "metadata_processed": "2023-02-26T05:57:56.563000+00:00",
+    "source_update_frequency": null,
+    "sha256": "b9f14aacb3a824682a67576d86945d082b4c3bca95ef1081406c9d12372f5652",
+    "comparison_to_12_october_snapshot": "byte-identical observations"
+  },
+  {
+    "dataset": "outdoor_artworks",
+    "retrieved_date_utc": "2026-10-21",
+    "metadata_url": "https://data.melbourne.vic.gov.au/api/explore/v2.1/catalog/datasets/outdoor-artworks",
+    "export_url": "https://data.melbourne.vic.gov.au/api/explore/v2.1/catalog/datasets/outdoor-artworks/exports/json",
+    "records": 202,
+    "data_processed": "2022-11-28T03:41:00+00:00",
+    "modified": "2026-09-03T12:59:33+00:00",
+    "metadata_processed": "2026-09-03T12:59:34.764000+00:00",
+    "source_update_frequency": "Static (not updated)",
+    "sha256": "e03bf15d89274261ed7ca9a4dee809abe1f9f2e9d40c3ee04c6fd900801b6c42",
+    "comparison_to_12_october_snapshot": "byte-identical observations"
+  },
+  {
+    "dataset": "walks",
+    "retrieved_date_utc": "2026-10-21",
+    "metadata_url": "https://data.melbourne.vic.gov.au/api/explore/v2.1/catalog/datasets/self-guided-walks",
+    "export_url": "https://data.melbourne.vic.gov.au/api/explore/v2.1/catalog/datasets/self-guided-walks/exports/json",
+    "records": 34,
+    "data_processed": "2025-04-09T23:45:44+00:00",
+    "modified": "2021-09-30T00:00:00+00:00",
+    "metadata_processed": "2025-04-09T23:52:22.020000+00:00",
+    "source_update_frequency": "Annually",
+    "sha256": "1aedd63eae65074aa5c9e28718778d4d4b6b726e80c94aab89ce7a81d354b4ee",
+    "comparison_to_12_october_snapshot": "byte-identical observations"
+  },
+  {
+    "dataset": "toilets",
+    "retrieved_date_utc": "2026-10-21",
+    "metadata_url": "https://data.melbourne.vic.gov.au/api/explore/v2.1/catalog/datasets/public-toilets",
+    "export_url": "https://data.melbourne.vic.gov.au/api/explore/v2.1/catalog/datasets/public-toilets/exports/json",
+    "records": 74,
+    "data_processed": "2024-08-30T06:49:50+00:00",
+    "modified": "2021-09-30T00:00:00+00:00",
+    "metadata_processed": "2026-10-20T15:02:20.648000+00:00",
+    "source_update_frequency": "Static",
+    "sha256": "bffe9ed286ab9a1c460d7b21030c0b0658454bc7b3c287d096b99ae11f82ccfc",
+    "comparison_to_12_october_snapshot": "byte-identical observations"
+  },
+  {
+    "dataset": "forest",
+    "source_url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Arecweb_site&outputFormat=application%2Fjson&srsName=EPSG%3A4326&count=5000",
+    "retrieved_date_utc": "2026-10-21",
+    "versions": [
+      "2026-10-20T00:00:00Z"
+    ],
+    "records": 532,
+    "activity_totals": {
+      "camping": 360,
+      "picnicing": 277,
+      "campervanning": 145,
+      "fishing": 113
+    },
+    "combinations": {
+      "1100": 69,
+      "1110": 37,
+      "0100": 125,
+      "1000": 109,
+      "1111": 17,
+      "1010": 44,
+      "0101": 11,
+      "0000": 32,
+      "1011": 44,
+      "1101": 15,
+      "1001": 25,
+      "0110": 3,
+      "0001": 1
+    },
+    "sha256": "4fd1c2d467844d723329a4c6c321a4d9bd7de54579277f071900317c37da44a2",
+    "comparison_to_12_october_snapshot": "see detailed comparison"
+  },
+  {
+    "dataset": "Victorian forest recreation sites",
+    "retrieved_date_utc": "2026-10-21",
+    "records": 532,
+    "replication_versions": [
+      "2026-10-20T00:00:00Z"
+    ],
+    "latest_alter_date": "30/07/2026",
+    "comparison": "No added/removed features, geometry changes or property changes except vers_date; all chart analytical values unchanged",
+    "raw_sha256": "4fd1c2d467844d723329a4c6c321a4d9bd7de54579277f071900317c37da44a2"
+  },
+  {
+    "dataset": "drinking-fountains",
+    "retrieved_date_utc": "2026-10-21",
+    "records": 338,
+    "data_processed": "2026-10-15",
+    "export_url": "https://data.melbourne.vic.gov.au/api/explore/v2.1/catalog/datasets/drinking-fountains/exports/json",
+    "sha256": "a69b7ab1b6ea3c64ccb0d94381f8b1e6b5ee8e7e54e199549c8028e3a3fe71bd",
+    "changes": "Asset1756332 is now categorised Dog Bowl rather than Drinking Fountain, with model/description changes; asset1373788 location description changed. Counts/geometries unchanged.",
+    "used_in_visible_charts": false,
+    "note": "Auxiliary archive refreshed outside the published site; no drinking-fountain layer or human-water availability claim exists in current figures."
+  }
+]

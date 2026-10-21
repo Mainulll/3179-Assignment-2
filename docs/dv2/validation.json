@@ -2,8 +2,8 @@
   "status": "PASS",
   "checks": 68,
   "snapshot": "2026-10-12",
-  "data_bytes": 2332341,
-  "website_bytes_upper_bound": 3445318,
+  "data_bytes": 2337688,
+  "website_bytes_upper_bound": 3466504,
   "assertions": [
     "94 unique selected sight records",
     "Sight theme counts reconcile 57 + 36 + 1",

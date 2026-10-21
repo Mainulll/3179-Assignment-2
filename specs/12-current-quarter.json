@@ -1,0 +1,557 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Current official DoTS comparison: June quarters 2025 and 2026, selected Victoria or Australia. All four metrics have separate zero-based scales and explicit units. Not joined to original historical NVS.",
+  "background": "transparent",
+  "config": {
+    "background": "transparent",
+    "view": {
+      "stroke": null
+    },
+    "font": "Manrope",
+    "axis": {
+      "labelFontSize": 13,
+      "titleFontSize": 13,
+      "titleFontWeight": 500,
+      "labelColor": "#52635F",
+      "titleColor": "#203C3A",
+      "domain": false,
+      "tickColor": "#DDD6C9",
+      "gridColor": "#E8E2D7",
+      "labelPadding": 7,
+      "titlePadding": 12
+    },
+    "legend": {
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "labelColor": "#52635F",
+      "titleColor": "#203C3A"
+    },
+    "text": {
+      "font": "Manrope",
+      "color": "#203C3A"
+    },
+    "title": {
+      "font": "Fraunces",
+      "color": "#203C3A"
+    }
+  },
+  "data": {
+    "url": "data/dv2/dots-quarter.json"
+  },
+  "params": [
+    {
+      "name": "currentGeography",
+      "value": "Victoria"
+    }
+  ],
+  "transform": [
+    {
+      "filter": "datum.geography === currentGeography"
+    }
+  ],
+  "spacing": 24,
+  "hconcat": [
+    {
+      "width": 175,
+      "height": 90,
+      "title": {
+        "text": [
+          "Overnight trips",
+          "million trips"
+        ],
+        "font": "Manrope",
+        "fontSize": 13,
+        "fontWeight": 700,
+        "lineHeight": 18,
+        "anchor": "start",
+        "offset": 12
+      },
+      "transform": [
+        {
+          "filter": "datum.metric === 'overnight_trips'"
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "value",
+          "type": "quantitative",
+          "title": null,
+          "scale": {
+            "zero": true
+          },
+          "axis": {
+            "tickCount": 3,
+            "format": ".2~f"
+          }
+        },
+        "y": {
+          "field": "year",
+          "type": "ordinal",
+          "sort": [
+            2025,
+            2026
+          ],
+          "title": null,
+          "axis": {
+            "labelAngle": 0,
+            "labelFontSize": 12
+          }
+        }
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "bar",
+            "height": 23
+          },
+          "encoding": {
+            "color": {
+              "field": "year",
+              "type": "nominal",
+              "scale": {
+                "domain": [
+                  2025,
+                  2026
+                ],
+                "range": [
+                  "#A8C6BE",
+                  "#176C65"
+                ]
+              },
+              "legend": null
+            },
+            "tooltip": [
+              {
+                "field": "geography",
+                "title": "Geography",
+                "type": "nominal"
+              },
+              {
+                "field": "period",
+                "title": "Period",
+                "type": "nominal"
+              },
+              {
+                "field": "metric_label",
+                "title": "Measure",
+                "type": "nominal"
+              },
+              {
+                "field": "value",
+                "title": "Value",
+                "type": "quantitative",
+                "format": ",.3f"
+              },
+              {
+                "field": "unit",
+                "title": "Unit",
+                "type": "nominal"
+              },
+              {
+                "field": "change_pct",
+                "title": "2026 vs 2025 (%)",
+                "type": "quantitative",
+                "format": ".2f"
+              }
+            ]
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 4,
+            "fontSize": 12,
+            "fontWeight": 700,
+            "color": "#203C3A"
+          },
+          "encoding": {
+            "text": {
+              "field": "value",
+              "type": "quantitative",
+              "format": ".2f"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "width": 175,
+      "height": 90,
+      "title": {
+        "text": [
+          "Overnight nights",
+          "million nights"
+        ],
+        "font": "Manrope",
+        "fontSize": 13,
+        "fontWeight": 700,
+        "lineHeight": 18,
+        "anchor": "start",
+        "offset": 12
+      },
+      "transform": [
+        {
+          "filter": "datum.metric === 'nights'"
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "value",
+          "type": "quantitative",
+          "title": null,
+          "scale": {
+            "zero": true
+          },
+          "axis": {
+            "tickCount": 3,
+            "format": ".2~f"
+          }
+        },
+        "y": {
+          "field": "year",
+          "type": "ordinal",
+          "sort": [
+            2025,
+            2026
+          ],
+          "title": null,
+          "axis": {
+            "labelAngle": 0,
+            "labelFontSize": 12
+          }
+        }
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "bar",
+            "height": 23
+          },
+          "encoding": {
+            "color": {
+              "field": "year",
+              "type": "nominal",
+              "scale": {
+                "domain": [
+                  2025,
+                  2026
+                ],
+                "range": [
+                  "#A8C6BE",
+                  "#176C65"
+                ]
+              },
+              "legend": null
+            },
+            "tooltip": [
+              {
+                "field": "geography",
+                "title": "Geography",
+                "type": "nominal"
+              },
+              {
+                "field": "period",
+                "title": "Period",
+                "type": "nominal"
+              },
+              {
+                "field": "metric_label",
+                "title": "Measure",
+                "type": "nominal"
+              },
+              {
+                "field": "value",
+                "title": "Value",
+                "type": "quantitative",
+                "format": ",.3f"
+              },
+              {
+                "field": "unit",
+                "title": "Unit",
+                "type": "nominal"
+              },
+              {
+                "field": "change_pct",
+                "title": "2026 vs 2025 (%)",
+                "type": "quantitative",
+                "format": ".2f"
+              }
+            ]
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 4,
+            "fontSize": 12,
+            "fontWeight": 700,
+            "color": "#203C3A"
+          },
+          "encoding": {
+            "text": {
+              "field": "value",
+              "type": "quantitative",
+              "format": ".2f"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "width": 175,
+      "height": 90,
+      "title": {
+        "text": [
+          "Overnight regional spend",
+          "A$ billion"
+        ],
+        "font": "Manrope",
+        "fontSize": 13,
+        "fontWeight": 700,
+        "lineHeight": 18,
+        "anchor": "start",
+        "offset": 12
+      },
+      "transform": [
+        {
+          "filter": "datum.metric === 'spend'"
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "value",
+          "type": "quantitative",
+          "title": null,
+          "scale": {
+            "zero": true
+          },
+          "axis": {
+            "tickCount": 3,
+            "format": ".2~f"
+          }
+        },
+        "y": {
+          "field": "year",
+          "type": "ordinal",
+          "sort": [
+            2025,
+            2026
+          ],
+          "title": null,
+          "axis": {
+            "labelAngle": 0,
+            "labelFontSize": 12
+          }
+        }
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "bar",
+            "height": 23
+          },
+          "encoding": {
+            "color": {
+              "field": "year",
+              "type": "nominal",
+              "scale": {
+                "domain": [
+                  2025,
+                  2026
+                ],
+                "range": [
+                  "#A8C6BE",
+                  "#176C65"
+                ]
+              },
+              "legend": null
+            },
+            "tooltip": [
+              {
+                "field": "geography",
+                "title": "Geography",
+                "type": "nominal"
+              },
+              {
+                "field": "period",
+                "title": "Period",
+                "type": "nominal"
+              },
+              {
+                "field": "metric_label",
+                "title": "Measure",
+                "type": "nominal"
+              },
+              {
+                "field": "value",
+                "title": "Value",
+                "type": "quantitative",
+                "format": ",.3f"
+              },
+              {
+                "field": "unit",
+                "title": "Unit",
+                "type": "nominal"
+              },
+              {
+                "field": "change_pct",
+                "title": "2026 vs 2025 (%)",
+                "type": "quantitative",
+                "format": ".2f"
+              }
+            ]
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 4,
+            "fontSize": 12,
+            "fontWeight": 700,
+            "color": "#203C3A"
+          },
+          "encoding": {
+            "text": {
+              "field": "value",
+              "type": "quantitative",
+              "format": ".2f"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "width": 175,
+      "height": 90,
+      "title": {
+        "text": [
+          "Day trips",
+          "million trips"
+        ],
+        "font": "Manrope",
+        "fontSize": 13,
+        "fontWeight": 700,
+        "lineHeight": 18,
+        "anchor": "start",
+        "offset": 12
+      },
+      "transform": [
+        {
+          "filter": "datum.metric === 'day_trips'"
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "value",
+          "type": "quantitative",
+          "title": null,
+          "scale": {
+            "zero": true
+          },
+          "axis": {
+            "tickCount": 3,
+            "format": ".2~f"
+          }
+        },
+        "y": {
+          "field": "year",
+          "type": "ordinal",
+          "sort": [
+            2025,
+            2026
+          ],
+          "title": null,
+          "axis": {
+            "labelAngle": 0,
+            "labelFontSize": 12
+          }
+        }
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "bar",
+            "height": 23
+          },
+          "encoding": {
+            "color": {
+              "field": "year",
+              "type": "nominal",
+              "scale": {
+                "domain": [
+                  2025,
+                  2026
+                ],
+                "range": [
+                  "#A8C6BE",
+                  "#176C65"
+                ]
+              },
+              "legend": null
+            },
+            "tooltip": [
+              {
+                "field": "geography",
+                "title": "Geography",
+                "type": "nominal"
+              },
+              {
+                "field": "period",
+                "title": "Period",
+                "type": "nominal"
+              },
+              {
+                "field": "metric_label",
+                "title": "Measure",
+                "type": "nominal"
+              },
+              {
+                "field": "value",
+                "title": "Value",
+                "type": "quantitative",
+                "format": ",.3f"
+              },
+              {
+                "field": "unit",
+                "title": "Unit",
+                "type": "nominal"
+              },
+              {
+                "field": "change_pct",
+                "title": "2026 vs 2025 (%)",
+                "type": "quantitative",
+                "format": ".2f"
+              }
+            ]
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 4,
+            "fontSize": 12,
+            "fontWeight": 700,
+            "color": "#203C3A"
+          },
+          "encoding": {
+            "text": {
+              "field": "value",
+              "type": "quantitative",
+              "format": ".2f"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "resolve": {
+    "scale": {
+      "x": "independent",
+      "y": "shared"
+    }
+  }
+}
