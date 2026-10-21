@@ -1,0 +1,128 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 420,
+  "height": 300,
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "config": {
+    "background": "transparent",
+    "view": {
+      "stroke": null
+    },
+    "font": "Manrope",
+    "axis": {
+      "labelFontSize": 13,
+      "titleFontSize": 13,
+      "titleFontWeight": 500,
+      "labelColor": "#52635F",
+      "titleColor": "#203C3A",
+      "domain": false,
+      "tickColor": "#DDD6C9",
+      "gridColor": "#E8E2D7",
+      "labelPadding": 7,
+      "titlePadding": 12
+    },
+    "legend": {
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "labelColor": "#52635F",
+      "titleColor": "#203C3A"
+    },
+    "text": {
+      "font": "Manrope",
+      "color": "#203C3A"
+    },
+    "title": {
+      "font": "Fraunces",
+      "color": "#203C3A"
+    }
+  },
+  "description": "Quarterly overnight trips, revised DoTS-compatible backcasts 2019–2024 and actual DoTS 2025–June2026. Separate line segments identify the collection boundary.",
+  "params": [
+    {
+      "name": "historyArea",
+      "value": "Victoria"
+    }
+  ],
+  "data": {
+    "url": "data/dv2/dots-quarterly-history.json"
+  },
+  "transform": [
+    {
+      "filter": "datum.area === historyArea"
+    }
+  ],
+  "mark": {
+    "type": "line",
+    "strokeWidth": 2.5,
+    "point": {
+      "filled": true,
+      "size": 28
+    }
+  },
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "title": null,
+      "axis": {
+        "format": "%Y",
+        "tickCount": 8,
+        "labelAngle": 0
+      }
+    },
+    "y": {
+      "field": "trips_m",
+      "type": "quantitative",
+      "title": "Quarterly overnight trips (m)",
+      "scale": {
+        "zero": true
+      }
+    },
+    "color": {
+      "field": "method",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "DoTS-compatible revised backcast",
+          "DoTS"
+        ],
+        "range": [
+          "#52635F",
+          "#176C65"
+        ]
+      },
+      "legend": {
+        "orient": "bottom",
+        "title": null,
+        "direction": "vertical",
+        "labelLimit": 300
+      }
+    },
+    "tooltip": [
+      {
+        "field": "area",
+        "title": "State / national total",
+        "type": "nominal"
+      },
+      {
+        "field": "period",
+        "title": "Quarter",
+        "type": "nominal"
+      },
+      {
+        "field": "method",
+        "title": "Method",
+        "type": "nominal"
+      },
+      {
+        "field": "trips_m",
+        "title": "Overnight trips (millions)",
+        "type": "quantitative",
+        "format": ".3f"
+      }
+    ]
+  }
+}

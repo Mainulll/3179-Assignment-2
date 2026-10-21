@@ -1,0 +1,100 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 420,
+  "height": 260,
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "config": {
+    "background": "transparent",
+    "view": {
+      "stroke": null
+    },
+    "font": "Manrope",
+    "axis": {
+      "labelFontSize": 13,
+      "titleFontSize": 13,
+      "titleFontWeight": 500,
+      "labelColor": "#52635F",
+      "titleColor": "#203C3A",
+      "domain": false,
+      "tickColor": "#DDD6C9",
+      "gridColor": "#E8E2D7",
+      "labelPadding": 7,
+      "titlePadding": 12
+    },
+    "legend": {
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "labelColor": "#52635F",
+      "titleColor": "#203C3A"
+    },
+    "text": {
+      "font": "Manrope",
+      "color": "#203C3A"
+    },
+    "title": {
+      "font": "Fraunces",
+      "color": "#203C3A"
+    }
+  },
+  "description": "Melbourne tourism region actual DoTS quarters, January2025–June2026. Separate from legacy annual NVS; no substate backcast.",
+  "data": {
+    "url": "data/dv2/melbourne-current.json"
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "color": "#176C65",
+        "strokeWidth": 3,
+        "point": {
+          "filled": true,
+          "size": 45,
+          "color": "#176C65"
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "date",
+          "type": "temporal",
+          "title": null,
+          "axis": {
+            "format": "%b %Y",
+            "tickCount": 6,
+            "labelAngle": -35
+          }
+        },
+        "y": {
+          "field": "trips_m",
+          "type": "quantitative",
+          "title": "Overnight trips (m)",
+          "scale": {
+            "domain": [
+              0,
+              4
+            ],
+            "nice": false
+          },
+          "axis": {
+            "tickCount": 4
+          }
+        },
+        "tooltip": [
+          {
+            "field": "period",
+            "title": "Quarter",
+            "type": "nominal"
+          },
+          {
+            "field": "trips_m",
+            "title": "Overnight trips (millions)",
+            "type": "quantitative",
+            "format": ".3f"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,254 @@
+[
+  {
+    "geography": "Melbourne",
+    "geography_type": "TRA tourism region",
+    "period": "December quarter 2025",
+    "period_type": "quarter",
+    "series": "DoTS",
+    "trips_000": 3536.65260469192,
+    "nights_000": 8983.115738034841,
+    "spend_aud_million": 3168.17022283199,
+    "suppression_status": "published numeric value",
+    "source_measures": [
+      "QTR[Trips (000) NP (QTR)]",
+      "QTR[Nights (000) NP (QTR)]",
+      "QTR[Expenditure ($M) NP (QTR)]"
+    ],
+    "source_page": "https://djsir.vic.gov.au/tourism-industry-support/research/domestic-and-regional-research",
+    "source_report": "https://app.powerbi.com/view?r=eyJrIjoiNjA5YTYyNWYtZDJhZi00YTRjLTg0NGEtMDI1MzlhZWUyYzIxIiwidCI6IjcyMmVhMGJlLTNlMWMtNGIxMS1hZDZmLTk0MDFkNjg1NmUyNCJ9"
+  },
+  {
+    "geography": "Melbourne",
+    "geography_type": "TRA tourism region",
+    "period": "June quarter 2025",
+    "period_type": "quarter",
+    "series": "DoTS",
+    "trips_000": 3272.99735197145,
+    "nights_000": 8681.03714917732,
+    "spend_aud_million": 3001.79161947062,
+    "suppression_status": "published numeric value",
+    "source_measures": [
+      "QTR[Trips (000) NP (QTR)]",
+      "QTR[Nights (000) NP (QTR)]",
+      "QTR[Expenditure ($M) NP (QTR)]"
+    ],
+    "source_page": "https://djsir.vic.gov.au/tourism-industry-support/research/domestic-and-regional-research",
+    "source_report": "https://app.powerbi.com/view?r=eyJrIjoiNjA5YTYyNWYtZDJhZi00YTRjLTg0NGEtMDI1MzlhZWUyYzIxIiwidCI6IjcyMmVhMGJlLTNlMWMtNGIxMS1hZDZmLTk0MDFkNjg1NmUyNCJ9"
+  },
+  {
+    "geography": "Melbourne",
+    "geography_type": "TRA tourism region",
+    "period": "June quarter 2026",
+    "period_type": "quarter",
+    "series": "DoTS",
+    "trips_000": 3217.0962985906,
+    "nights_000": 8517.72731249566,
+    "spend_aud_million": 3191.74326089295,
+    "suppression_status": "published numeric value",
+    "source_measures": [
+      "QTR[Trips (000) NP (QTR)]",
+      "QTR[Nights (000) NP (QTR)]",
+      "QTR[Expenditure ($M) NP (QTR)]"
+    ],
+    "source_page": "https://djsir.vic.gov.au/tourism-industry-support/research/domestic-and-regional-research",
+    "source_report": "https://app.powerbi.com/view?r=eyJrIjoiNjA5YTYyNWYtZDJhZi00YTRjLTg0NGEtMDI1MzlhZWUyYzIxIiwidCI6IjcyMmVhMGJlLTNlMWMtNGIxMS1hZDZmLTk0MDFkNjg1NmUyNCJ9"
+  },
+  {
+    "geography": "Melbourne",
+    "geography_type": "TRA tourism region",
+    "period": "March quarter 2025",
+    "period_type": "quarter",
+    "series": "DoTS",
+    "trips_000": 3457.71741519184,
+    "nights_000": 9596.16803047885,
+    "spend_aud_million": 3452.2265673311704,
+    "suppression_status": "published numeric value",
+    "source_measures": [
+      "QTR[Trips (000) NP (QTR)]",
+      "QTR[Nights (000) NP (QTR)]",
+      "QTR[Expenditure ($M) NP (QTR)]"
+    ],
+    "source_page": "https://djsir.vic.gov.au/tourism-industry-support/research/domestic-and-regional-research",
+    "source_report": "https://app.powerbi.com/view?r=eyJrIjoiNjA5YTYyNWYtZDJhZi00YTRjLTg0NGEtMDI1MzlhZWUyYzIxIiwidCI6IjcyMmVhMGJlLTNlMWMtNGIxMS1hZDZmLTk0MDFkNjg1NmUyNCJ9"
+  },
+  {
+    "geography": "Melbourne",
+    "geography_type": "TRA tourism region",
+    "period": "March quarter 2026",
+    "period_type": "quarter",
+    "series": "DoTS",
+    "trips_000": 3422.73093827905,
+    "nights_000": 9545.36663166341,
+    "spend_aud_million": 3553.56594090749,
+    "suppression_status": "published numeric value",
+    "source_measures": [
+      "QTR[Trips (000) NP (QTR)]",
+      "QTR[Nights (000) NP (QTR)]",
+      "QTR[Expenditure ($M) NP (QTR)]"
+    ],
+    "source_page": "https://djsir.vic.gov.au/tourism-industry-support/research/domestic-and-regional-research",
+    "source_report": "https://app.powerbi.com/view?r=eyJrIjoiNjA5YTYyNWYtZDJhZi00YTRjLTg0NGEtMDI1MzlhZWUyYzIxIiwidCI6IjcyMmVhMGJlLTNlMWMtNGIxMS1hZDZmLTk0MDFkNjg1NmUyNCJ9"
+  },
+  {
+    "geography": "Melbourne",
+    "geography_type": "TRA tourism region",
+    "period": "September quarter 2025",
+    "period_type": "quarter",
+    "series": "DoTS",
+    "trips_000": 3270.64009674695,
+    "nights_000": 8319.617465308009,
+    "spend_aud_million": 2877.13695959843,
+    "suppression_status": "published numeric value",
+    "source_measures": [
+      "QTR[Trips (000) NP (QTR)]",
+      "QTR[Nights (000) NP (QTR)]",
+      "QTR[Expenditure ($M) NP (QTR)]"
+    ],
+    "source_page": "https://djsir.vic.gov.au/tourism-industry-support/research/domestic-and-regional-research",
+    "source_report": "https://app.powerbi.com/view?r=eyJrIjoiNjA5YTYyNWYtZDJhZi00YTRjLTg0NGEtMDI1MzlhZWUyYzIxIiwidCI6IjcyMmVhMGJlLTNlMWMtNGIxMS1hZDZmLTk0MDFkNjg1NmUyNCJ9"
+  },
+  {
+    "geography": "Melbourne",
+    "geography_type": "TRA tourism region",
+    "period": "Year ending June 2026",
+    "period_type": "year ending",
+    "series": "DoTS",
+    "trips_000": 13447.119938309399,
+    "nights_000": 35365.827147503696,
+    "spend_aud_million": 12790.6163842311,
+    "suppression_status": "published numeric value",
+    "source_measures": [
+      "QTR[Trips (000) NP (QTR)]",
+      "QTR[Nights (000) NP (QTR)]",
+      "QTR[Expenditure ($M) NP (QTR)]"
+    ],
+    "source_page": "https://djsir.vic.gov.au/tourism-industry-support/research/domestic-and-regional-research",
+    "source_report": "https://app.powerbi.com/view?r=eyJrIjoiNjA5YTYyNWYtZDJhZi00YTRjLTg0NGEtMDI1MzlhZWUyYzIxIiwidCI6IjcyMmVhMGJlLTNlMWMtNGIxMS1hZDZmLTk0MDFkNjg1NmUyNCJ9"
+  },
+  {
+    "geography": "Total Victoria",
+    "geography_type": "State",
+    "period": "December quarter 2025",
+    "period_type": "quarter",
+    "series": "DoTS",
+    "trips_000": 8043.48589447299,
+    "nights_000": 21450.0059852591,
+    "spend_aud_million": 5707.57355016889,
+    "suppression_status": "published numeric value",
+    "source_measures": [
+      "QTR[Trips (000) NP (QTR)]",
+      "QTR[Nights (000) NP (QTR)]",
+      "QTR[Expenditure ($M) NP (QTR)]"
+    ],
+    "source_page": "https://djsir.vic.gov.au/tourism-industry-support/research/domestic-and-regional-research",
+    "source_report": "https://app.powerbi.com/view?r=eyJrIjoiNjA5YTYyNWYtZDJhZi00YTRjLTg0NGEtMDI1MzlhZWUyYzIxIiwidCI6IjcyMmVhMGJlLTNlMWMtNGIxMS1hZDZmLTk0MDFkNjg1NmUyNCJ9"
+  },
+  {
+    "geography": "Total Victoria",
+    "geography_type": "State",
+    "period": "June quarter 2025",
+    "period_type": "quarter",
+    "series": "DoTS",
+    "trips_000": 7497.04985133574,
+    "nights_000": 20486.978811594603,
+    "spend_aud_million": 5393.80436677015,
+    "suppression_status": "published numeric value",
+    "source_measures": [
+      "QTR[Trips (000) NP (QTR)]",
+      "QTR[Nights (000) NP (QTR)]",
+      "QTR[Expenditure ($M) NP (QTR)]"
+    ],
+    "source_page": "https://djsir.vic.gov.au/tourism-industry-support/research/domestic-and-regional-research",
+    "source_report": "https://app.powerbi.com/view?r=eyJrIjoiNjA5YTYyNWYtZDJhZi00YTRjLTg0NGEtMDI1MzlhZWUyYzIxIiwidCI6IjcyMmVhMGJlLTNlMWMtNGIxMS1hZDZmLTk0MDFkNjg1NmUyNCJ9"
+  },
+  {
+    "geography": "Total Victoria",
+    "geography_type": "State",
+    "period": "June quarter 2026",
+    "period_type": "quarter",
+    "series": "DoTS",
+    "trips_000": 7301.03538436446,
+    "nights_000": 20134.4489487779,
+    "spend_aud_million": 5597.62060282902,
+    "suppression_status": "published numeric value",
+    "source_measures": [
+      "QTR[Trips (000) NP (QTR)]",
+      "QTR[Nights (000) NP (QTR)]",
+      "QTR[Expenditure ($M) NP (QTR)]"
+    ],
+    "source_page": "https://djsir.vic.gov.au/tourism-industry-support/research/domestic-and-regional-research",
+    "source_report": "https://app.powerbi.com/view?r=eyJrIjoiNjA5YTYyNWYtZDJhZi00YTRjLTg0NGEtMDI1MzlhZWUyYzIxIiwidCI6IjcyMmVhMGJlLTNlMWMtNGIxMS1hZDZmLTk0MDFkNjg1NmUyNCJ9"
+  },
+  {
+    "geography": "Total Victoria",
+    "geography_type": "State",
+    "period": "March quarter 2025",
+    "period_type": "quarter",
+    "series": "DoTS",
+    "trips_000": 8650.63618278899,
+    "nights_000": 26342.1167045768,
+    "spend_aud_million": 6759.18580295406,
+    "suppression_status": "published numeric value",
+    "source_measures": [
+      "QTR[Trips (000) NP (QTR)]",
+      "QTR[Nights (000) NP (QTR)]",
+      "QTR[Expenditure ($M) NP (QTR)]"
+    ],
+    "source_page": "https://djsir.vic.gov.au/tourism-industry-support/research/domestic-and-regional-research",
+    "source_report": "https://app.powerbi.com/view?r=eyJrIjoiNjA5YTYyNWYtZDJhZi00YTRjLTg0NGEtMDI1MzlhZWUyYzIxIiwidCI6IjcyMmVhMGJlLTNlMWMtNGIxMS1hZDZmLTk0MDFkNjg1NmUyNCJ9"
+  },
+  {
+    "geography": "Total Victoria",
+    "geography_type": "State",
+    "period": "March quarter 2026",
+    "period_type": "quarter",
+    "series": "DoTS",
+    "trips_000": 8457.53474392605,
+    "nights_000": 25946.1685496835,
+    "spend_aud_million": 7081.74622543861,
+    "suppression_status": "published numeric value",
+    "source_measures": [
+      "QTR[Trips (000) NP (QTR)]",
+      "QTR[Nights (000) NP (QTR)]",
+      "QTR[Expenditure ($M) NP (QTR)]"
+    ],
+    "source_page": "https://djsir.vic.gov.au/tourism-industry-support/research/domestic-and-regional-research",
+    "source_report": "https://app.powerbi.com/view?r=eyJrIjoiNjA5YTYyNWYtZDJhZi00YTRjLTg0NGEtMDI1MzlhZWUyYzIxIiwidCI6IjcyMmVhMGJlLTNlMWMtNGIxMS1hZDZmLTk0MDFkNjg1NmUyNCJ9"
+  },
+  {
+    "geography": "Total Victoria",
+    "geography_type": "State",
+    "period": "September quarter 2025",
+    "period_type": "quarter",
+    "series": "DoTS",
+    "trips_000": 7191.99612352873,
+    "nights_000": 18961.2281392373,
+    "spend_aud_million": 5108.593619921339,
+    "suppression_status": "published numeric value",
+    "source_measures": [
+      "QTR[Trips (000) NP (QTR)]",
+      "QTR[Nights (000) NP (QTR)]",
+      "QTR[Expenditure ($M) NP (QTR)]"
+    ],
+    "source_page": "https://djsir.vic.gov.au/tourism-industry-support/research/domestic-and-regional-research",
+    "source_report": "https://app.powerbi.com/view?r=eyJrIjoiNjA5YTYyNWYtZDJhZi00YTRjLTg0NGEtMDI1MzlhZWUyYzIxIiwidCI6IjcyMmVhMGJlLTNlMWMtNGIxMS1hZDZmLTk0MDFkNjg1NmUyNCJ9"
+  },
+  {
+    "geography": "Total Victoria",
+    "geography_type": "State",
+    "period": "Year ending June 2026",
+    "period_type": "year ending",
+    "series": "DoTS",
+    "trips_000": 30994.052146291,
+    "nights_000": 86491.8516229441,
+    "spend_aud_million": 23495.5339983579,
+    "suppression_status": "published numeric value",
+    "source_measures": [
+      "QTR[Trips (000) NP (QTR)]",
+      "QTR[Nights (000) NP (QTR)]",
+      "QTR[Expenditure ($M) NP (QTR)]"
+    ],
+    "source_page": "https://djsir.vic.gov.au/tourism-industry-support/research/domestic-and-regional-research",
+    "source_report": "https://app.powerbi.com/view?r=eyJrIjoiNjA5YTYyNWYtZDJhZi00YTRjLTg0NGEtMDI1MzlhZWUyYzIxIiwidCI6IjcyMmVhMGJlLTNlMWMtNGIxMS1hZDZmLTk0MDFkNjg1NmUyNCJ9"
+  }
+]

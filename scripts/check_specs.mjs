@@ -65,3 +65,13 @@ const current=JSON.parse(fs.readFileSync(path.join(root,'data/dv2/dots-quarter.j
 if(current.length!==16||new Set(current.map(r=>r.geography)).size!==2||current.some(r=>![2025,2026].includes(r.year)||Math.abs(r.value*1000-r.raw_value)>1e-7))throw new Error('Current DoTS units/coverage failed');
 if(current.find(r=>r.geography==='Victoria'&&r.metric==='overnight_trips'&&r.year===2026).raw_value!==7301.035)throw new Error('Current source-cell fidelity failed');
 console.log('PASS current DoTS quarter comparison:16 source cells, units and separate2025/2026 periods');
+const history=JSON.parse(fs.readFileSync(path.join(root,'data/dv2/dots-quarterly-history.json')));
+if(history.length!==270||new Set(history.map(r=>r.area)).size!==9||new Set(history.map(r=>r.area+':'+r.period)).size!==270)throw new Error('Compatible history coverage/uniqueness');
+for(const area of new Set(history.map(r=>r.area))){const rows=history.filter(r=>r.area===area);if(rows.length!==30||rows.some(r=>r.method!==(r.year<2025?'DoTS-compatible revised backcast':'DoTS')))throw new Error('Quarterly method/coverage mismatch');}
+const latestStates=JSON.parse(fs.readFileSync(path.join(root,'data/dv2/state-nights-current.json'))),latestCities=JSON.parse(fs.readFileSync(path.join(root,'data/dv2/city-purposes-current.json')));
+if(latestStates.length!==8||latestCities.length!==16)throw new Error('Current map/heatmap coverage');
+for(const r of latestStates)if(Math.abs(r.holiday_nights_000/r.nights_000*100-r.holiday_nights_share_pct)>1e-9)throw new Error('State denominator changed');
+for(const city of new Set(latestCities.map(r=>r.city))){const rows=latestCities.filter(r=>r.city===city);if(rows.length!==4||Math.abs(rows.reduce((n,r)=>n+r.nights_000,0)-rows[0].total_nights_000)>.00101)throw new Error('City published total reconciliation');}
+const currentMelbourne=JSON.parse(fs.readFileSync(path.join(root,'data/dv2/melbourne-current.json')));
+if(currentMelbourne.length!==6||Math.abs(currentMelbourne.slice(-4).reduce((n,r)=>n+r.trips_m,0)-13.447119938309399)>1e-10)throw new Error('Melbourne quarters/year-ending mismatch');
+console.log('PASS 270 unique state quarters, method boundary, current denominators and Melbourne year-ending reconciliation');

@@ -35,7 +35,20 @@ local places, compare route geometry and documented activities, and understand
 the wider historical tourism context. Inventories and travel estimates are
 separate populations, with no attraction-level attendance linkage.
 
-## Four chapters and eleven chart families
+
+## Latest data release — 21 October 2026
+
+The page now renders 13 chart panels. Latest defaults: eight-state holiday-night map and four-city purpose heatmap use **year ending June 2026 DoTS** (July 2025–June 2026); Melbourne uses six separate DoTS quarters from January 2025 through June 2026; state scatter compares like-for-like June quarters 2019 (revised DoTS backcast) and 2026 (actual DoTS). Historical calendar-year NVS views remain available through labelled controls. They are separate collections and periods, not a growth calculation.
+
+A new quarterly history panel provides 270 observations across Australia and all eight states/territories, 2019 Q1–2026 Q2. Revised backcasts and actual collection are separate line segments. The current four-metric panel compares June quarter 2025 with June quarter 2026. DoTS covers residents aged 14+; legacy NVS covers residents aged 15+. No substate backcast is claimed.
+
+Current query evidence is in `current_README.txt`, `current_teq_query_payload.json`, `current_states_holiday_nights_YEJune2026.json`, `current_cities_purpose_nights_YEJune2026.json`, `melbourne_current_source.json`, `melbourne_query.json` and `dots_history_sources.json`. All shown purpose cells pass the source publication threshold; independently rounded categories may differ from a total by one night. Do not add overlapping Leisure categories.
+
+Current municipal exports were rechecked on 21 October: all analytical values in panels 1–7 are unchanged. The forest replication date is 20 October; the latest actual alteration is 9 October. Retrieval dates do not create new historical measurements. Fountains have two record edits but are not a visible chart layer.
+
+The detailed historical chart table below documents retained NVS modes, not the default latest observations.
+
+## Four chapters and thirteen chart panels
 
 | # | Question | Idiom | Encoding and purpose |
 |---|---|---|---|
@@ -52,7 +65,7 @@ separate populations, with no attraction-level attendance linkage.
 | 11 | How do 2019 and 2024 state trips compare? | Scatter | Eight state points, square plot, identical zero-based domains, equality line and Victoria highlight. Label leaders are purely display annotations. |
 
 The brief v1.2 classifies all map idioms and idioms beyond its listed basic
-families as advanced. This revision supplies 11 chart families, with 8 advanced
+families as advanced. The original eleven chart families include 8 advanced
 candidates (1, 2, 3, 4, 5, 7, 8, 9) and 3 map families. Chart 05 is a violin
 with raw observations rather than a basic strip plot alone. The footnote's
 “other idioms” rule supports this advanced classification; the brief does not

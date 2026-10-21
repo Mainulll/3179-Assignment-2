@@ -1,0 +1,2717 @@
+{
+  "checked_date_utc": "2026-10-21",
+  "scope": "Australia and all eight states/territories, 2019Q1 through 2026Q2",
+  "notes": [
+    "Pre-2025 is revised backcast adjusted toward DoTS; explicitly label it and use TRA caution.",
+    "Do not call state values Melbourne or compare quarterly totals to a calendar-year value.",
+    "March2025 sourced from March2026 release Table1a B, avoiding a mislabeled Table1b F4 header.",
+    "Latest June2026 workbook supersedes overlapping quarter values."
+  ],
+  "workbook_sha256": {
+    "tra-dots-march-quarter-2026-compared-to-march-quarter-2025.xlsx": "b52721093974e2dd866af83f3773e66724a63e06eba3aeca3edd5e6b06b90965",
+    "tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx": "8b8bbd16e7b9995593775eb2c6b033a597f5b579eb21719c01a3d41ebb52e892",
+    "tra-dots-2019-2024-overnight-backcast-data-revised.xlsx": "f484203d43901d75703a5992db5f6601dd1f43b258edddc41188e9cc873a9523"
+  },
+  "source_cells": [
+    {
+      "area": "Australia",
+      "period": "2019 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!B4",
+        "nights": "Table 2!B4",
+        "spend": "Table 3!B4"
+      }
+    },
+    {
+      "area": "Australia",
+      "period": "2019 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!C4",
+        "nights": "Table 2!C4",
+        "spend": "Table 3!C4"
+      }
+    },
+    {
+      "area": "Australia",
+      "period": "2019 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!D4",
+        "nights": "Table 2!D4",
+        "spend": "Table 3!D4"
+      }
+    },
+    {
+      "area": "Australia",
+      "period": "2019 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!E4",
+        "nights": "Table 2!E4",
+        "spend": "Table 3!E4"
+      }
+    },
+    {
+      "area": "Australia",
+      "period": "2020 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!F4",
+        "nights": "Table 2!F4",
+        "spend": "Table 3!F4"
+      }
+    },
+    {
+      "area": "Australia",
+      "period": "2020 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!G4",
+        "nights": "Table 2!G4",
+        "spend": "Table 3!G4"
+      }
+    },
+    {
+      "area": "Australia",
+      "period": "2020 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!H4",
+        "nights": "Table 2!H4",
+        "spend": "Table 3!H4"
+      }
+    },
+    {
+      "area": "Australia",
+      "period": "2020 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!I4",
+        "nights": "Table 2!I4",
+        "spend": "Table 3!I4"
+      }
+    },
+    {
+      "area": "Australia",
+      "period": "2021 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!J4",
+        "nights": "Table 2!J4",
+        "spend": "Table 3!J4"
+      }
+    },
+    {
+      "area": "Australia",
+      "period": "2021 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!K4",
+        "nights": "Table 2!K4",
+        "spend": "Table 3!K4"
+      }
+    },
+    {
+      "area": "Australia",
+      "period": "2021 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!L4",
+        "nights": "Table 2!L4",
+        "spend": "Table 3!L4"
+      }
+    },
+    {
+      "area": "Australia",
+      "period": "2021 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!M4",
+        "nights": "Table 2!M4",
+        "spend": "Table 3!M4"
+      }
+    },
+    {
+      "area": "Australia",
+      "period": "2022 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!N4",
+        "nights": "Table 2!N4",
+        "spend": "Table 3!N4"
+      }
+    },
+    {
+      "area": "Australia",
+      "period": "2022 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!O4",
+        "nights": "Table 2!O4",
+        "spend": "Table 3!O4"
+      }
+    },
+    {
+      "area": "Australia",
+      "period": "2022 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!P4",
+        "nights": "Table 2!P4",
+        "spend": "Table 3!P4"
+      }
+    },
+    {
+      "area": "Australia",
+      "period": "2022 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!Q4",
+        "nights": "Table 2!Q4",
+        "spend": "Table 3!Q4"
+      }
+    },
+    {
+      "area": "Australia",
+      "period": "2023 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!R4",
+        "nights": "Table 2!R4",
+        "spend": "Table 3!R4"
+      }
+    },
+    {
+      "area": "Australia",
+      "period": "2023 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!S4",
+        "nights": "Table 2!S4",
+        "spend": "Table 3!S4"
+      }
+    },
+    {
+      "area": "Australia",
+      "period": "2023 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!T4",
+        "nights": "Table 2!T4",
+        "spend": "Table 3!T4"
+      }
+    },
+    {
+      "area": "Australia",
+      "period": "2023 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!U4",
+        "nights": "Table 2!U4",
+        "spend": "Table 3!U4"
+      }
+    },
+    {
+      "area": "Australia",
+      "period": "2024 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!V4",
+        "nights": "Table 2!V4",
+        "spend": "Table 3!V4"
+      }
+    },
+    {
+      "area": "Australia",
+      "period": "2024 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!W4",
+        "nights": "Table 2!W4",
+        "spend": "Table 3!W4"
+      }
+    },
+    {
+      "area": "Australia",
+      "period": "2024 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!X4",
+        "nights": "Table 2!X4",
+        "spend": "Table 3!X4"
+      }
+    },
+    {
+      "area": "Australia",
+      "period": "2024 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!Y4",
+        "nights": "Table 2!Y4",
+        "spend": "Table 3!Y4"
+      }
+    },
+    {
+      "area": "Australia",
+      "period": "2025 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-march-quarter-2026-compared-to-march-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1a!B14",
+        "nights": "Table 1a!B24",
+        "spend": "Table 1a!B34"
+      }
+    },
+    {
+      "area": "Australia",
+      "period": "2025 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!B14",
+        "nights": "Table 1b!B24",
+        "spend": "Table 1b!B34"
+      }
+    },
+    {
+      "area": "Australia",
+      "period": "2025 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!C14",
+        "nights": "Table 1b!C24",
+        "spend": "Table 1b!C34"
+      }
+    },
+    {
+      "area": "Australia",
+      "period": "2025 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!D14",
+        "nights": "Table 1b!D24",
+        "spend": "Table 1b!D34"
+      }
+    },
+    {
+      "area": "Australia",
+      "period": "2026 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!E14",
+        "nights": "Table 1b!E24",
+        "spend": "Table 1b!E34"
+      }
+    },
+    {
+      "area": "Australia",
+      "period": "2026 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!F14",
+        "nights": "Table 1b!F24",
+        "spend": "Table 1b!F34"
+      }
+    },
+    {
+      "area": "Australian Capital Territory",
+      "period": "2019 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!B12",
+        "nights": "Table 2!B12",
+        "spend": "Table 3!B12"
+      }
+    },
+    {
+      "area": "Australian Capital Territory",
+      "period": "2019 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!C12",
+        "nights": "Table 2!C12",
+        "spend": "Table 3!C12"
+      }
+    },
+    {
+      "area": "Australian Capital Territory",
+      "period": "2019 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!D12",
+        "nights": "Table 2!D12",
+        "spend": "Table 3!D12"
+      }
+    },
+    {
+      "area": "Australian Capital Territory",
+      "period": "2019 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!E12",
+        "nights": "Table 2!E12",
+        "spend": "Table 3!E12"
+      }
+    },
+    {
+      "area": "Australian Capital Territory",
+      "period": "2020 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!F12",
+        "nights": "Table 2!F12",
+        "spend": "Table 3!F12"
+      }
+    },
+    {
+      "area": "Australian Capital Territory",
+      "period": "2020 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!G12",
+        "nights": "Table 2!G12",
+        "spend": "Table 3!G12"
+      }
+    },
+    {
+      "area": "Australian Capital Territory",
+      "period": "2020 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!H12",
+        "nights": "Table 2!H12",
+        "spend": "Table 3!H12"
+      }
+    },
+    {
+      "area": "Australian Capital Territory",
+      "period": "2020 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!I12",
+        "nights": "Table 2!I12",
+        "spend": "Table 3!I12"
+      }
+    },
+    {
+      "area": "Australian Capital Territory",
+      "period": "2021 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!J12",
+        "nights": "Table 2!J12",
+        "spend": "Table 3!J12"
+      }
+    },
+    {
+      "area": "Australian Capital Territory",
+      "period": "2021 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!K12",
+        "nights": "Table 2!K12",
+        "spend": "Table 3!K12"
+      }
+    },
+    {
+      "area": "Australian Capital Territory",
+      "period": "2021 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!L12",
+        "nights": "Table 2!L12",
+        "spend": "Table 3!L12"
+      }
+    },
+    {
+      "area": "Australian Capital Territory",
+      "period": "2021 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!M12",
+        "nights": "Table 2!M12",
+        "spend": "Table 3!M12"
+      }
+    },
+    {
+      "area": "Australian Capital Territory",
+      "period": "2022 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!N12",
+        "nights": "Table 2!N12",
+        "spend": "Table 3!N12"
+      }
+    },
+    {
+      "area": "Australian Capital Territory",
+      "period": "2022 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!O12",
+        "nights": "Table 2!O12",
+        "spend": "Table 3!O12"
+      }
+    },
+    {
+      "area": "Australian Capital Territory",
+      "period": "2022 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!P12",
+        "nights": "Table 2!P12",
+        "spend": "Table 3!P12"
+      }
+    },
+    {
+      "area": "Australian Capital Territory",
+      "period": "2022 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!Q12",
+        "nights": "Table 2!Q12",
+        "spend": "Table 3!Q12"
+      }
+    },
+    {
+      "area": "Australian Capital Territory",
+      "period": "2023 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!R12",
+        "nights": "Table 2!R12",
+        "spend": "Table 3!R12"
+      }
+    },
+    {
+      "area": "Australian Capital Territory",
+      "period": "2023 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!S12",
+        "nights": "Table 2!S12",
+        "spend": "Table 3!S12"
+      }
+    },
+    {
+      "area": "Australian Capital Territory",
+      "period": "2023 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!T12",
+        "nights": "Table 2!T12",
+        "spend": "Table 3!T12"
+      }
+    },
+    {
+      "area": "Australian Capital Territory",
+      "period": "2023 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!U12",
+        "nights": "Table 2!U12",
+        "spend": "Table 3!U12"
+      }
+    },
+    {
+      "area": "Australian Capital Territory",
+      "period": "2024 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!V12",
+        "nights": "Table 2!V12",
+        "spend": "Table 3!V12"
+      }
+    },
+    {
+      "area": "Australian Capital Territory",
+      "period": "2024 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!W12",
+        "nights": "Table 2!W12",
+        "spend": "Table 3!W12"
+      }
+    },
+    {
+      "area": "Australian Capital Territory",
+      "period": "2024 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!X12",
+        "nights": "Table 2!X12",
+        "spend": "Table 3!X12"
+      }
+    },
+    {
+      "area": "Australian Capital Territory",
+      "period": "2024 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!Y12",
+        "nights": "Table 2!Y12",
+        "spend": "Table 3!Y12"
+      }
+    },
+    {
+      "area": "Australian Capital Territory",
+      "period": "2025 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-march-quarter-2026-compared-to-march-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1a!B13",
+        "nights": "Table 1a!B23",
+        "spend": "Table 1a!B33"
+      }
+    },
+    {
+      "area": "Australian Capital Territory",
+      "period": "2025 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!B13",
+        "nights": "Table 1b!B23",
+        "spend": "Table 1b!B33"
+      }
+    },
+    {
+      "area": "Australian Capital Territory",
+      "period": "2025 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!C13",
+        "nights": "Table 1b!C23",
+        "spend": "Table 1b!C33"
+      }
+    },
+    {
+      "area": "Australian Capital Territory",
+      "period": "2025 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!D13",
+        "nights": "Table 1b!D23",
+        "spend": "Table 1b!D33"
+      }
+    },
+    {
+      "area": "Australian Capital Territory",
+      "period": "2026 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!E13",
+        "nights": "Table 1b!E23",
+        "spend": "Table 1b!E33"
+      }
+    },
+    {
+      "area": "Australian Capital Territory",
+      "period": "2026 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!F13",
+        "nights": "Table 1b!F23",
+        "spend": "Table 1b!F33"
+      }
+    },
+    {
+      "area": "New South Wales",
+      "period": "2019 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!B5",
+        "nights": "Table 2!B5",
+        "spend": "Table 3!B5"
+      }
+    },
+    {
+      "area": "New South Wales",
+      "period": "2019 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!C5",
+        "nights": "Table 2!C5",
+        "spend": "Table 3!C5"
+      }
+    },
+    {
+      "area": "New South Wales",
+      "period": "2019 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!D5",
+        "nights": "Table 2!D5",
+        "spend": "Table 3!D5"
+      }
+    },
+    {
+      "area": "New South Wales",
+      "period": "2019 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!E5",
+        "nights": "Table 2!E5",
+        "spend": "Table 3!E5"
+      }
+    },
+    {
+      "area": "New South Wales",
+      "period": "2020 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!F5",
+        "nights": "Table 2!F5",
+        "spend": "Table 3!F5"
+      }
+    },
+    {
+      "area": "New South Wales",
+      "period": "2020 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!G5",
+        "nights": "Table 2!G5",
+        "spend": "Table 3!G5"
+      }
+    },
+    {
+      "area": "New South Wales",
+      "period": "2020 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!H5",
+        "nights": "Table 2!H5",
+        "spend": "Table 3!H5"
+      }
+    },
+    {
+      "area": "New South Wales",
+      "period": "2020 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!I5",
+        "nights": "Table 2!I5",
+        "spend": "Table 3!I5"
+      }
+    },
+    {
+      "area": "New South Wales",
+      "period": "2021 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!J5",
+        "nights": "Table 2!J5",
+        "spend": "Table 3!J5"
+      }
+    },
+    {
+      "area": "New South Wales",
+      "period": "2021 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!K5",
+        "nights": "Table 2!K5",
+        "spend": "Table 3!K5"
+      }
+    },
+    {
+      "area": "New South Wales",
+      "period": "2021 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!L5",
+        "nights": "Table 2!L5",
+        "spend": "Table 3!L5"
+      }
+    },
+    {
+      "area": "New South Wales",
+      "period": "2021 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!M5",
+        "nights": "Table 2!M5",
+        "spend": "Table 3!M5"
+      }
+    },
+    {
+      "area": "New South Wales",
+      "period": "2022 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!N5",
+        "nights": "Table 2!N5",
+        "spend": "Table 3!N5"
+      }
+    },
+    {
+      "area": "New South Wales",
+      "period": "2022 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!O5",
+        "nights": "Table 2!O5",
+        "spend": "Table 3!O5"
+      }
+    },
+    {
+      "area": "New South Wales",
+      "period": "2022 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!P5",
+        "nights": "Table 2!P5",
+        "spend": "Table 3!P5"
+      }
+    },
+    {
+      "area": "New South Wales",
+      "period": "2022 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!Q5",
+        "nights": "Table 2!Q5",
+        "spend": "Table 3!Q5"
+      }
+    },
+    {
+      "area": "New South Wales",
+      "period": "2023 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!R5",
+        "nights": "Table 2!R5",
+        "spend": "Table 3!R5"
+      }
+    },
+    {
+      "area": "New South Wales",
+      "period": "2023 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!S5",
+        "nights": "Table 2!S5",
+        "spend": "Table 3!S5"
+      }
+    },
+    {
+      "area": "New South Wales",
+      "period": "2023 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!T5",
+        "nights": "Table 2!T5",
+        "spend": "Table 3!T5"
+      }
+    },
+    {
+      "area": "New South Wales",
+      "period": "2023 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!U5",
+        "nights": "Table 2!U5",
+        "spend": "Table 3!U5"
+      }
+    },
+    {
+      "area": "New South Wales",
+      "period": "2024 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!V5",
+        "nights": "Table 2!V5",
+        "spend": "Table 3!V5"
+      }
+    },
+    {
+      "area": "New South Wales",
+      "period": "2024 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!W5",
+        "nights": "Table 2!W5",
+        "spend": "Table 3!W5"
+      }
+    },
+    {
+      "area": "New South Wales",
+      "period": "2024 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!X5",
+        "nights": "Table 2!X5",
+        "spend": "Table 3!X5"
+      }
+    },
+    {
+      "area": "New South Wales",
+      "period": "2024 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!Y5",
+        "nights": "Table 2!Y5",
+        "spend": "Table 3!Y5"
+      }
+    },
+    {
+      "area": "New South Wales",
+      "period": "2025 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-march-quarter-2026-compared-to-march-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1a!B6",
+        "nights": "Table 1a!B16",
+        "spend": "Table 1a!B26"
+      }
+    },
+    {
+      "area": "New South Wales",
+      "period": "2025 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!B6",
+        "nights": "Table 1b!B16",
+        "spend": "Table 1b!B26"
+      }
+    },
+    {
+      "area": "New South Wales",
+      "period": "2025 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!C6",
+        "nights": "Table 1b!C16",
+        "spend": "Table 1b!C26"
+      }
+    },
+    {
+      "area": "New South Wales",
+      "period": "2025 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!D6",
+        "nights": "Table 1b!D16",
+        "spend": "Table 1b!D26"
+      }
+    },
+    {
+      "area": "New South Wales",
+      "period": "2026 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!E6",
+        "nights": "Table 1b!E16",
+        "spend": "Table 1b!E26"
+      }
+    },
+    {
+      "area": "New South Wales",
+      "period": "2026 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!F6",
+        "nights": "Table 1b!F16",
+        "spend": "Table 1b!F26"
+      }
+    },
+    {
+      "area": "Northern Territory",
+      "period": "2019 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!B11",
+        "nights": "Table 2!B11",
+        "spend": "Table 3!B11"
+      }
+    },
+    {
+      "area": "Northern Territory",
+      "period": "2019 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!C11",
+        "nights": "Table 2!C11",
+        "spend": "Table 3!C11"
+      }
+    },
+    {
+      "area": "Northern Territory",
+      "period": "2019 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!D11",
+        "nights": "Table 2!D11",
+        "spend": "Table 3!D11"
+      }
+    },
+    {
+      "area": "Northern Territory",
+      "period": "2019 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!E11",
+        "nights": "Table 2!E11",
+        "spend": "Table 3!E11"
+      }
+    },
+    {
+      "area": "Northern Territory",
+      "period": "2020 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!F11",
+        "nights": "Table 2!F11",
+        "spend": "Table 3!F11"
+      }
+    },
+    {
+      "area": "Northern Territory",
+      "period": "2020 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!G11",
+        "nights": "Table 2!G11",
+        "spend": "Table 3!G11"
+      }
+    },
+    {
+      "area": "Northern Territory",
+      "period": "2020 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!H11",
+        "nights": "Table 2!H11",
+        "spend": "Table 3!H11"
+      }
+    },
+    {
+      "area": "Northern Territory",
+      "period": "2020 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!I11",
+        "nights": "Table 2!I11",
+        "spend": "Table 3!I11"
+      }
+    },
+    {
+      "area": "Northern Territory",
+      "period": "2021 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!J11",
+        "nights": "Table 2!J11",
+        "spend": "Table 3!J11"
+      }
+    },
+    {
+      "area": "Northern Territory",
+      "period": "2021 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!K11",
+        "nights": "Table 2!K11",
+        "spend": "Table 3!K11"
+      }
+    },
+    {
+      "area": "Northern Territory",
+      "period": "2021 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!L11",
+        "nights": "Table 2!L11",
+        "spend": "Table 3!L11"
+      }
+    },
+    {
+      "area": "Northern Territory",
+      "period": "2021 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!M11",
+        "nights": "Table 2!M11",
+        "spend": "Table 3!M11"
+      }
+    },
+    {
+      "area": "Northern Territory",
+      "period": "2022 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!N11",
+        "nights": "Table 2!N11",
+        "spend": "Table 3!N11"
+      }
+    },
+    {
+      "area": "Northern Territory",
+      "period": "2022 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!O11",
+        "nights": "Table 2!O11",
+        "spend": "Table 3!O11"
+      }
+    },
+    {
+      "area": "Northern Territory",
+      "period": "2022 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!P11",
+        "nights": "Table 2!P11",
+        "spend": "Table 3!P11"
+      }
+    },
+    {
+      "area": "Northern Territory",
+      "period": "2022 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!Q11",
+        "nights": "Table 2!Q11",
+        "spend": "Table 3!Q11"
+      }
+    },
+    {
+      "area": "Northern Territory",
+      "period": "2023 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!R11",
+        "nights": "Table 2!R11",
+        "spend": "Table 3!R11"
+      }
+    },
+    {
+      "area": "Northern Territory",
+      "period": "2023 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!S11",
+        "nights": "Table 2!S11",
+        "spend": "Table 3!S11"
+      }
+    },
+    {
+      "area": "Northern Territory",
+      "period": "2023 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!T11",
+        "nights": "Table 2!T11",
+        "spend": "Table 3!T11"
+      }
+    },
+    {
+      "area": "Northern Territory",
+      "period": "2023 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!U11",
+        "nights": "Table 2!U11",
+        "spend": "Table 3!U11"
+      }
+    },
+    {
+      "area": "Northern Territory",
+      "period": "2024 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!V11",
+        "nights": "Table 2!V11",
+        "spend": "Table 3!V11"
+      }
+    },
+    {
+      "area": "Northern Territory",
+      "period": "2024 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!W11",
+        "nights": "Table 2!W11",
+        "spend": "Table 3!W11"
+      }
+    },
+    {
+      "area": "Northern Territory",
+      "period": "2024 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!X11",
+        "nights": "Table 2!X11",
+        "spend": "Table 3!X11"
+      }
+    },
+    {
+      "area": "Northern Territory",
+      "period": "2024 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!Y11",
+        "nights": "Table 2!Y11",
+        "spend": "Table 3!Y11"
+      }
+    },
+    {
+      "area": "Northern Territory",
+      "period": "2025 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-march-quarter-2026-compared-to-march-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1a!B12",
+        "nights": "Table 1a!B22",
+        "spend": "Table 1a!B32"
+      }
+    },
+    {
+      "area": "Northern Territory",
+      "period": "2025 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!B12",
+        "nights": "Table 1b!B22",
+        "spend": "Table 1b!B32"
+      }
+    },
+    {
+      "area": "Northern Territory",
+      "period": "2025 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!C12",
+        "nights": "Table 1b!C22",
+        "spend": "Table 1b!C32"
+      }
+    },
+    {
+      "area": "Northern Territory",
+      "period": "2025 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!D12",
+        "nights": "Table 1b!D22",
+        "spend": "Table 1b!D32"
+      }
+    },
+    {
+      "area": "Northern Territory",
+      "period": "2026 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!E12",
+        "nights": "Table 1b!E22",
+        "spend": "Table 1b!E32"
+      }
+    },
+    {
+      "area": "Northern Territory",
+      "period": "2026 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!F12",
+        "nights": "Table 1b!F22",
+        "spend": "Table 1b!F32"
+      }
+    },
+    {
+      "area": "Queensland",
+      "period": "2019 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!B7",
+        "nights": "Table 2!B7",
+        "spend": "Table 3!B7"
+      }
+    },
+    {
+      "area": "Queensland",
+      "period": "2019 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!C7",
+        "nights": "Table 2!C7",
+        "spend": "Table 3!C7"
+      }
+    },
+    {
+      "area": "Queensland",
+      "period": "2019 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!D7",
+        "nights": "Table 2!D7",
+        "spend": "Table 3!D7"
+      }
+    },
+    {
+      "area": "Queensland",
+      "period": "2019 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!E7",
+        "nights": "Table 2!E7",
+        "spend": "Table 3!E7"
+      }
+    },
+    {
+      "area": "Queensland",
+      "period": "2020 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!F7",
+        "nights": "Table 2!F7",
+        "spend": "Table 3!F7"
+      }
+    },
+    {
+      "area": "Queensland",
+      "period": "2020 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!G7",
+        "nights": "Table 2!G7",
+        "spend": "Table 3!G7"
+      }
+    },
+    {
+      "area": "Queensland",
+      "period": "2020 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!H7",
+        "nights": "Table 2!H7",
+        "spend": "Table 3!H7"
+      }
+    },
+    {
+      "area": "Queensland",
+      "period": "2020 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!I7",
+        "nights": "Table 2!I7",
+        "spend": "Table 3!I7"
+      }
+    },
+    {
+      "area": "Queensland",
+      "period": "2021 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!J7",
+        "nights": "Table 2!J7",
+        "spend": "Table 3!J7"
+      }
+    },
+    {
+      "area": "Queensland",
+      "period": "2021 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!K7",
+        "nights": "Table 2!K7",
+        "spend": "Table 3!K7"
+      }
+    },
+    {
+      "area": "Queensland",
+      "period": "2021 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!L7",
+        "nights": "Table 2!L7",
+        "spend": "Table 3!L7"
+      }
+    },
+    {
+      "area": "Queensland",
+      "period": "2021 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!M7",
+        "nights": "Table 2!M7",
+        "spend": "Table 3!M7"
+      }
+    },
+    {
+      "area": "Queensland",
+      "period": "2022 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!N7",
+        "nights": "Table 2!N7",
+        "spend": "Table 3!N7"
+      }
+    },
+    {
+      "area": "Queensland",
+      "period": "2022 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!O7",
+        "nights": "Table 2!O7",
+        "spend": "Table 3!O7"
+      }
+    },
+    {
+      "area": "Queensland",
+      "period": "2022 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!P7",
+        "nights": "Table 2!P7",
+        "spend": "Table 3!P7"
+      }
+    },
+    {
+      "area": "Queensland",
+      "period": "2022 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!Q7",
+        "nights": "Table 2!Q7",
+        "spend": "Table 3!Q7"
+      }
+    },
+    {
+      "area": "Queensland",
+      "period": "2023 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!R7",
+        "nights": "Table 2!R7",
+        "spend": "Table 3!R7"
+      }
+    },
+    {
+      "area": "Queensland",
+      "period": "2023 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!S7",
+        "nights": "Table 2!S7",
+        "spend": "Table 3!S7"
+      }
+    },
+    {
+      "area": "Queensland",
+      "period": "2023 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!T7",
+        "nights": "Table 2!T7",
+        "spend": "Table 3!T7"
+      }
+    },
+    {
+      "area": "Queensland",
+      "period": "2023 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!U7",
+        "nights": "Table 2!U7",
+        "spend": "Table 3!U7"
+      }
+    },
+    {
+      "area": "Queensland",
+      "period": "2024 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!V7",
+        "nights": "Table 2!V7",
+        "spend": "Table 3!V7"
+      }
+    },
+    {
+      "area": "Queensland",
+      "period": "2024 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!W7",
+        "nights": "Table 2!W7",
+        "spend": "Table 3!W7"
+      }
+    },
+    {
+      "area": "Queensland",
+      "period": "2024 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!X7",
+        "nights": "Table 2!X7",
+        "spend": "Table 3!X7"
+      }
+    },
+    {
+      "area": "Queensland",
+      "period": "2024 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!Y7",
+        "nights": "Table 2!Y7",
+        "spend": "Table 3!Y7"
+      }
+    },
+    {
+      "area": "Queensland",
+      "period": "2025 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-march-quarter-2026-compared-to-march-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1a!B8",
+        "nights": "Table 1a!B18",
+        "spend": "Table 1a!B28"
+      }
+    },
+    {
+      "area": "Queensland",
+      "period": "2025 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!B8",
+        "nights": "Table 1b!B18",
+        "spend": "Table 1b!B28"
+      }
+    },
+    {
+      "area": "Queensland",
+      "period": "2025 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!C8",
+        "nights": "Table 1b!C18",
+        "spend": "Table 1b!C28"
+      }
+    },
+    {
+      "area": "Queensland",
+      "period": "2025 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!D8",
+        "nights": "Table 1b!D18",
+        "spend": "Table 1b!D28"
+      }
+    },
+    {
+      "area": "Queensland",
+      "period": "2026 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!E8",
+        "nights": "Table 1b!E18",
+        "spend": "Table 1b!E28"
+      }
+    },
+    {
+      "area": "Queensland",
+      "period": "2026 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!F8",
+        "nights": "Table 1b!F18",
+        "spend": "Table 1b!F28"
+      }
+    },
+    {
+      "area": "South Australia",
+      "period": "2019 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!B8",
+        "nights": "Table 2!B8",
+        "spend": "Table 3!B8"
+      }
+    },
+    {
+      "area": "South Australia",
+      "period": "2019 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!C8",
+        "nights": "Table 2!C8",
+        "spend": "Table 3!C8"
+      }
+    },
+    {
+      "area": "South Australia",
+      "period": "2019 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!D8",
+        "nights": "Table 2!D8",
+        "spend": "Table 3!D8"
+      }
+    },
+    {
+      "area": "South Australia",
+      "period": "2019 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!E8",
+        "nights": "Table 2!E8",
+        "spend": "Table 3!E8"
+      }
+    },
+    {
+      "area": "South Australia",
+      "period": "2020 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!F8",
+        "nights": "Table 2!F8",
+        "spend": "Table 3!F8"
+      }
+    },
+    {
+      "area": "South Australia",
+      "period": "2020 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!G8",
+        "nights": "Table 2!G8",
+        "spend": "Table 3!G8"
+      }
+    },
+    {
+      "area": "South Australia",
+      "period": "2020 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!H8",
+        "nights": "Table 2!H8",
+        "spend": "Table 3!H8"
+      }
+    },
+    {
+      "area": "South Australia",
+      "period": "2020 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!I8",
+        "nights": "Table 2!I8",
+        "spend": "Table 3!I8"
+      }
+    },
+    {
+      "area": "South Australia",
+      "period": "2021 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!J8",
+        "nights": "Table 2!J8",
+        "spend": "Table 3!J8"
+      }
+    },
+    {
+      "area": "South Australia",
+      "period": "2021 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!K8",
+        "nights": "Table 2!K8",
+        "spend": "Table 3!K8"
+      }
+    },
+    {
+      "area": "South Australia",
+      "period": "2021 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!L8",
+        "nights": "Table 2!L8",
+        "spend": "Table 3!L8"
+      }
+    },
+    {
+      "area": "South Australia",
+      "period": "2021 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!M8",
+        "nights": "Table 2!M8",
+        "spend": "Table 3!M8"
+      }
+    },
+    {
+      "area": "South Australia",
+      "period": "2022 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!N8",
+        "nights": "Table 2!N8",
+        "spend": "Table 3!N8"
+      }
+    },
+    {
+      "area": "South Australia",
+      "period": "2022 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!O8",
+        "nights": "Table 2!O8",
+        "spend": "Table 3!O8"
+      }
+    },
+    {
+      "area": "South Australia",
+      "period": "2022 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!P8",
+        "nights": "Table 2!P8",
+        "spend": "Table 3!P8"
+      }
+    },
+    {
+      "area": "South Australia",
+      "period": "2022 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!Q8",
+        "nights": "Table 2!Q8",
+        "spend": "Table 3!Q8"
+      }
+    },
+    {
+      "area": "South Australia",
+      "period": "2023 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!R8",
+        "nights": "Table 2!R8",
+        "spend": "Table 3!R8"
+      }
+    },
+    {
+      "area": "South Australia",
+      "period": "2023 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!S8",
+        "nights": "Table 2!S8",
+        "spend": "Table 3!S8"
+      }
+    },
+    {
+      "area": "South Australia",
+      "period": "2023 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!T8",
+        "nights": "Table 2!T8",
+        "spend": "Table 3!T8"
+      }
+    },
+    {
+      "area": "South Australia",
+      "period": "2023 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!U8",
+        "nights": "Table 2!U8",
+        "spend": "Table 3!U8"
+      }
+    },
+    {
+      "area": "South Australia",
+      "period": "2024 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!V8",
+        "nights": "Table 2!V8",
+        "spend": "Table 3!V8"
+      }
+    },
+    {
+      "area": "South Australia",
+      "period": "2024 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!W8",
+        "nights": "Table 2!W8",
+        "spend": "Table 3!W8"
+      }
+    },
+    {
+      "area": "South Australia",
+      "period": "2024 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!X8",
+        "nights": "Table 2!X8",
+        "spend": "Table 3!X8"
+      }
+    },
+    {
+      "area": "South Australia",
+      "period": "2024 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!Y8",
+        "nights": "Table 2!Y8",
+        "spend": "Table 3!Y8"
+      }
+    },
+    {
+      "area": "South Australia",
+      "period": "2025 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-march-quarter-2026-compared-to-march-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1a!B9",
+        "nights": "Table 1a!B19",
+        "spend": "Table 1a!B29"
+      }
+    },
+    {
+      "area": "South Australia",
+      "period": "2025 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!B9",
+        "nights": "Table 1b!B19",
+        "spend": "Table 1b!B29"
+      }
+    },
+    {
+      "area": "South Australia",
+      "period": "2025 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!C9",
+        "nights": "Table 1b!C19",
+        "spend": "Table 1b!C29"
+      }
+    },
+    {
+      "area": "South Australia",
+      "period": "2025 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!D9",
+        "nights": "Table 1b!D19",
+        "spend": "Table 1b!D29"
+      }
+    },
+    {
+      "area": "South Australia",
+      "period": "2026 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!E9",
+        "nights": "Table 1b!E19",
+        "spend": "Table 1b!E29"
+      }
+    },
+    {
+      "area": "South Australia",
+      "period": "2026 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!F9",
+        "nights": "Table 1b!F19",
+        "spend": "Table 1b!F29"
+      }
+    },
+    {
+      "area": "Tasmania",
+      "period": "2019 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!B10",
+        "nights": "Table 2!B10",
+        "spend": "Table 3!B10"
+      }
+    },
+    {
+      "area": "Tasmania",
+      "period": "2019 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!C10",
+        "nights": "Table 2!C10",
+        "spend": "Table 3!C10"
+      }
+    },
+    {
+      "area": "Tasmania",
+      "period": "2019 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!D10",
+        "nights": "Table 2!D10",
+        "spend": "Table 3!D10"
+      }
+    },
+    {
+      "area": "Tasmania",
+      "period": "2019 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!E10",
+        "nights": "Table 2!E10",
+        "spend": "Table 3!E10"
+      }
+    },
+    {
+      "area": "Tasmania",
+      "period": "2020 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!F10",
+        "nights": "Table 2!F10",
+        "spend": "Table 3!F10"
+      }
+    },
+    {
+      "area": "Tasmania",
+      "period": "2020 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!G10",
+        "nights": "Table 2!G10",
+        "spend": "Table 3!G10"
+      }
+    },
+    {
+      "area": "Tasmania",
+      "period": "2020 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!H10",
+        "nights": "Table 2!H10",
+        "spend": "Table 3!H10"
+      }
+    },
+    {
+      "area": "Tasmania",
+      "period": "2020 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!I10",
+        "nights": "Table 2!I10",
+        "spend": "Table 3!I10"
+      }
+    },
+    {
+      "area": "Tasmania",
+      "period": "2021 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!J10",
+        "nights": "Table 2!J10",
+        "spend": "Table 3!J10"
+      }
+    },
+    {
+      "area": "Tasmania",
+      "period": "2021 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!K10",
+        "nights": "Table 2!K10",
+        "spend": "Table 3!K10"
+      }
+    },
+    {
+      "area": "Tasmania",
+      "period": "2021 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!L10",
+        "nights": "Table 2!L10",
+        "spend": "Table 3!L10"
+      }
+    },
+    {
+      "area": "Tasmania",
+      "period": "2021 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!M10",
+        "nights": "Table 2!M10",
+        "spend": "Table 3!M10"
+      }
+    },
+    {
+      "area": "Tasmania",
+      "period": "2022 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!N10",
+        "nights": "Table 2!N10",
+        "spend": "Table 3!N10"
+      }
+    },
+    {
+      "area": "Tasmania",
+      "period": "2022 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!O10",
+        "nights": "Table 2!O10",
+        "spend": "Table 3!O10"
+      }
+    },
+    {
+      "area": "Tasmania",
+      "period": "2022 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!P10",
+        "nights": "Table 2!P10",
+        "spend": "Table 3!P10"
+      }
+    },
+    {
+      "area": "Tasmania",
+      "period": "2022 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!Q10",
+        "nights": "Table 2!Q10",
+        "spend": "Table 3!Q10"
+      }
+    },
+    {
+      "area": "Tasmania",
+      "period": "2023 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!R10",
+        "nights": "Table 2!R10",
+        "spend": "Table 3!R10"
+      }
+    },
+    {
+      "area": "Tasmania",
+      "period": "2023 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!S10",
+        "nights": "Table 2!S10",
+        "spend": "Table 3!S10"
+      }
+    },
+    {
+      "area": "Tasmania",
+      "period": "2023 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!T10",
+        "nights": "Table 2!T10",
+        "spend": "Table 3!T10"
+      }
+    },
+    {
+      "area": "Tasmania",
+      "period": "2023 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!U10",
+        "nights": "Table 2!U10",
+        "spend": "Table 3!U10"
+      }
+    },
+    {
+      "area": "Tasmania",
+      "period": "2024 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!V10",
+        "nights": "Table 2!V10",
+        "spend": "Table 3!V10"
+      }
+    },
+    {
+      "area": "Tasmania",
+      "period": "2024 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!W10",
+        "nights": "Table 2!W10",
+        "spend": "Table 3!W10"
+      }
+    },
+    {
+      "area": "Tasmania",
+      "period": "2024 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!X10",
+        "nights": "Table 2!X10",
+        "spend": "Table 3!X10"
+      }
+    },
+    {
+      "area": "Tasmania",
+      "period": "2024 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!Y10",
+        "nights": "Table 2!Y10",
+        "spend": "Table 3!Y10"
+      }
+    },
+    {
+      "area": "Tasmania",
+      "period": "2025 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-march-quarter-2026-compared-to-march-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1a!B11",
+        "nights": "Table 1a!B21",
+        "spend": "Table 1a!B31"
+      }
+    },
+    {
+      "area": "Tasmania",
+      "period": "2025 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!B11",
+        "nights": "Table 1b!B21",
+        "spend": "Table 1b!B31"
+      }
+    },
+    {
+      "area": "Tasmania",
+      "period": "2025 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!C11",
+        "nights": "Table 1b!C21",
+        "spend": "Table 1b!C31"
+      }
+    },
+    {
+      "area": "Tasmania",
+      "period": "2025 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!D11",
+        "nights": "Table 1b!D21",
+        "spend": "Table 1b!D31"
+      }
+    },
+    {
+      "area": "Tasmania",
+      "period": "2026 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!E11",
+        "nights": "Table 1b!E21",
+        "spend": "Table 1b!E31"
+      }
+    },
+    {
+      "area": "Tasmania",
+      "period": "2026 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!F11",
+        "nights": "Table 1b!F21",
+        "spend": "Table 1b!F31"
+      }
+    },
+    {
+      "area": "Victoria",
+      "period": "2019 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!B6",
+        "nights": "Table 2!B6",
+        "spend": "Table 3!B6"
+      }
+    },
+    {
+      "area": "Victoria",
+      "period": "2019 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!C6",
+        "nights": "Table 2!C6",
+        "spend": "Table 3!C6"
+      }
+    },
+    {
+      "area": "Victoria",
+      "period": "2019 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!D6",
+        "nights": "Table 2!D6",
+        "spend": "Table 3!D6"
+      }
+    },
+    {
+      "area": "Victoria",
+      "period": "2019 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!E6",
+        "nights": "Table 2!E6",
+        "spend": "Table 3!E6"
+      }
+    },
+    {
+      "area": "Victoria",
+      "period": "2020 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!F6",
+        "nights": "Table 2!F6",
+        "spend": "Table 3!F6"
+      }
+    },
+    {
+      "area": "Victoria",
+      "period": "2020 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!G6",
+        "nights": "Table 2!G6",
+        "spend": "Table 3!G6"
+      }
+    },
+    {
+      "area": "Victoria",
+      "period": "2020 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!H6",
+        "nights": "Table 2!H6",
+        "spend": "Table 3!H6"
+      }
+    },
+    {
+      "area": "Victoria",
+      "period": "2020 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!I6",
+        "nights": "Table 2!I6",
+        "spend": "Table 3!I6"
+      }
+    },
+    {
+      "area": "Victoria",
+      "period": "2021 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!J6",
+        "nights": "Table 2!J6",
+        "spend": "Table 3!J6"
+      }
+    },
+    {
+      "area": "Victoria",
+      "period": "2021 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!K6",
+        "nights": "Table 2!K6",
+        "spend": "Table 3!K6"
+      }
+    },
+    {
+      "area": "Victoria",
+      "period": "2021 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!L6",
+        "nights": "Table 2!L6",
+        "spend": "Table 3!L6"
+      }
+    },
+    {
+      "area": "Victoria",
+      "period": "2021 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!M6",
+        "nights": "Table 2!M6",
+        "spend": "Table 3!M6"
+      }
+    },
+    {
+      "area": "Victoria",
+      "period": "2022 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!N6",
+        "nights": "Table 2!N6",
+        "spend": "Table 3!N6"
+      }
+    },
+    {
+      "area": "Victoria",
+      "period": "2022 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!O6",
+        "nights": "Table 2!O6",
+        "spend": "Table 3!O6"
+      }
+    },
+    {
+      "area": "Victoria",
+      "period": "2022 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!P6",
+        "nights": "Table 2!P6",
+        "spend": "Table 3!P6"
+      }
+    },
+    {
+      "area": "Victoria",
+      "period": "2022 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!Q6",
+        "nights": "Table 2!Q6",
+        "spend": "Table 3!Q6"
+      }
+    },
+    {
+      "area": "Victoria",
+      "period": "2023 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!R6",
+        "nights": "Table 2!R6",
+        "spend": "Table 3!R6"
+      }
+    },
+    {
+      "area": "Victoria",
+      "period": "2023 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!S6",
+        "nights": "Table 2!S6",
+        "spend": "Table 3!S6"
+      }
+    },
+    {
+      "area": "Victoria",
+      "period": "2023 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!T6",
+        "nights": "Table 2!T6",
+        "spend": "Table 3!T6"
+      }
+    },
+    {
+      "area": "Victoria",
+      "period": "2023 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!U6",
+        "nights": "Table 2!U6",
+        "spend": "Table 3!U6"
+      }
+    },
+    {
+      "area": "Victoria",
+      "period": "2024 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!V6",
+        "nights": "Table 2!V6",
+        "spend": "Table 3!V6"
+      }
+    },
+    {
+      "area": "Victoria",
+      "period": "2024 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!W6",
+        "nights": "Table 2!W6",
+        "spend": "Table 3!W6"
+      }
+    },
+    {
+      "area": "Victoria",
+      "period": "2024 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!X6",
+        "nights": "Table 2!X6",
+        "spend": "Table 3!X6"
+      }
+    },
+    {
+      "area": "Victoria",
+      "period": "2024 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!Y6",
+        "nights": "Table 2!Y6",
+        "spend": "Table 3!Y6"
+      }
+    },
+    {
+      "area": "Victoria",
+      "period": "2025 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-march-quarter-2026-compared-to-march-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1a!B7",
+        "nights": "Table 1a!B17",
+        "spend": "Table 1a!B27"
+      }
+    },
+    {
+      "area": "Victoria",
+      "period": "2025 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!B7",
+        "nights": "Table 1b!B17",
+        "spend": "Table 1b!B27"
+      }
+    },
+    {
+      "area": "Victoria",
+      "period": "2025 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!C7",
+        "nights": "Table 1b!C17",
+        "spend": "Table 1b!C27"
+      }
+    },
+    {
+      "area": "Victoria",
+      "period": "2025 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!D7",
+        "nights": "Table 1b!D17",
+        "spend": "Table 1b!D27"
+      }
+    },
+    {
+      "area": "Victoria",
+      "period": "2026 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!E7",
+        "nights": "Table 1b!E17",
+        "spend": "Table 1b!E27"
+      }
+    },
+    {
+      "area": "Victoria",
+      "period": "2026 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!F7",
+        "nights": "Table 1b!F17",
+        "spend": "Table 1b!F27"
+      }
+    },
+    {
+      "area": "Western Australia",
+      "period": "2019 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!B9",
+        "nights": "Table 2!B9",
+        "spend": "Table 3!B9"
+      }
+    },
+    {
+      "area": "Western Australia",
+      "period": "2019 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!C9",
+        "nights": "Table 2!C9",
+        "spend": "Table 3!C9"
+      }
+    },
+    {
+      "area": "Western Australia",
+      "period": "2019 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!D9",
+        "nights": "Table 2!D9",
+        "spend": "Table 3!D9"
+      }
+    },
+    {
+      "area": "Western Australia",
+      "period": "2019 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!E9",
+        "nights": "Table 2!E9",
+        "spend": "Table 3!E9"
+      }
+    },
+    {
+      "area": "Western Australia",
+      "period": "2020 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!F9",
+        "nights": "Table 2!F9",
+        "spend": "Table 3!F9"
+      }
+    },
+    {
+      "area": "Western Australia",
+      "period": "2020 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!G9",
+        "nights": "Table 2!G9",
+        "spend": "Table 3!G9"
+      }
+    },
+    {
+      "area": "Western Australia",
+      "period": "2020 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!H9",
+        "nights": "Table 2!H9",
+        "spend": "Table 3!H9"
+      }
+    },
+    {
+      "area": "Western Australia",
+      "period": "2020 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!I9",
+        "nights": "Table 2!I9",
+        "spend": "Table 3!I9"
+      }
+    },
+    {
+      "area": "Western Australia",
+      "period": "2021 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!J9",
+        "nights": "Table 2!J9",
+        "spend": "Table 3!J9"
+      }
+    },
+    {
+      "area": "Western Australia",
+      "period": "2021 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!K9",
+        "nights": "Table 2!K9",
+        "spend": "Table 3!K9"
+      }
+    },
+    {
+      "area": "Western Australia",
+      "period": "2021 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!L9",
+        "nights": "Table 2!L9",
+        "spend": "Table 3!L9"
+      }
+    },
+    {
+      "area": "Western Australia",
+      "period": "2021 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!M9",
+        "nights": "Table 2!M9",
+        "spend": "Table 3!M9"
+      }
+    },
+    {
+      "area": "Western Australia",
+      "period": "2022 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!N9",
+        "nights": "Table 2!N9",
+        "spend": "Table 3!N9"
+      }
+    },
+    {
+      "area": "Western Australia",
+      "period": "2022 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!O9",
+        "nights": "Table 2!O9",
+        "spend": "Table 3!O9"
+      }
+    },
+    {
+      "area": "Western Australia",
+      "period": "2022 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!P9",
+        "nights": "Table 2!P9",
+        "spend": "Table 3!P9"
+      }
+    },
+    {
+      "area": "Western Australia",
+      "period": "2022 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!Q9",
+        "nights": "Table 2!Q9",
+        "spend": "Table 3!Q9"
+      }
+    },
+    {
+      "area": "Western Australia",
+      "period": "2023 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!R9",
+        "nights": "Table 2!R9",
+        "spend": "Table 3!R9"
+      }
+    },
+    {
+      "area": "Western Australia",
+      "period": "2023 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!S9",
+        "nights": "Table 2!S9",
+        "spend": "Table 3!S9"
+      }
+    },
+    {
+      "area": "Western Australia",
+      "period": "2023 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!T9",
+        "nights": "Table 2!T9",
+        "spend": "Table 3!T9"
+      }
+    },
+    {
+      "area": "Western Australia",
+      "period": "2023 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!U9",
+        "nights": "Table 2!U9",
+        "spend": "Table 3!U9"
+      }
+    },
+    {
+      "area": "Western Australia",
+      "period": "2024 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!V9",
+        "nights": "Table 2!V9",
+        "spend": "Table 3!V9"
+      }
+    },
+    {
+      "area": "Western Australia",
+      "period": "2024 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!W9",
+        "nights": "Table 2!W9",
+        "spend": "Table 3!W9"
+      }
+    },
+    {
+      "area": "Western Australia",
+      "period": "2024 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!X9",
+        "nights": "Table 2!X9",
+        "spend": "Table 3!X9"
+      }
+    },
+    {
+      "area": "Western Australia",
+      "period": "2024 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-2019-2024-overnight-backcast-data-revised.xlsx",
+      "source_cells": {
+        "trips": "Table 1!Y9",
+        "nights": "Table 2!Y9",
+        "spend": "Table 3!Y9"
+      }
+    },
+    {
+      "area": "Western Australia",
+      "period": "2025 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-march-quarter-2026-compared-to-march-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1a!B10",
+        "nights": "Table 1a!B20",
+        "spend": "Table 1a!B30"
+      }
+    },
+    {
+      "area": "Western Australia",
+      "period": "2025 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!B10",
+        "nights": "Table 1b!B20",
+        "spend": "Table 1b!B30"
+      }
+    },
+    {
+      "area": "Western Australia",
+      "period": "2025 Q3",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!C10",
+        "nights": "Table 1b!C20",
+        "spend": "Table 1b!C30"
+      }
+    },
+    {
+      "area": "Western Australia",
+      "period": "2025 Q4",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!D10",
+        "nights": "Table 1b!D20",
+        "spend": "Table 1b!D30"
+      }
+    },
+    {
+      "area": "Western Australia",
+      "period": "2026 Q1",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!E10",
+        "nights": "Table 1b!E20",
+        "spend": "Table 1b!E30"
+      }
+    },
+    {
+      "area": "Western Australia",
+      "period": "2026 Q2",
+      "source_url": "https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/dots/tra-dots-june-quarter-2026-compared-to-june-quarter-2025.xlsx",
+      "source_cells": {
+        "trips": "Table 1b!F10",
+        "nights": "Table 1b!F20",
+        "spend": "Table 1b!F30"
+      }
+    }
+  ]
+}

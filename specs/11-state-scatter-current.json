@@ -1,0 +1,248 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 350,
+  "height": 350,
+  "autosize": {
+    "type": "none",
+    "contains": "content"
+  },
+  "config": {
+    "background": "transparent",
+    "view": {
+      "stroke": null
+    },
+    "font": "Manrope",
+    "axis": {
+      "labelFontSize": 13,
+      "titleFontSize": 13,
+      "titleFontWeight": 500,
+      "labelColor": "#52635F",
+      "titleColor": "#203C3A",
+      "domain": false,
+      "tickColor": "#DDD6C9",
+      "gridColor": "#E8E2D7",
+      "labelPadding": 7,
+      "titlePadding": 12
+    },
+    "legend": {
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "labelColor": "#52635F",
+      "titleColor": "#203C3A"
+    },
+    "text": {
+      "font": "Manrope",
+      "color": "#203C3A"
+    },
+    "title": {
+      "font": "Fraunces",
+      "color": "#203C3A"
+    }
+  },
+  "padding": {
+    "left": 52,
+    "right": 10,
+    "top": 10,
+    "bottom": 55
+  },
+  "description": "Like-for-like June-quarter comparison: revised DoTS-compatible 2019 backcast versus actual 2026 DoTS. Identical square zero-to-ten-million axes; not an annual comparison.",
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "x": 0,
+            "y": 0
+          },
+          {
+            "x": 10,
+            "y": 10
+          }
+        ]
+      },
+      "mark": {
+        "type": "line",
+        "color": "#8F9F94",
+        "strokeDash": [
+          4,
+          4
+        ],
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              10
+            ],
+            "nice": false
+          },
+          "title": "June quarter 2019 trips (m)",
+          "axis": {
+            "values": [
+              0,
+              2,
+              4,
+              6,
+              8,
+              10
+            ],
+            "labelFontSize": 12
+          }
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              10
+            ],
+            "nice": false
+          },
+          "title": "June quarter 2026 trips (m)",
+          "axis": {
+            "values": [
+              0,
+              2,
+              4,
+              6,
+              8,
+              10
+            ],
+            "labelFontSize": 12
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "data/dv2/dots-state-pairs.json"
+      },
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 70,
+        "stroke": "#FFFDF8",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              10
+            ],
+            "nice": false
+          }
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              10
+            ],
+            "nice": false
+          }
+        },
+        "color": {
+          "condition": {
+            "test": "datum.state === 'Victoria'",
+            "value": "#A6472D"
+          },
+          "value": "#176C65"
+        },
+        "tooltip": [
+          {
+            "field": "state",
+            "title": "State / territory",
+            "type": "nominal"
+          },
+          {
+            "field": "x",
+            "title": "June quarter 2019 trips (m, backcast)",
+            "type": "quantitative",
+            "format": ".2f"
+          },
+          {
+            "field": "y",
+            "title": "June quarter 2026 trips (m, DoTS)",
+            "type": "quantitative",
+            "format": ".2f"
+          },
+          {
+            "field": "change_pct",
+            "title": "Change (%)",
+            "type": "quantitative",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/dv2/dots-state-pairs.json"
+      },
+      "mark": {
+        "type": "rule",
+        "stroke": "#94A398",
+        "strokeWidth": 0.7
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative"
+        },
+        "x2": {
+          "field": "label_x"
+        },
+        "y2": {
+          "field": "label_y"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "data/dv2/dots-state-pairs.json"
+      },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "dy": -3,
+        "fontSize": 12,
+        "fontWeight": 600
+      },
+      "encoding": {
+        "x": {
+          "field": "label_x",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "label_y",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "abbr"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.state === 'Victoria'",
+            "value": "#A6472D"
+          },
+          "value": "#176C65"
+        }
+      }
+    }
+  ]
+}

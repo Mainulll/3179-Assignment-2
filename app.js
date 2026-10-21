@@ -9,7 +9,7 @@
   const mapProjection = {};
   const renderQueues = new Map();
   const renderVersions = new Map();
-  let lastPanAt=0,lastRouteFilter='All',lastCombo='All',currentGeography='Victoria';
+  let lastPanAt=0,lastRouteFilter='All',lastCombo='All',currentGeography='Victoria',historyArea='Victoria',scatterPeriod='current',tourismPeriod='current',melbournePeriod='current';
   const state = {themeFilter:'All',subFilter:'All',routeFilter:'All',selectedCombo:'All'};
   const $ = id => document.getElementById(id);
   const fetchJSON = async url => {
@@ -96,7 +96,8 @@
     if(!nationalFits.has(key)){projection.fitExtent([[8,8],[width-8,height-8]],states);nationalFits.set(key,{scale:projection.scale(),translate:projection.translate()});}
     const fitted=nationalFits.get(key),scale=fitted.scale*zoom,baseTranslate=fitted.translate;
     // Inline one cached geometry/label set: zoom must never reload the boundaries.
-    spec.layer[0].data={values:states.features};
+    const current=tourismPeriod==='current'?await fetchJSON('data/dv2/state-nights-current.json'):null;
+    spec.layer[0].data={values:current?states.features.map(f=>({...f,properties:{...f.properties,...current.find(r=>r.state_abbr===f.properties.state_abbr)}})):states.features};
     for(const layer of spec.layer){if(layer.data?.url?.endsWith('state-map-labels.json'))layer.data={values:labels};}
     const translate=[width/2+(baseTranslate[0]-width/2)*zoom-mapPan[id].longitude*Math.PI/180*scale,height/2+(baseTranslate[1]-height/2)*zoom+mapPan[id].mercator*scale];
     spec.width=width;spec.autosize={type:'none',contains:'content'};spec.padding={left:5,right:5,top:5,bottom:80};
@@ -162,7 +163,9 @@
   async function renderFigure(figure) {
     const name=figure.dataset.chart, element=figure.querySelector('.chart');
     const previousView=views.get(name);
-    const original=specs.get(name),spec=structuredClone(original);
+    const original=specs.get(name.startsWith('11')&&scatterPeriod==='current'?'11-state-scatter-current':name.startsWith('10')&&melbournePeriod==='current'?'10-melbourne-current':name),spec=structuredClone(original);
+    if(name.startsWith('13'))spec.params[0].value=historyArea;
+    if(name.startsWith('09')&&tourismPeriod==='current')spec.data={url:'data/dv2/city-purposes-current.json'};
     const available=Math.max(190,Math.floor(element.parentElement.classList.contains('chart-scroll') ? 760 : element.clientWidth));
     const isVega=spec.$schema.includes('/vega/v');
     if(name.startsWith('12')){
@@ -181,7 +184,7 @@
     if(name.startsWith('08') && available<430){for(const layer of spec.layer){if(layer.encoding?.text?.field==='map_label')layer.encoding.text.field='state_abbr';}spec.layer[0].encoding.color.legend.gradientLength=Math.min(240,available-30);}
     if(['01','04','08'].includes(name.slice(0,2)))await setMapView(spec,name,available);
     if(name.startsWith('08')){
-      if(previousView && element.dataset.renderWidth===String(available)){
+      if(previousView && element.dataset.renderWidth===String(available) && element.dataset.renderPeriod===tourismPeriod){
         await updateNationalProjection(previousView,spec.projection);
         figure.dataset.ready='true';return;
       }
@@ -194,7 +197,7 @@
       figure.dataset.ready='true';
       for(const key of Object.keys(state)){try{view.signal(key,state[key]);}catch{}}
       await view.runAsync();
-      element.dataset.renderWidth=String(available);
+      element.dataset.renderWidth=String(available);if(name.startsWith('08'))element.dataset.renderPeriod=tourismPeriod;
       view.addEventListener('click',(_,item)=>{
         if(Date.now()-lastPanAt<250 || !item?.datum)return;const d=item.datum;
         if(name.startsWith('01') && d.sub_theme)selectType(d.sub_theme,d.theme);
@@ -226,7 +229,13 @@
     $('route-filter').addEventListener('change',e=>{state.routeFilter=e.target.value;updateSignals();});
     $('reset-route').addEventListener('click',()=>{state.routeFilter='All';$('route-filter').value='All';updateSignals();});
     $('current-geography').addEventListener('change',async e=>{currentGeography=e.target.value;$('current-readout').textContent=currentGeography+' · June quarter 2026 versus June quarter 2025';const view=views.get('12-current-quarter');if(view)await view.signal('currentGeography',currentGeography).runAsync();});
+    $('tourism-period').addEventListener('change',async e=>{tourismPeriod=e.target.value;const current=tourismPeriod==='current';const map=document.querySelector('[data-chart="08-holiday-map"]'),heat=document.querySelector('[data-chart="09-city-heatmap"]');map.querySelector('.figure-heading p').textContent=current?'Holiday nights ÷ all domestic overnight nights · year ending June 2026':'Holiday nights ÷ all domestic overnight nights · calendar 2024 NVS';heat.querySelector('.figure-heading p').textContent=current?'Share of tourism-region nights (%) · year ending June 2026':'Share of tourism-region nights (%) · calendar 2024 NVS';map.querySelector('figcaption').innerHTML=current?'<strong>Latest DoTS: July 2025–June 2026.</strong> Each state uses its own published total-night denominator. The ACT is marked for visibility. <a href="docs/dv2/current_states_holiday_nights_YEJune2026.json">TEQ / TRA source observations</a> · ABS 2021 boundaries.':'<strong>Historical calendar 2024 NVS.</strong> Victoria 50.0%, Tasmania 58.0%, ACT 28.4%. This is a different period and collection from the current view; the toggle does not measure growth.';heat.querySelector('figcaption').innerHTML=current?'Melbourne: holiday 39.0%, friends or relatives 42.3%. Four TRA tourism regions, each with its own published total denominator. All shown values pass the source publication threshold. Other is a published category; independent rounding can leave a one-night discrepancy. <a href="docs/dv2/current_cities_purpose_nights_YEJune2026.json">TEQ / TRA source observations</a>':'Historical calendar 2024 NVS. Melbourne: holiday 37.7%, friends or relatives 35.3%. Other includes Other and Not Asked. Do not infer regional growth across the NVS / DoTS methodology break.';await Promise.all([render(map),render(heat)]);});
+    $('melbourne-period').addEventListener('change',async e=>{melbournePeriod=e.target.value;const f=document.querySelector('[data-chart="10-melbourne-trend"]'),c=melbournePeriod==='current';f.querySelector('.figure-heading p').textContent=c?'Quarterly DoTS · January 2025–June 2026':'Annual NVS · calendar 2019–2024';f.querySelector('figcaption').innerHTML=c?'June quarter 2026: 3.217m overnight trips, down 1.7% on the same quarter in 2025. Latest year ending June 2026: 13.447m trips. Trips are not unique people. No comparable regional backcast is available; the old annual NVS series stays separate. <a href="docs/dv2/melbourne_current_source.json">DJSIR / TRA source observations</a>':'Six historical annual NVS observations, 2019–2024; 10.4m overnight trips in 2024. Annual totals cannot be compared directly to quarterly totals. No line joins these observations to the new DoTS collection.';await render(f);});
+    $('history-area').addEventListener('change',async e=>{historyArea=e.target.value;const view=views.get('13-state-history');if(view)await view.signal('historyArea',historyArea).runAsync();});
+    $('scatter-period').addEventListener('change',async e=>{scatterPeriod=e.target.value;const f=document.querySelector('[data-chart="11-state-scatter"]');f.querySelector('h3').textContent=scatterPeriod==='current'?'State trips: June quarters 2019 and 2026':'State trips: calendar years 2019 and 2024';f.querySelector('.figure-heading p').textContent=scatterPeriod==='current'?'Same quarter · revised 2019 backcast and 2026 DoTS':'Full calendar years · historical NVS';f.querySelector('figcaption').innerHTML=scatterPeriod==='current'?'Above the dashed line means more trips in June quarter 2026 than in the revised June quarter 2019 backcast. Victoria: 7.251m to 7.301m (+0.7%). Small differences are not proof of statistical significance. <a href="docs/dv2/dots_history_sources.json">TRA workbook sources and cells</a>':'Historical NVS calendar-year totals, 2019 versus 2024. Queensland is the only state above the equality line. These annual totals cannot be compared directly to the current quarterly view.';await render(f);});
     $('combo-filter').addEventListener('change',e=>{state.selectedCombo=e.target.value;updateSignals();});
+    specs.set('11-state-scatter-current',await fetchJSON('specs/11-state-scatter-current.json'));
+    specs.set('10-melbourne-current',await fetchJSON('specs/10-melbourne-current.json'));
     await Promise.all(figures.map(async figure=>{
       const name=figure.dataset.chart;
       const [spec,records]=await Promise.all([fetchJSON(`specs/${name}.json`),fetchJSON(`data/dv2/${figure.dataset.table}.json`)]);

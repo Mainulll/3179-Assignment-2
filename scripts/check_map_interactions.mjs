@@ -14,7 +14,7 @@ console.log('PASS exact endpoints for all 34 components; display groups retain a
 const code=fs.readFileSync('app.js','utf8');
 const viewCode=code.slice(code.indexOf('  const mercatorY='),code.indexOf('  async function render(figure)'));
 const nodes={};
-const context={Math,mapPan:{'01':{longitude:0,mercator:0},'04':{longitude:0,mercator:0}},mapProjection:{}, mapZoom:{'01':1,'04':3},state:{routeFilter:'Fitzroy Gardens'},fetchJSON:async p=>JSON.parse(fs.readFileSync(p)), $:id=>nodes[id]??=( {style:{},textContent:''})};
+const context={Math,tourismPeriod:"current",mapPan:{'01':{longitude:0,mercator:0},'04':{longitude:0,mercator:0}},mapProjection:{}, mapZoom:{'01':1,'04':3},state:{routeFilter:'Fitzroy Gardens'},fetchJSON:async p=>JSON.parse(fs.readFileSync(p)), $:id=>nodes[id]??=( {style:{},textContent:''})};
 vm.createContext(context);vm.runInContext(viewCode+'\n globalThis.testMapView=setMapView;globalThis.testNationalSignals=makeNationalSignals;globalThis.testNationalUpdate=updateNationalProjection;',context);
 const spec=JSON.parse(fs.readFileSync('specs/04-city-routes.json'));spec.height=520;
 await context.testMapView(spec,'04-city-routes',944);

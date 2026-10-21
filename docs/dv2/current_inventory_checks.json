@@ -90,7 +90,7 @@
     "replication_versions": [
       "2026-10-20T00:00:00Z"
     ],
-    "latest_alter_date": "30/07/2026",
+    "latest_alter_date": "2026-10-09",
     "comparison": "No added/removed features, geometry changes or property changes except vers_date; all chart analytical values unchanged",
     "raw_sha256": "4fd1c2d467844d723329a4c6c321a4d9bd7de54579277f071900317c37da44a2"
   },
